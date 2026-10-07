@@ -21,12 +21,27 @@ def absolute_boxes(model):
 def edge_path(edge, boxes):
     a, b = boxes[edge['source']], boxes[edge['target']]
     s = edge.get('style', {})
-    start = (a[0]+a[2]*float(s.get('exitX', 1)), a[1]+a[3]*float(s.get('exitY', .5)))
-    end = (b[0]+b[2]*float(s.get('entryX', 0)), b[1]+b[3]*float(s.get('entryY', .5)))
+    from connector_policy import facing_sides, POINTS, SIDES
+    source_side,target_side = facing_sides(a,b)
+    inverse = {v:k for k,v in SIDES.items()}
+    source_side = inverse.get(s.get('sourcePortConstraint'),source_side)
+    target_side = inverse.get(s.get('targetPortConstraint'),target_side)
+    sx,sy = POINTS[source_side]; tx,ty = POINTS[target_side]
+    if not edge.get('connector_mode') and not s:
+        sx,sy,tx,ty = 1,.5,0,.5
+    start = (a[0]+a[2]*float(s.get('exitX', sx)), a[1]+a[3]*float(s.get('exitY', sy)))
+    end = (b[0]+b[2]*float(s.get('entryX', tx)), b[1]+b[3]*float(s.get('entryY', ty)))
+    if edge.get('type') in ('retry','feedback','backward') and edge.get('connector_mode') == 'side':
+        if source_side == target_side == 'top':
+            corridor = min(box[1] for box in boxes.values())-32
+            return [start,(start[0],corridor),(end[0],corridor),end]
+        if source_side == target_side == 'left':
+            corridor = min(box[0] for box in boxes.values())-32
+            return [start,(corridor,start[1]),(corridor,end[1]),end]
     # A proxy for native orthogonal routing, never serialized as authoritative waypoints.
     if start[0] == end[0] or start[1] == end[1]:
         return [start, end]
-    if s.get('exitX') in (0, 1):
+    if float(s.get('exitX',sx)) in (0, 1):
         mid = (start[0]+end[0])/2
         return [start, (mid, start[1]), (mid, end[1]), end]
     mid = (start[1]+end[1])/2
@@ -48,6 +63,16 @@ def score_layout(model, profile=None):
                      for e,path in paths for n in nodes if n['id'] not in (e['source'],e['target']))
     crossings = sum(any(segments_intersect(a,b,c,d) for a,b in zip(p,p[1:]) for c,d in zip(q,q[1:]))
                     for (e,p),(f,q) in combinations(paths,2) if not {e['source'],e['target']} & {f['source'],f['target']})
+    crossing_pairs = [(e.get('id',str(i)),f.get('id',str(j)))
+                      for (i,(e,p)),(j,(f,q)) in combinations(enumerate(paths),2)
+                      if not {e['source'],e['target']} & {f['source'],f['target']}
+                      and any(segments_intersect(a,b,c,d) for a,b in zip(p,p[1:]) for c,d in zip(q,q[1:]))]
+    oriented = model.get('archetype','process-flow') in ('process-flow','decision-flow','pipeline','hierarchy')
+    from connector_policy import BACKWARD_TYPES, SECONDARY_ROLES
+    ordinary = [(e,p) for e,p in paths if e.get('type') not in BACKWARD_TYPES and e.get('role') not in SECONDARY_ROLES]
+    main_bends = sum(max(0,len(p)-2) for e,p in ordinary if e.get('type') not in ('branch','exception')) if oriented else 0
+    axis = 1 if model.get('_layout_direction',model.get('direction')) == 'TB' else 0
+    backward = sum(boxes[e['target']][axis]+boxes[e['target']][axis+2]/2 < boxes[e['source']][axis]+boxes[e['source']][axis+2]/2 for e,p in ordinary) if oriented else 0
     bends = sum(max(0,len(p)-2) for _,p in paths)
     length = sum(math.dist(a,b) for _,p in paths for a,b in zip(p,p[1:]))
     target_width = profile.get('target_width_mm')
@@ -68,10 +93,10 @@ def score_layout(model, profile=None):
                       for n in model.get('groups',[])+nodes if n.get('parent','1') != '1')
     penalties = dict(node_overlaps=collisions*100, edge_node_collisions=edge_nodes*80,
                      containment=containment*100, document_height=document_height_penalty, small_font=small*12, crossings=crossings*8,
-                     bends=bends*.5, edge_length=length/1000, aspect=abs(math.log(aspect/target_aspect))*5,
+                     main_flow_bends=main_bends*2, backward_ordinary_edges=backward*15, bends=bends*.5, edge_length=length/1000, aspect=abs(math.log(aspect/target_aspect))*5,
                      whitespace=whitespace*3, label_collisions=model.get('_label_collisions',0)*20)
     return dict(score=round(100-sum(penalties.values()),3), penalties=penalties,
-                crossings=crossings,node_overlaps=collisions,edge_node_collisions=edge_nodes,bends=bends,
+                crossings=crossings,crossing_pairs=crossing_pairs,main_flow_bends=main_bends,backward_ordinary_edges=backward,total_edge_length=round(length,3),node_overlaps=collisions,edge_node_collisions=edge_nodes,bends=bends,
                 projected_min_font_pt=round(projected,3) if projected else None, aspect_ratio=round(aspect,3),
                 target_height_mm=target_height, height_at_target_width_mm=target_height_at_width,
                 projection_constraint='height' if height_scale and height_scale < width_scale else 'width' if width_scale else None,

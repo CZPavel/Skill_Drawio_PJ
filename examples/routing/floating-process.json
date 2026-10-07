@@ -1,0 +1,35 @@
+{
+  "archetype": "process-flow",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "a",
+      "title": "Načti snímek",
+      "kind": "action"
+    },
+    {
+      "id": "b",
+      "title": "Vyhodnoť kontrolu",
+      "kind": "action"
+    },
+    {
+      "id": "c",
+      "title": "Ulož výsledek",
+      "kind": "action"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ab",
+      "source": "a",
+      "target": "b",
+      "connector_mode": "floating"
+    },
+    {
+      "id": "bc",
+      "source": "b",
+      "target": "c",
+      "connector_mode": "floating"
+    }
+  ]
+}

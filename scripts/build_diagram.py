@@ -171,6 +171,8 @@ def build(model, output, report_path=None):
         base.update(node.get("style", {}))
         c = cell(node["id"], value=label, vertex="1", parent=parent, style=prefix + style(**base))
         ET.SubElement(c, "mxGeometry", x=str(node["x"]), y=str(node["y"]), width=str(width), height=str(height), **{"as": "geometry"})
+        if model.get("_semantic_generated") and "abstraction_level" in node:
+            c.set("pjAbstractionLevel",str(node["abstraction_level"]))
         boxes[node["id"]] = {**node, "width": width, "height": height}
 
     def ancestors(identifier):
@@ -188,18 +190,43 @@ def build(model, output, report_path=None):
         options = dict(edgeStyle="orthogonalEdgeStyle", rounded=0, html=1, endArrow="block", endSize=10,
             strokeColor=role["stroke"], strokeWidth=TOKENS["stroke_width"], fontColor=TOKENS["text"],
             fontFamily=family, fontSize=profile["edge"], labelBackgroundColor="#FFFFFF",
-            exitX=1, exitY=0.5, entryX=0, entryY=0.5, exitPerimeter=1, entryPerimeter=1)
+            exitPerimeter=1, entryPerimeter=1)
+        if not model.get("_semantic_generated"):
+            options.update(exitX=1, exitY=0.5, entryX=0, entryY=0.5)
         options.update(preset.get("edge_style", {}))
         options.update(edge.get("style", {}))
+        if model.get("_semantic_generated") and edge.get("connector_mode") != "fixed":
+            for key in ("exitX","exitY","entryX","entryY"):
+                options.pop(key,None)
+            if edge.get("connector_mode") == "floating":
+                for key in ("sourcePortConstraint","targetPortConstraint"):
+                    options.pop(key,None)
         if edge.get("points"):
             options.update(edgeStyle="none", noEdgeStyle=1)
         c = cell(edge["id"], edge="1", parent=parent, source=source, target=target,
                  value=edge.get("label", ""), style=style(**options))
+        if model.get("_semantic_generated"):
+            c.set("pjRole",edge.get("role","data"))
+            c.set("pjType",edge.get("type","ordinary"))
         geo = ET.SubElement(c, "mxGeometry", relative="1", x=str(edge.get("label_position", 0)), y=str(edge.get("label_offset", -18)), **{"as": "geometry"})
         if edge.get("points"):
             array = ET.SubElement(geo, "Array", **{"as": "points"})
             for x, y in edge["points"]:
                 ET.SubElement(array, "mxPoint", x=str(x), y=str(y))
+    if model.get('_semantic_generated'):
+        # Native paint order: backgrounds, secondary paths, main paths, foreground
+        # nodes. Imported XML and legacy coordinate ordering remain untouched.
+        from connector_policy import SECONDARY_ROLES, BACKWARD_TYPES
+        edges_by_id={e['id']:e for e in model.get('edges',[])}
+        group_ids={g['id'] for g in model.get('groups',[])}
+        def paint_priority(c):
+            if c.get('id') in ('0','1'):return 0
+            if c.get('id') in group_ids:return 1
+            if c.get('edge')=='1':
+                e=edges_by_id[c.get('id')]
+                return 2 if e.get('role') in SECONDARY_ROLES or e.get('type') in BACKWARD_TYPES else 3
+            return 4
+        root[:]=sorted(root,key=paint_priority)
     output = Path(output)
     output.parent.mkdir(parents=True, exist_ok=True)
     ET.indent(file)

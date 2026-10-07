@@ -26,6 +26,16 @@ test('benign containment and endpoint attachment excluded; crossing edges found'
   assert.ok(!codes(r).has('node-overlap'));
   assert.ok(!codes(r).has('edge-node'));
   assert.ok(codes(r).has('edge-edge'));
+  assert.equal(r.post_routing.crossings,1);
+  assert.equal(r.post_routing.edge_node_collisions,0);
+  assert.equal(r.post_routing.total_edge_length_css_px,180);
+});
+test('post-routing semantic metrics distinguish retry from backward main flow',async()=>{
+  const r=await fixture(`<g data-cell-id="main"><path d="M 200 50 L 20 50" fill="none" stroke="black"/></g><g data-cell-id="retry"><path d="M 200 120 L 20 120" fill="none" stroke="black"/></g>`,
+    {direction:'LR',edgeSemantics:{main:{},retry:{type:'retry'}}});
+  assert.equal(r.post_routing.backward_ordinary_edges,1);
+  assert.equal(r.post_routing.main_flow_bends,0);
+  assert.equal(r.post_routing.crossings,0);
 });
 test('transformed font projects correctly; sampled curves and missing identity honest',async()=>{
   const r=await fixture(`<g transform="scale(2)"><rect x="0" y="0" width="250" height="70" fill="white"/><text x="10" y="30" font-size="10">Čitelnost</text><path d="M 0 90 Q 80 10 180 90" fill="none" stroke="black"/></g>`,{targetWidthMm:60});
@@ -34,4 +44,15 @@ test('transformed font projects correctly; sampled curves and missing identity h
   assert.ok(codes(r).has('path-sampled'));
   assert.ok(codes(r).has('identity-unavailable'));
   assert.equal(r.coverage.target_document_verified,false);
+});
+test('rounded main flow does not claim zero measured bends',async()=>{
+  const r=await fixture(`<g data-cell-id="main"><path d="M0,50 L90,50 Q100,50 100,60 L100,190 Q100,200 110,200 L200,200" fill="none" stroke="black"/></g>`,
+    {direction:'LR',edgeSemantics:{main:{}}});
+  assert.equal(r.post_routing.main_flow_bends,null);
+  assert.equal(r.post_routing.score,null);
+});
+test('collinear intermediate waypoint is neither bend nor missing crossing',async()=>{
+  const r=await fixture(`<g data-cell-id="a"><path d="M0 100 L100 100 L200 100" fill="none" stroke="black"/></g><g data-cell-id="b"><path d="M100 0 L100 200" fill="none" stroke="black"/></g>`);
+  assert.equal(r.post_routing.crossings,1);
+  assert.equal(r.post_routing.edge_metrics.find(e=>e.id==='a').bends,0);
 });

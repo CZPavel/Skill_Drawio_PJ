@@ -1,0 +1,53 @@
+{
+  "archetype": "technical-block",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "a",
+      "title": "A",
+      "x": 0,
+      "y": 150,
+      "width": 220
+    },
+    {
+      "id": "b",
+      "title": "B",
+      "x": 700,
+      "y": 150,
+      "width": 220
+    },
+    {
+      "id": "c",
+      "title": "C",
+      "x": 350,
+      "y": 0,
+      "width": 220
+    },
+    {
+      "id": "d",
+      "title": "D",
+      "x": 350,
+      "y": 350,
+      "width": 220
+    }
+  ],
+  "edges": [
+    {
+      "id": "main",
+      "source": "a",
+      "target": "b"
+    },
+    {
+      "id": "control",
+      "source": "c",
+      "target": "d",
+      "role": "control",
+      "style": {
+        "exitX": 0.5,
+        "exitY": 1,
+        "entryX": 0.5,
+        "entryY": 0
+      }
+    }
+  ]
+}

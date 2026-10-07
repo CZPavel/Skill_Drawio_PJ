@@ -1,0 +1,53 @@
+{
+  "archetype": "decision-flow",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "a",
+      "title": "Načti snímek"
+    },
+    {
+      "id": "d",
+      "title": "Kontrola OK?",
+      "shape": "decision"
+    },
+    {
+      "id": "ok",
+      "title": "Ulož výsledek",
+      "role": "ok"
+    },
+    {
+      "id": "no",
+      "title": "Opakuj snímání",
+      "role": "control"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ad",
+      "source": "a",
+      "target": "d"
+    },
+    {
+      "id": "yes",
+      "source": "d",
+      "target": "ok",
+      "label": "Ano"
+    },
+    {
+      "id": "no-edge",
+      "source": "d",
+      "target": "no",
+      "label": "Ne",
+      "type": "branch"
+    },
+    {
+      "id": "retry",
+      "source": "no",
+      "target": "a",
+      "type": "retry",
+      "role": "control",
+      "label": "Retry"
+    }
+  ]
+}

@@ -19,7 +19,7 @@ async function audit(file, options = {}) {
     });
     await page.goto(pathToFileURL(path.resolve(file)).href);
     await page.evaluate(() => document.fonts.ready);
-    const result = await page.evaluate(({targetWidthMm}) => {
+    const result = await page.evaluate(({targetWidthMm,edgeSemantics,direction}) => {
       const svg = document.querySelector('svg');
       if (!svg || document.querySelector('parsererror')) throw new Error('Input is not valid rendered SVG');
       const findings = [];
@@ -102,6 +102,21 @@ async function audit(file, options = {}) {
         else points=Array.from({length:el.points.numberOfItems},(_,k)=>el.points.getItem(k));
         const matrix=el.getScreenCTM();
         points=points.map(p=>{const q=new DOMPoint(p.x,p.y).matrixTransform(matrix);return {x:q.x,y:q.y};});
+        if(!curved) {
+          const reduced=[];
+          for(const p of points) {
+            if(reduced.length && Math.hypot(p.x-reduced.at(-1).x,p.y-reduced.at(-1).y)<0.001)continue;
+            while(reduced.length>=2) {
+              const a=reduced.at(-2),b=reduced.at(-1);
+              const cross=(b.x-a.x)*(p.y-b.y)-(b.y-a.y)*(p.x-b.x);
+              const dot=(b.x-a.x)*(p.x-b.x)+(b.y-a.y)*(p.y-b.y);
+              if(Math.abs(cross)>0.001||dot<0)break;
+              reduced.pop();
+            }
+            reduced.push(p);
+          }
+          points=reduced;
+        }
         if(points.length<2){add('path-unresolved',[id(el,i)],'No usable rendered path segments','uncertain');continue;}
         const edge={id:id(el,i),points,curved};edges.push(edge);
         if(!curved && points.length>2 && Math.hypot(points.at(-1).x-points.at(-2).x,points.at(-1).y-points.at(-2).y)<20) add('edge-terminal',[edge.id],'Final rendered segment shorter than 20 rendered CSS pixels (review target scale)');
@@ -116,6 +131,34 @@ async function audit(file, options = {}) {
         const a=edges[i],b=edges[j];if(a.id===b.id)continue;
         if(a.points.slice(1).some((p,k)=>b.points.slice(1).some((q,l)=>intersect(a.points[k],p,b.points[l],q)))) add('edge-edge',[a.id,b.id],'Rendered path segments intersect/overlap; intentional junctions need review');
       }
+      // Post-routing evidence stays separate from pre-routing candidate estimates.
+      // Strict interior crossings exclude shared endpoint contacts and overlap.
+      const proper=(a,b,c,d)=>{
+        const cross=(p,q,r)=>(q.x-p.x)*(r.y-p.y)-(q.y-p.y)*(r.x-p.x);
+        return cross(a,b,c)*cross(a,b,d)<-0.01 && cross(c,d,a)*cross(c,d,b)<-0.01;
+      };
+      const crossingPairs=[];
+      for(let i=0;i<edges.length;i++)for(let j=i+1;j<edges.length;j++) {
+        const a=edges[i],b=edges[j];
+        if(a.id!==b.id && a.points.slice(1).some((p,k)=>b.points.slice(1).some((q,l)=>proper(a.points[k],p,b.points[l],q))))crossingPairs.push([a.id,b.id]);
+      }
+      const edgeMetrics=edges.map(e=>({id:e.id,bends:e.curved?null:Math.max(0,e.points.length-2),
+        length_css_px:e.points.slice(1).reduce((s,p,i)=>s+Math.hypot(p.x-e.points[i].x,p.y-e.points[i].y),0),
+        start:e.points[0],end:e.points.at(-1)}));
+      const secondary=e=>['retry','feedback','backward','exception'].includes(e.type)||['control','note','service'].includes(e.role);
+      const ordinary=edgeMetrics.filter(e=>edgeSemantics?.[e.id]&&!secondary(edgeSemantics[e.id]));
+      const main=ordinary.filter(e=>edgeSemantics[e.id].type!=='branch');
+      const ordinaryBackward=direction ? ordinary.filter(e=>direction==='TB'?e.end.y<e.start.y-1:e.end.x<e.start.x-1).length:null;
+      const uniqueFindings=code=>new Set(findings.filter(f=>f.code===code).map(f=>f.cells.join('|'))).size;
+      const edgeNode=uniqueFindings('edge-node'),labelNode=uniqueFindings('label-node');
+      const edgeLabel=new Set(findings.filter(f=>f.code==='edge-label'&&f.cells[0]!==f.cells[1]).map(f=>f.cells.join('|'))).size;
+      const post={crossings:crossingPairs.length,crossing_pairs:crossingPairs,
+        edge_node_collisions:edgeNode,label_collisions:labelNode+edgeLabel,
+        total_edge_length_css_px:edgeMetrics.reduce((s,e)=>s+e.length_css_px,0),
+        main_flow_bends:edgeSemantics&&!main.some(e=>e.bends===null)?main.reduce((s,e)=>s+e.bends,0):null,
+        backward_ordinary_edges:ordinaryBackward,edge_metrics:edgeMetrics,
+        score:edges.some(e=>e.curved)||findings.some(f=>f.code==='path-unresolved')?null:100-crossingPairs.length*8-edgeNode*80-(labelNode+edgeLabel)*20,
+        score_scope:'Rendered rectangle/path screening only; not a quality certificate. Sampled curves and jumps approximate; visual review required.'};
       const content=[...shapes.map(s=>s.r),...texts.map(t=>t.r),...edges.flatMap(e=>e.points.map(p=>({x:p.x,y:p.y,w:0,h:0})))];
       const left=Math.min(...content.map(r=>r.x)),top=Math.min(...content.map(r=>r.y)),right=Math.max(...content.map(r=>r.x+r.w)),bottom=Math.max(...content.map(r=>r.y+r.h));
       const width=content.length?right-left:0,height=content.length?bottom-top:0;
@@ -126,8 +169,8 @@ async function audit(file, options = {}) {
       const outer=shapes.filter(a=>!shapes.some(b=>a!==b && contains(b.r,a.r) && b.r.w*b.r.h>a.r.w*a.r.h));
       add('bounds-approximation',[],'Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent','uncertain');
       if(!content.length)add('content-unresolved',[],'No measurable diagram content','uncertain');
-      return {findings,metrics:{nodes:shapes.length,text_runs:texts.length,edges:edges.length,sampled_edges:edges.filter(e=>e.curved).length,bends:edges.filter(e=>!e.curved).reduce((n,e)=>n+Math.max(0,e.points.length-2),0),bounds_css_px:content.length?[left,top,right,bottom]:null,width_css_px:width,height_css_px:height,exported_width_css_px:exportedWidth,aspect_ratio:height?width/height:null,min_font_css_px:minFont,projected_min_font_pt:projected,estimated_whitespace_fraction:width*height?Math.max(0,1-outer.reduce((n,s)=>n+s.r.w*s.r.h,0)/(width*height)):null},coverage:{browser_rendered:true,target_document_verified:false,collision_geometry:'transformed browser rectangles and rendered path segments; sampled curves approximate',visual_review_required:true}};
-    },{targetWidthMm:options.targetWidthMm});
+      return {findings,post_routing:post,metrics:{nodes:shapes.length,text_runs:texts.length,edges:edges.length,sampled_edges:edges.filter(e=>e.curved).length,bends:edges.filter(e=>!e.curved).reduce((n,e)=>n+Math.max(0,e.points.length-2),0),bounds_css_px:content.length?[left,top,right,bottom]:null,width_css_px:width,height_css_px:height,exported_width_css_px:exportedWidth,aspect_ratio:height?width/height:null,min_font_css_px:minFont,projected_min_font_pt:projected,estimated_whitespace_fraction:width*height?Math.max(0,1-outer.reduce((n,s)=>n+s.r.w*s.r.h,0)/(width*height)):null},coverage:{browser_rendered:true,target_document_verified:false,collision_geometry:'transformed browser rectangles and rendered path segments; sampled curves approximate',visual_review_required:true}};
+    },{targetWidthMm:options.targetWidthMm,edgeSemantics:options.edgeSemantics,direction:options.direction});
     return {source:path.resolve(file),...result};
   } finally {await browser.close();}
 }
@@ -135,7 +178,7 @@ async function audit(file, options = {}) {
 async function main() {
   const args=process.argv.slice(2), file=args.shift(),options={};let output;
   if(!file)throw new Error('Usage: node scripts/audit_svg.cjs FILE --json OUTPUT [--target-width-mm 160] [--browser-channel msedge]');
-  while(args.length){const flag=args.shift(),value=args.shift();if(flag==='--json')output=value;else if(flag==='--target-width-mm')options.targetWidthMm=Number(value);else if(flag==='--browser-channel')options.browserChannel=value;else throw new Error(`Unknown argument ${flag}`);}
+  while(args.length){const flag=args.shift(),value=args.shift();if(flag==='--json')output=value;else if(flag==='--target-width-mm')options.targetWidthMm=Number(value);else if(flag==='--browser-channel')options.browserChannel=value;else if(flag==='--model'){const m=JSON.parse(fs.readFileSync(value,'utf8').replace(/^\uFEFF/,''));options.edgeSemantics=Object.fromEntries((m.edges||[]).map((e,i)=>[e.id||('edge-'+(i+1)),e]));options.direction=m._layout_direction||(m.direction==='auto'?undefined:m.direction);}else throw new Error(`Unknown argument ${flag}`);}
   if(options.targetWidthMm!==undefined && !(options.targetWidthMm>0))throw new Error('Target width must be positive');
   const result=await audit(file,options), json=JSON.stringify(result,null,2)+'\n';
   if(output){fs.mkdirSync(path.dirname(path.resolve(output)),{recursive:true});fs.writeFileSync(output,json);}

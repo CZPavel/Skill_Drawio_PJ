@@ -1,0 +1,31 @@
+{
+  "archetype": "technical-block",
+  "direction": "LR",
+  "preserve_placement": true,
+  "nodes": [
+    {
+      "id": "a",
+      "title": "Kamera"
+    },
+    {
+      "id": "b",
+      "title": "IPC"
+    }
+  ],
+  "edges": [
+    {
+      "id": "port",
+      "source": "a",
+      "target": "b",
+      "type": "technical-interface",
+      "connector_mode": "fixed",
+      "label": "GigE",
+      "style": {
+        "exitX": 1,
+        "exitY": 0.25,
+        "entryX": 0,
+        "entryY": 0.75
+      }
+    }
+  ]
+}

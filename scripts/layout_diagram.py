@@ -141,6 +141,7 @@ def layout(model):
     from build_diagram import TOKENS, effective_profile, font, load_preset
     validate_ir(model)
     base = copy.deepcopy(model)
+    base['_semantic_generated'] = True
     base['profile'] = base.get('target',base.get('profile','document'))
     for n in base.get('groups',[])+base.get('nodes',[]):
         n['parent'] = n.get('parent',n.get('group','1'))
@@ -164,6 +165,7 @@ def layout(model):
         if label_spans:
             gap = max(gap,math.ceil(max(label_spans)+32))
         placed = copy.deepcopy(base)
+        placed['_layout_direction'] = orientation
         items = placed.get('groups',[])+placed.get('nodes',[])
         by_id = {n['id']:n for n in items}
         for n in placed.get('nodes',[]):
@@ -188,7 +190,7 @@ def layout(model):
                 for edge in placed.get('edges',[]):
                     source,target = direct_child(edge['source']),direct_child(edge['target'])
                     secondary = placed.get('archetype') == 'network-topology' and edge.get('role','data') in ('control','note','service')
-                    if source in index and target in index and source != target and edge.get('type') not in ('retry','feedback') and not secondary:
+                    if source in index and target in index and source != target and edge.get('type') not in ('retry','feedback','backward') and not secondary:
                         links.append((source,target))
                 remaining = list(ranks)
                 processed = set()
@@ -226,7 +228,10 @@ def layout(model):
         boxes = absolute_boxes(placed)
         flags = []
         for e in placed.get('edges',[]):
-            e['style'] = {**automatic_ports(boxes[e['source']],boxes[e['target']],e.get('ports')),**e.get('style',{})}
+            from connector_policy import connector_style
+            e['style'] = connector_style(placed,e,boxes,by_id,orientation)
+            if e.get('type') in ('retry','feedback','backward'):
+                flags.append(f"edge:{e['id']}:native-routing-review")
             if e.pop('points',None):
                 flags.append(f"edge:{e['id']}:stale-waypoints-cleared")
         flags += _labels(placed,boxes,profile)
@@ -244,12 +249,23 @@ def layout(model):
         name = f'{orientation}-gap{gap}-width{width_mode}'
         candidates.append((placed,dict(name=name,**metrics),flags))
     best = max(candidates,key=lambda c:c[1]['score'])
-    if best[1]['crossings']:
-        for edge in best[0].get('edges',[]):
-            edge['style'].setdefault('jumpStyle','arc')
-            edge['style'].setdefault('jumpSize',10)
-    report = dict(selected=best[1]['name'],candidates=[c[1] for c in candidates],review_flags=best[2],
+    from connector_policy import choose_jump_policy
+    selected,jump_flags = choose_jump_policy(best[0].get('edges',[]),best[1]['crossing_pairs'])
+    for edge in best[0].get('edges',[]):
+        if edge['id'] in selected:
+            edge['style'].update(jumpStyle='arc',jumpSize=10)
+    flags = best[2]+jump_flags
+    from design_review import review_design
+    flags += review_design(best[0])
+    full = bool(best[1]['edge_node_collisions'] or best[1]['crossings'] or any('label:' in f or 'measurement-review' in f or 'native-routing-review' in f for f in flags))
+    report = dict(selected=best[1]['name'],candidates=[c[1] for c in candidates],review_flags=flags,
+                  qa_mode='FULL' if full else 'FAST', requires_rendered_qa=full,
+                  jump_edges=selected,
                   routing='native orthogonal; score uses estimated paths, not final renderer geometry')
+    from connector_policy import choose_routing_strategy
+    report['routing_strategy'] = choose_routing_strategy(best[0],best[1],model.get('routing_capabilities'))
+    if report['routing_strategy']['strategy'] != 'native':
+        report.update(qa_mode='FULL',requires_rendered_qa=True)
     return best[0],report
 
 

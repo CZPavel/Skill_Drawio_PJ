@@ -10,6 +10,10 @@ import subprocess
 import xml.etree.ElementTree as ET
 from lint_drawio import pages, style
 
+def has_side_constraints(text):
+    return any(any(k in style(c.get('style','')) for k in ('sourcePortConstraint','targetPortConstraint','portConstraint'))
+               for _,model in pages(ET.fromstring(text)) for c in model.iter('mxCell'))
+
 def contract(text):
     result=[]
     for name,model in pages(ET.fromstring(text)):
@@ -32,6 +36,8 @@ def route(source,output,mcp_root):
     module=Path(mcp_root).resolve()/'src/libavoid-pass.js'
     if not module.is_file():raise ValueError('External @drawio/mcp src/libavoid-pass.js missing')
     original=source.read_text(encoding='utf-8-sig')
+    if has_side_constraints(original):
+        raise ValueError('External routeXml side constraints are unverified; retain native side routing')
     # Engine may catch failures and return unchanged XML; report that explicitly.
     js="const fs=require('node:fs');const {pathToFileURL}=require('node:url');(async()=>{const m=await import(pathToFileURL(process.argv[1]).href);process.stdout.write(await m.routeXml(fs.readFileSync(process.argv[2],'utf8')));})().catch(e=>{console.error(e);process.exit(1)});"
     result=subprocess.run(['node','-e',js,str(module),str(source.resolve())],capture_output=True,text=True,encoding='utf-8',timeout=60,check=True)

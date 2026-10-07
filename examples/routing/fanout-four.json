@@ -1,0 +1,52 @@
+{
+  "archetype": "network-topology",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "s",
+      "title": "IPC"
+    },
+    {
+      "id": "n0",
+      "title": "Systém 1"
+    },
+    {
+      "id": "n1",
+      "title": "Systém 2"
+    },
+    {
+      "id": "n2",
+      "title": "Systém 3"
+    },
+    {
+      "id": "n3",
+      "title": "Systém 4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "s",
+      "target": "n0",
+      "label": "Data"
+    },
+    {
+      "id": "e1",
+      "source": "s",
+      "target": "n1",
+      "label": "Data"
+    },
+    {
+      "id": "e2",
+      "source": "s",
+      "target": "n2",
+      "label": "Data"
+    },
+    {
+      "id": "e3",
+      "source": "s",
+      "target": "n3",
+      "label": "Data"
+    }
+  ]
+}

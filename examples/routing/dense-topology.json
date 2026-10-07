@@ -1,0 +1,77 @@
+{
+  "archetype": "network-topology",
+  "direction": "LR",
+  "preserve_placement": true,
+  "nodes": [
+    {
+      "id": "cam",
+      "title": "Kamera"
+    },
+    {
+      "id": "sw",
+      "title": "Switch"
+    },
+    {
+      "id": "pc",
+      "title": "IPC"
+    },
+    {
+      "id": "plc",
+      "title": "PLC",
+      "role": "control"
+    },
+    {
+      "id": "mes",
+      "title": "MES",
+      "role": "ok"
+    },
+    {
+      "id": "srv",
+      "title": "Servis",
+      "role": "note"
+    }
+  ],
+  "edges": [
+    {
+      "id": "cs",
+      "source": "cam",
+      "target": "sw"
+    },
+    {
+      "id": "sp",
+      "source": "sw",
+      "target": "pc"
+    },
+    {
+      "id": "pm",
+      "source": "pc",
+      "target": "mes"
+    },
+    {
+      "id": "trig",
+      "source": "plc",
+      "target": "cam",
+      "role": "control",
+      "label": "Trigger"
+    },
+    {
+      "id": "result",
+      "source": "pc",
+      "target": "plc",
+      "role": "control",
+      "label": "Výsledek"
+    },
+    {
+      "id": "service",
+      "source": "srv",
+      "target": "sw",
+      "role": "note"
+    },
+    {
+      "id": "diag",
+      "source": "srv",
+      "target": "pc",
+      "role": "note"
+    }
+  ]
+}
