@@ -1,0 +1,448 @@
+{
+  "reviewed_at": "2026-10-07",
+  "method": "Git shallow clones of default branches, git commit identity, GitHub REST metadata, direct file inspection. Static evidence only; no upstream runtime tests. No source content redistributed.",
+  "sources": [
+    {
+      "name": "JGraph",
+      "repository": "jgraph/drawio-mcp",
+      "url": "https://github.com/jgraph/drawio-mcp",
+      "commit": "eebe7def96409a15511a51fda958f4a620c2300a",
+      "commit_date": "2026-10-03T21:14:01+02:00",
+      "default_branch": "main",
+      "pushed_at": "2026-10-03T19:17:40Z",
+      "archived": false,
+      "license_file_review": "Apache-2.0",
+      "github_license": "Apache-2.0",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/LICENSE",
+          "sha256": "9c83253db0f588e73e14b61376011ccbece07a690f7134934d965c82fb9cd8fa",
+          "lines": 191
+        },
+        {
+          "path": "plugins/codex/drawio/skills/drawio/SKILL.md",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/plugins/codex/drawio/skills/drawio/SKILL.md",
+          "sha256": "3ac312c808c20357e38d2ce3506b776ece78a7b863792d9fed958c3dd05a3eb3",
+          "lines": 442
+        },
+        {
+          "path": "shared/xml-reference.md",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/shared/xml-reference.md",
+          "sha256": "0780a6607b202a720af7ef2cc9fcb17a47d3845c78f82ec27e4b69a1f6726f2d",
+          "lines": 488
+        },
+        {
+          "path": "shared/style-reference.md",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/shared/style-reference.md",
+          "sha256": "7cba10985cfd0d92bfe9da2b653b2af86d2f8e5c0f3bd7d664c47fde0816617e",
+          "lines": 927
+        },
+        {
+          "path": "shared/mermaid-reference.md",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/shared/mermaid-reference.md",
+          "sha256": "c0d67f90fcb9320ebce8f2cd3a8dde80568de7390d32ed49c5f2b1087c5fe0f4",
+          "lines": 498
+        },
+        {
+          "path": "shared/shape-search.js",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/shared/shape-search.js",
+          "sha256": "393ee483a84722070916bfac614d476352cdd9057cf3835aae940d034a363c5d",
+          "lines": 431
+        },
+        {
+          "path": "shared/mermaid-elk.js",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/shared/mermaid-elk.js",
+          "sha256": "9468a38131a7f3ba4669a2c974d9621d54830ba2a133c4e51e047df45e599ceb",
+          "lines": 143
+        },
+        {
+          "path": "mcp-tool-server/src/index.js",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/mcp-tool-server/src/index.js",
+          "sha256": "6814c18a3cc6d4c5dc8a608a8cdd3322651dcdd11bc76240540c364673748282",
+          "lines": 950
+        },
+        {
+          "path": "mcp-tool-server/src/elk-pass.js",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/mcp-tool-server/src/elk-pass.js",
+          "sha256": "c6ef6eba3d49796dd213dee0e57047a6b8140adc96d2addcefd17aacb64ba292",
+          "lines": 125
+        },
+        {
+          "path": "mcp-tool-server/src/libavoid-pass.js",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/mcp-tool-server/src/libavoid-pass.js",
+          "sha256": "14f0fc1511b1984939f02a005ce6603b12cfe6d1cb3f37db781ea8fb7e071bcd",
+          "lines": 392
+        },
+        {
+          "path": "mcp-tool-server/vendor/libavoid/LICENSE",
+          "url": "https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/mcp-tool-server/vendor/libavoid/LICENSE",
+          "sha256": "94bbccc53053821c77cfd9fe097b04701a63caff69caa14873289488e5b7e1b6",
+          "lines": 505
+        }
+      ]
+    },
+    {
+      "name": "Softaworks",
+      "repository": "softaworks/agent-toolkit",
+      "url": "https://github.com/softaworks/agent-toolkit",
+      "commit": "3027f20f3181758385a1bb8c022d4041dfb4de84",
+      "commit_date": "2026-03-05T13:46:24-03:00",
+      "default_branch": "main",
+      "pushed_at": "2026-03-05T16:46:24Z",
+      "archived": false,
+      "license_file_review": "MIT",
+      "github_license": "MIT",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/softaworks/agent-toolkit/blob/3027f20f3181758385a1bb8c022d4041dfb4de84/LICENSE",
+          "sha256": "c35fc1ec8678412787692308f37bfe538f79b8bc7f0df70effa1eb82051dce03",
+          "lines": 21
+        },
+        {
+          "path": "skills/draw-io/SKILL.md",
+          "url": "https://github.com/softaworks/agent-toolkit/blob/3027f20f3181758385a1bb8c022d4041dfb4de84/skills/draw-io/SKILL.md",
+          "sha256": "d179aff326a814c03977c12e15158189d904d39f2fadd5067fcc3a1108e1d5f3",
+          "lines": 278
+        },
+        {
+          "path": "skills/draw-io/references/layout-guidelines.md",
+          "url": "https://github.com/softaworks/agent-toolkit/blob/3027f20f3181758385a1bb8c022d4041dfb4de84/skills/draw-io/references/layout-guidelines.md",
+          "sha256": "28d887d4857ab60b054fc70450ceb7deb2efb9317906e1651f0974d97cab4ccd",
+          "lines": 63
+        },
+        {
+          "path": "skills/draw-io/README.md",
+          "url": "https://github.com/softaworks/agent-toolkit/blob/3027f20f3181758385a1bb8c022d4041dfb4de84/skills/draw-io/README.md",
+          "sha256": "b1d66ea79c692b96f72f3c7259d66444e4efde71b4b820ec0c7c382bbbcd09fc",
+          "lines": 269
+        }
+      ]
+    },
+    {
+      "name": "Sunwood",
+      "repository": "Sunwood-ai-labs/draw-io-skill",
+      "url": "https://github.com/Sunwood-ai-labs/draw-io-skill",
+      "commit": "131921b2039b02fc8ee16b23bdb951b1fbb59594",
+      "commit_date": "2026-06-04T01:29:31+09:00",
+      "default_branch": "main",
+      "pushed_at": "2026-06-03T16:29:40Z",
+      "archived": false,
+      "license_file_review": "MIT",
+      "github_license": "MIT",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/Sunwood-ai-labs/draw-io-skill/blob/131921b2039b02fc8ee16b23bdb951b1fbb59594/LICENSE",
+          "sha256": "6b4aed40348610c911fa4160b31141d978824e5efcce3d1a7f1adb17aba6de40",
+          "lines": 21
+        },
+        {
+          "path": "SKILL.md",
+          "url": "https://github.com/Sunwood-ai-labs/draw-io-skill/blob/131921b2039b02fc8ee16b23bdb951b1fbb59594/SKILL.md",
+          "sha256": "98e3fcc3df2f76bd794e036e381ae765f3059fee6a57189922b58f6c4c5f65e6",
+          "lines": 436
+        },
+        {
+          "path": "scripts/check-drawio-svg-overlaps.mjs",
+          "url": "https://github.com/Sunwood-ai-labs/draw-io-skill/blob/131921b2039b02fc8ee16b23bdb951b1fbb59594/scripts/check-drawio-svg-overlaps.mjs",
+          "sha256": "99b4a41a2420d8c8b8737cd67a4871e5f8d07ffe2898920e99f5e94f06821a9f",
+          "lines": 2229
+        },
+        {
+          "path": "scripts/export-drawio.mjs",
+          "url": "https://github.com/Sunwood-ai-labs/draw-io-skill/blob/131921b2039b02fc8ee16b23bdb951b1fbb59594/scripts/export-drawio.mjs",
+          "sha256": "26a881fef984bd64b7587e69f0337b22b7f176fdae9a88e49229be5a691370f2",
+          "lines": 424
+        },
+        {
+          "path": "references/layout-guidelines.en.md",
+          "url": "https://github.com/Sunwood-ai-labs/draw-io-skill/blob/131921b2039b02fc8ee16b23bdb951b1fbb59594/references/layout-guidelines.en.md",
+          "sha256": "171540364665378ece4d60e7fd7073c7d526f13735cec569ccf0160d0678967f",
+          "lines": 66
+        },
+        {
+          "path": "scripts/verify-text-contrast-fixture.mjs",
+          "url": "https://github.com/Sunwood-ai-labs/draw-io-skill/blob/131921b2039b02fc8ee16b23bdb951b1fbb59594/scripts/verify-text-contrast-fixture.mjs",
+          "sha256": "5ac3f5ed2fdf58d29d088dae2d299594899d337546bb585aa8b5bf4f783b3012",
+          "lines": 47
+        },
+        {
+          "path": "scripts/verify-shape-text-overflow-fixture.mjs",
+          "url": "https://github.com/Sunwood-ai-labs/draw-io-skill/blob/131921b2039b02fc8ee16b23bdb951b1fbb59594/scripts/verify-shape-text-overflow-fixture.mjs",
+          "sha256": "22987e1223257d65497322df9f819ae01c5de975671e83b6b15c30e500b998fe",
+          "lines": 27
+        }
+      ]
+    },
+    {
+      "name": "SHALINS",
+      "repository": "SHALINS428/Codex-drawio-skill",
+      "url": "https://github.com/SHALINS428/Codex-drawio-skill",
+      "commit": "1f3acc7c002eab30e3858a9ea2bf514a6659e01a",
+      "commit_date": "2026-05-15T14:55:45+08:00",
+      "default_branch": "main",
+      "pushed_at": "2026-05-15T06:55:53Z",
+      "archived": false,
+      "license_file_review": "MIT",
+      "github_license": "MIT",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/SHALINS428/Codex-drawio-skill/blob/1f3acc7c002eab30e3858a9ea2bf514a6659e01a/LICENSE",
+          "sha256": "3d9eb567abded21047833b5a0b5acf827c504d15d191e1ca0129672a45f6a6f7",
+          "lines": 22
+        },
+        {
+          "path": "skill/drawio/SKILL.md",
+          "url": "https://github.com/SHALINS428/Codex-drawio-skill/blob/1f3acc7c002eab30e3858a9ea2bf514a6659e01a/skill/drawio/SKILL.md",
+          "sha256": "88cfe9e62a839a2e93633cf270739fff6dc76ab2c056fe3cc99fb5ee4d95b63c",
+          "lines": 189
+        },
+        {
+          "path": "skill/drawio/references/academic-diagram-style.md",
+          "url": "https://github.com/SHALINS428/Codex-drawio-skill/blob/1f3acc7c002eab30e3858a9ea2bf514a6659e01a/skill/drawio/references/academic-diagram-style.md",
+          "sha256": "901b85a89983f42359a0cf3747c76379cabe208254c65273d3112c0137aba8cc",
+          "lines": 86
+        },
+        {
+          "path": "skill/drawio/references/figure-types.md",
+          "url": "https://github.com/SHALINS428/Codex-drawio-skill/blob/1f3acc7c002eab30e3858a9ea2bf514a6659e01a/skill/drawio/references/figure-types.md",
+          "sha256": "130319d18309bd53799838b0f675f683d5ee526d6e08fc87e8cd963d17dda8d5",
+          "lines": 73
+        },
+        {
+          "path": "skill/drawio/scripts/new-drawio-figure.ps1",
+          "url": "https://github.com/SHALINS428/Codex-drawio-skill/blob/1f3acc7c002eab30e3858a9ea2bf514a6659e01a/skill/drawio/scripts/new-drawio-figure.ps1",
+          "sha256": "e0c0ff7f33e17ed70f9bc43801b591516e7745440ad29f71f33ebd2f143215f9",
+          "lines": 59
+        },
+        {
+          "path": "skill/drawio/scripts/export-drawio-png.ps1",
+          "url": "https://github.com/SHALINS428/Codex-drawio-skill/blob/1f3acc7c002eab30e3858a9ea2bf514a6659e01a/skill/drawio/scripts/export-drawio-png.ps1",
+          "sha256": "43d5709896fee6526b04d75e937f9b4a0b4eb5ecb8737924747b03e0611fa6ba",
+          "lines": 134
+        }
+      ]
+    },
+    {
+      "name": "JMO808",
+      "repository": "jmo808/drawio_plugin",
+      "url": "https://github.com/jmo808/drawio_plugin",
+      "commit": "170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e",
+      "commit_date": "2026-07-20T22:01:14-06:00",
+      "default_branch": "main",
+      "pushed_at": "2026-07-21T04:01:15Z",
+      "archived": false,
+      "license_file_review": "MIT",
+      "github_license": "MIT",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/jmo808/drawio_plugin/blob/170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e/LICENSE",
+          "sha256": "fb3e12634012e7d1c6c3023a2e6678cb482a505a6e07b15a19831eb4060f5c57",
+          "lines": 21
+        },
+        {
+          "path": "skills/drawio/SKILL.md",
+          "url": "https://github.com/jmo808/drawio_plugin/blob/170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e/skills/drawio/SKILL.md",
+          "sha256": "5b443446fc1a881a757387dd597b1ed2b9c716c86456aa331cd9fb9c74263c3f",
+          "lines": 213
+        },
+        {
+          "path": "scripts/diagram-builder.js",
+          "url": "https://github.com/jmo808/drawio_plugin/blob/170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e/scripts/diagram-builder.js",
+          "sha256": "bd39fc0727073eee75bbcac160fb64152b6ea3a7ca7b49de20ebca0bd847b9b3",
+          "lines": 2670
+        },
+        {
+          "path": "scripts/validate.js",
+          "url": "https://github.com/jmo808/drawio_plugin/blob/170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e/scripts/validate.js",
+          "sha256": "c92d88f7879c230a15da588b5439792d081d871523d520973074d505257be90e",
+          "lines": 295
+        },
+        {
+          "path": "scripts/validators/design-quality.js",
+          "url": "https://github.com/jmo808/drawio_plugin/blob/170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e/scripts/validators/design-quality.js",
+          "sha256": "be6f4c701e7b288e4afe8f229dc7d0cebc35aed4981df04515142d736b6f9236",
+          "lines": 294
+        },
+        {
+          "path": "scripts/validators/network.js",
+          "url": "https://github.com/jmo808/drawio_plugin/blob/170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e/scripts/validators/network.js",
+          "sha256": "ca69523d4d6bb419746e86399a16c46ebbd2c5e24cbe094089a9bdf0c8326629",
+          "lines": 131
+        },
+        {
+          "path": "scripts/validators/aws.js",
+          "url": "https://github.com/jmo808/drawio_plugin/blob/170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e/scripts/validators/aws.js",
+          "sha256": "0f8f0f1fd6471b45bfc144cc2d76a1e6ab17620ef51e052a895dc8928c70474f",
+          "lines": 491
+        },
+        {
+          "path": "scripts/elk-layout.js",
+          "url": "https://github.com/jmo808/drawio_plugin/blob/170c000af0b8212e5ff8a2d2dfeec6d332cc6c2e/scripts/elk-layout.js",
+          "sha256": "273fdb69e11912b4d1eac4910c2586d4ac4cb7f4c58cbd20b9bce2a33e288327",
+          "lines": 109
+        }
+      ]
+    },
+    {
+      "name": "lgazo",
+      "repository": "lgazo/drawio-mcp-server",
+      "url": "https://github.com/lgazo/drawio-mcp-server",
+      "commit": "afbd4bedef50b117889d4c0f47692d311df5b71e",
+      "commit_date": "2026-09-14T17:02:06+02:00",
+      "default_branch": "main",
+      "pushed_at": "2026-09-15T20:08:16Z",
+      "archived": false,
+      "license_file_review": "MIT",
+      "github_license": "MIT",
+      "inspected_files": [
+        {
+          "path": "LICENSE.md",
+          "url": "https://github.com/lgazo/drawio-mcp-server/blob/afbd4bedef50b117889d4c0f47692d311df5b71e/LICENSE.md",
+          "sha256": "57af58e00d6b8dc85784f3b53fc799f9bf9e9d845bf941c8d8276ed2c4e7c0f4",
+          "lines": 21
+        },
+        {
+          "path": "packages/drawio-mcp-server/src/tools/edit-edge.ts",
+          "url": "https://github.com/lgazo/drawio-mcp-server/blob/afbd4bedef50b117889d4c0f47692d311df5b71e/packages/drawio-mcp-server/src/tools/edit-edge.ts",
+          "sha256": "390f4b950359f55561fb66c80b853cadb06d403043a3e5db60448225aa4ac5d9",
+          "lines": 53
+        },
+        {
+          "path": "packages/drawio-mcp-server/src/tools/create-layer.ts",
+          "url": "https://github.com/lgazo/drawio-mcp-server/blob/afbd4bedef50b117889d4c0f47692d311df5b71e/packages/drawio-mcp-server/src/tools/create-layer.ts",
+          "sha256": "f2ccd07169ad4383164e50a4395bda114f528d55783244471ba8c993ae43518e",
+          "lines": 19
+        },
+        {
+          "path": "packages/drawio-mcp-server/src/tools/create-page.ts",
+          "url": "https://github.com/lgazo/drawio-mcp-server/blob/afbd4bedef50b117889d4c0f47692d311df5b71e/packages/drawio-mcp-server/src/tools/create-page.ts",
+          "sha256": "5b92e5e290953a72aeb2321f6bd08ae8ac9725da917ca6b448bce8790b4ff58c",
+          "lines": 17
+        },
+        {
+          "path": "packages/drawio-mcp-server/src/tools/set-cell-parent.ts",
+          "url": "https://github.com/lgazo/drawio-mcp-server/blob/afbd4bedef50b117889d4c0f47692d311df5b71e/packages/drawio-mcp-server/src/tools/set-cell-parent.ts",
+          "sha256": "9201c25f5bbba29a839d4ea9d465deede0bed46ae55b4dfe899ef706b90935c6",
+          "lines": 20
+        },
+        {
+          "path": "packages/drawio-mcp-server/src/tools/get-shape-by-name.ts",
+          "url": "https://github.com/lgazo/drawio-mcp-server/blob/afbd4bedef50b117889d4c0f47692d311df5b71e/packages/drawio-mcp-server/src/tools/get-shape-by-name.ts",
+          "sha256": "76a7dca07e2d89dc3c92dc46c80dc98febec80df52da9922753996bec14f6123",
+          "lines": 21
+        },
+        {
+          "path": "packages/drawio-mcp-plugin/src/drawio-tools.ts",
+          "url": "https://github.com/lgazo/drawio-mcp-server/blob/afbd4bedef50b117889d4c0f47692d311df5b71e/packages/drawio-mcp-plugin/src/drawio-tools.ts",
+          "sha256": "ecb2f1a26b71b641632901e20f2f9d59720b47e11a7915edb05e3537918c46fc",
+          "lines": 2831
+        }
+      ]
+    },
+    {
+      "name": "abossard",
+      "repository": "abossard/drawio-mcp",
+      "url": "https://github.com/abossard/drawio-mcp",
+      "commit": "9a1992ec610911b35433e0f7e7f69b8c8f512c3a",
+      "commit_date": "2026-02-12T23:41:08+01:00",
+      "default_branch": "main",
+      "pushed_at": "2026-05-09T04:37:55Z",
+      "archived": false,
+      "license_file_review": "MIT",
+      "github_license": "MIT",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/abossard/drawio-mcp/blob/9a1992ec610911b35433e0f7e7f69b8c8f512c3a/LICENSE",
+          "sha256": "1c86041c9692590961c347893628e8583abfc74013b048b1e595309a95b69950",
+          "lines": 21
+        },
+        {
+          "path": "src/index.ts",
+          "url": "https://github.com/abossard/drawio-mcp/blob/9a1992ec610911b35433e0f7e7f69b8c8f512c3a/src/index.ts",
+          "sha256": "7c76d492927bd95e66dfa4e637c6ddc76c9c2d6c805d62184d2177629aeae425",
+          "lines": 1235
+        },
+        {
+          "path": "src/drawio.ts",
+          "url": "https://github.com/abossard/drawio-mcp/blob/9a1992ec610911b35433e0f7e7f69b8c8f512c3a/src/drawio.ts",
+          "sha256": "14345e44544bc9345dd8e7ccf39d47753f9747d8edd9fc3a05c6997527cdd19f",
+          "lines": 1678
+        },
+        {
+          "path": "src/sidecar.ts",
+          "url": "https://github.com/abossard/drawio-mcp/blob/9a1992ec610911b35433e0f7e7f69b8c8f512c3a/src/sidecar.ts",
+          "sha256": "6919d2ceaf94fd9d9593cbef416016b63d04d5d610f058411e347ed135f4e79a",
+          "lines": 438
+        },
+        {
+          "path": "vscode-drawio-mcp-bridge/src/extension.ts",
+          "url": "https://github.com/abossard/drawio-mcp/blob/9a1992ec610911b35433e0f7e7f69b8c8f512c3a/vscode-drawio-mcp-bridge/src/extension.ts",
+          "sha256": "0680f08f58a2ce3075546cae335a0c62253ff20144152aaf0ac040df40658efe",
+          "lines": 79
+        }
+      ]
+    },
+    {
+      "name": "yohasacura",
+      "repository": "yohasacura/drawio-mcp",
+      "url": "https://github.com/yohasacura/drawio-mcp",
+      "commit": "036573d746e1720e121701dfe0b3b570c4895e2a",
+      "commit_date": "2026-02-09T19:50:00+02:00",
+      "default_branch": "main",
+      "pushed_at": "2026-02-09T17:50:13Z",
+      "archived": false,
+      "license_file_review": "MIT",
+      "github_license": "MIT",
+      "inspected_files": [
+        {
+          "path": "LICENSE",
+          "url": "https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/LICENSE",
+          "sha256": "9e158664a256095843d0f159f26ebc52a656e049ff4f739c1f154392fa09e20f",
+          "lines": 21
+        },
+        {
+          "path": "src/drawio_mcp/server.py",
+          "url": "https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/server.py",
+          "sha256": "52063c44a2c73f87074778596ef870a2b212b20a096caa47b433afeb45f88df1",
+          "lines": 2259
+        },
+        {
+          "path": "src/drawio_mcp/models.py",
+          "url": "https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/models.py",
+          "sha256": "584d557bee7c566e2837b051f0fe7e99738a37f468d10c9b23a0eac8d3bf4a3b",
+          "lines": 533
+        },
+        {
+          "path": "src/drawio_mcp/styles.py",
+          "url": "https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/styles.py",
+          "sha256": "7f57fda7ad09bd66fa189ecf7d90344ae8b003b603422342aa2cc0a4eb17aa35",
+          "lines": 765
+        },
+        {
+          "path": "src/drawio_mcp/layout.py",
+          "url": "https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/layout.py",
+          "sha256": "05d66d6a89c7011bf438b2c508fa8b55cc8018ad80340ff0d87000876517bff0",
+          "lines": 689
+        },
+        {
+          "path": "src/drawio_mcp/layout_engine.py",
+          "url": "https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/layout_engine.py",
+          "sha256": "57dfeda5ea4a6754df42ba1bd86afa7a9642a3f3feb47d4ac9afcf1c00f8b375",
+          "lines": 2214
+        },
+        {
+          "path": "src/drawio_mcp/validation.py",
+          "url": "https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/validation.py",
+          "sha256": "a8361a3c395d4c3d4b48eb4425efcd07a90bcdf94c1b05b1db6efce2c08349a6",
+          "lines": 503
+        }
+      ]
+    }
+  ]
+}
