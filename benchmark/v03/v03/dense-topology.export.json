@@ -1,0 +1,20 @@
+{
+  "source_sha256": "bb31287707f3833d27b13036b7d4511d35a001b93c996d64927e209fbb913203",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v03/v03/dense-topology.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v03/v03/dense-topology.svg",
+      "sha256": "b978c4da64bedb87776cafcf977524af6a2483372a80e6e619d65356dec294d1",
+      "bytes": 22161
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v03/v03/dense-topology.png",
+      "sha256": "f4a0f844cfd553c2169a585fc6d65debeca61f13d96ec8cc7b3a2aafcf4200b4",
+      "bytes": 112756
+    }
+  ]
+}

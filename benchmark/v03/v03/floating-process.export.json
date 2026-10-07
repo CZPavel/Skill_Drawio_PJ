@@ -1,0 +1,20 @@
+{
+  "source_sha256": "ca31c2b1e6b590f6b472debd93728abe3339b7d824a4dcae5c45d11ced0bcff6",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v03/v03/floating-process.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v03/v03/floating-process.svg",
+      "sha256": "b37686be33dc9fedf938b5c3b31c8ff46839aac7a62ff6d7c9933d2417f9f663",
+      "bytes": 9105
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v03/v03/floating-process.png",
+      "sha256": "78a0016b29da463dca3db9064851331c939dd657cec45b488ae2cc293ec75586",
+      "bytes": 69119
+    }
+  ]
+}

@@ -1,0 +1,183 @@
+{
+  "source": "benchmark/v03/v02/decision-retry.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "yes",
+        "yes"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "no-edge",
+        "no-edge"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-node",
+      "cells": [
+        "retry",
+        "d"
+      ],
+      "message": "Rendered path intersects foreign node rectangle/border; nonrectangular silhouettes need visual review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "retry",
+        "d"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "retry",
+        "d"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "retry",
+        "retry"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "ad",
+        "retry"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "yes",
+        "no-edge"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "no-edge",
+        "retry"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "post_routing": {
+    "crossings": 0,
+    "crossing_pairs": [],
+    "edge_node_collisions": 1,
+    "label_collisions": 1,
+    "total_edge_length_css_px": 1249.8200000000002,
+    "main_flow_bends": 4,
+    "backward_ordinary_edges": 0,
+    "edge_metrics": [
+      {
+        "id": "ad",
+        "bends": 2,
+        "length_css_px": 165.7,
+        "start": {
+          "x": 277.5,
+          "y": 59.5
+        },
+        "end": {
+          "x": 361.2,
+          "y": 141.5
+        }
+      },
+      {
+        "id": "yes",
+        "bends": 2,
+        "length_css_px": 165.71000000000004,
+        "start": {
+          "x": 744.5,
+          "y": 141.5
+        },
+        "end": {
+          "x": 828.21,
+          "y": 59.5
+        }
+      },
+      {
+        "id": "no-edge",
+        "bends": 2,
+        "length_css_px": 184.71000000000004,
+        "start": {
+          "x": 744.5,
+          "y": 141.5
+        },
+        "end": {
+          "x": 828.21,
+          "y": 242.5
+        }
+      },
+      {
+        "id": "retry",
+        "bends": 2,
+        "length_css_px": 733.7,
+        "start": {
+          "x": 843.5,
+          "y": 242.5
+        },
+        "end": {
+          "x": 292.8,
+          "y": 59.5
+        }
+      }
+    ],
+    "score": 0,
+    "score_scope": "Rendered rectangle/path screening only; not a quality certificate. Sampled curves and jumps approximate; visual review required."
+  },
+  "metrics": {
+    "nodes": 4,
+    "text_runs": 8,
+    "edges": 4,
+    "sampled_edges": 0,
+    "bends": 8,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      1143.5,
+      284.5
+    ],
+    "width_css_px": 1126,
+    "height_css_px": 267,
+    "exported_width_css_px": 1178,
+    "aspect_ratio": 4.217228464419476,
+    "min_font_css_px": 28,
+    "projected_min_font_pt": 10.7803162974747,
+    "estimated_whitespace_fraction": 0.4616063255921403
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

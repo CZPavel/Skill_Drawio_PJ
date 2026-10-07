@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Skill_Drawio_PJ">
+  <diagram id="diagram" name="Diagram">
+    <mxGraphModel grid="1" gridSize="4" page="1" pageScale="1" pageWidth="1100" pageHeight="760" background="#FFFFFF" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="e0" edge="1" parent="1" source="s-routing-junction" target="n0" value="Data" style="endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=28;labelBackgroundColor=#FFFFFF;entryPerimeter=1;edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;noEdgeStyle=1;targetPortConstraint=west;" pjRole="data" pjType="ordinary" pjLogicalSource="s">
+          <mxGeometry relative="1" x="0.0" y="18" as="geometry">
+            <Array as="points">
+              <mxPoint x="344.0" y="70.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="s-routing-junction" target="n1" value="Data" style="endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=28;labelBackgroundColor=#FFFFFF;entryPerimeter=1;edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;noEdgeStyle=1;targetPortConstraint=west;" pjRole="data" pjType="ordinary" pjLogicalSource="s">
+          <mxGeometry x="0.6984126984126984" y="18" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="344.0" y="246.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="s-routing-junction" target="n2" value="Data" style="endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=28;labelBackgroundColor=#FFFFFF;entryPerimeter=1;edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;noEdgeStyle=1;targetPortConstraint=west;" pjRole="data" pjType="ordinary" pjLogicalSource="s">
+          <mxGeometry x="0.8224299065420562" y="18" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="344.0" y="422.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="s-routing-junction" target="n3" value="Data" style="endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=28;labelBackgroundColor=#FFFFFF;entryPerimeter=1;edgeStyle=none;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;noEdgeStyle=1;targetPortConstraint=west;" pjRole="data" pjType="ordinary" pjLogicalSource="s">
+          <mxGeometry x="0.8741721854304636" y="18" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="344.0" y="598.0" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="s" value="&lt;div style=&quot;font-size:34px;font-weight:bold;line-height:1.2&quot;&gt;IPC&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=34;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="28" y="28" width="300" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="n0" value="&lt;div style=&quot;font-size:34px;font-weight:bold;line-height:1.2&quot;&gt;Systém 1&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=34;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="420" y="28" width="300" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" value="&lt;div style=&quot;font-size:34px;font-weight:bold;line-height:1.2&quot;&gt;Systém 2&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=34;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="420" y="204" width="300" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" value="&lt;div style=&quot;font-size:34px;font-weight:bold;line-height:1.2&quot;&gt;Systém 3&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=34;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="420" y="380" width="300" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="n3" value="&lt;div style=&quot;font-size:34px;font-weight:bold;line-height:1.2&quot;&gt;Systém 4&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=34;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="420" y="556" width="300" height="84" as="geometry" />
+        </mxCell>
+        <mxCell id="s-routing-junction" parent="1" vertex="1" value="" pjSyntheticRoutingHelper="1" style="shape=waypoint;size=4;fillColor=none;strokeColor=none;">
+          <mxGeometry x="342.0" y="68.0" width="4" height="4" as="geometry" />
+        </mxCell>
+        <mxCell id="s-routing-junction-trunk" parent="1" edge="1" source="s" target="s-routing-junction" pjSyntheticRoutingHelper="1" style="endArrow=none;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=28;labelBackgroundColor=#FFFFFF;edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;sourcePortConstraint=east;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

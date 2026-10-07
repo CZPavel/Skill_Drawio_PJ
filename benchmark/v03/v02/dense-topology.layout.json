@@ -1,0 +1,99 @@
+{
+  "selected": "LR-gap147-width0",
+  "candidates": [
+    {
+      "name": "LR-gap147-width1",
+      "score": -164.931,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 240,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 5.102936407088201,
+        "crossings": 8,
+        "bends": 3.0,
+        "edge_length": 3.174,
+        "aspect": 3.1405340650840428,
+        "whitespace": 2.513841998649561,
+        "label_collisions": 0
+      },
+      "crossings": 1,
+      "node_overlaps": 0,
+      "edge_node_collisions": 3,
+      "bends": 6,
+      "projected_min_font_pt": 8.575,
+      "aspect_ratio": 2.712,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 58.987170830519915,
+      "projection_constraint": "width",
+      "width_px": 1481,
+      "height_px": 546,
+      "whitespace_fraction": 0.838,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    {
+      "name": "LR-gap147-width0",
+      "score": -159.162,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 240,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 8,
+        "bends": 3.0,
+        "edge_length": 3.054,
+        "aspect": 2.568891516356675,
+        "whitespace": 2.5388109241250802,
+        "label_collisions": 0
+      },
+      "crossings": 1,
+      "node_overlaps": 0,
+      "edge_node_collisions": 3,
+      "bends": 6,
+      "projected_min_font_pt": 9.613,
+      "aspect_ratio": 2.419,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 66.13171839515519,
+      "projection_constraint": "width",
+      "width_px": 1321,
+      "height_px": 546,
+      "whitespace_fraction": 0.846,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    {
+      "name": "LR-gap147-width2",
+      "score": -175.577,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 240,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 15.135556867091804,
+        "crossings": 8,
+        "bends": 3.0,
+        "edge_length": 3.294,
+        "aspect": 3.6534754491955033,
+        "whitespace": 2.493742089720152,
+        "label_collisions": 0
+      },
+      "crossings": 1,
+      "node_overlaps": 0,
+      "edge_node_collisions": 3,
+      "bends": 6,
+      "projected_min_font_pt": 7.739,
+      "aspect_ratio": 3.005,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 53.23583180987203,
+      "projection_constraint": "width",
+      "width_px": 1641,
+      "height_px": 546,
+      "whitespace_fraction": 0.831,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    }
+  ],
+  "review_flags": [
+    "native-routing-review"
+  ],
+  "routing": "native orthogonal; score uses estimated paths, not final renderer geometry"
+}

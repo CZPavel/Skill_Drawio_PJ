@@ -1,0 +1,182 @@
+{
+  "source": "benchmark/v03/v03/dense-topology.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "trig",
+        "trig"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "result",
+        "service"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "result",
+        "diag"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "service",
+        "diag"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "post_routing": {
+    "crossings": 1,
+    "crossing_pairs": [
+      [
+        "result",
+        "service"
+      ]
+    ],
+    "edge_node_collisions": 0,
+    "label_collisions": 0,
+    "total_edge_length_css_px": 3014.92,
+    "main_flow_bends": 0,
+    "backward_ordinary_edges": 0,
+    "edge_metrics": [
+      {
+        "id": "trig",
+        "bends": 0,
+        "length_css_px": 131.7,
+        "start": {
+          "x": 127.5,
+          "y": 248.5
+        },
+        "end": {
+          "x": 127.5,
+          "y": 116.8
+        }
+      },
+      {
+        "id": "result",
+        "bends": 1,
+        "length_css_px": 797.71,
+        "start": {
+          "x": 861.5,
+          "y": 101.5
+        },
+        "end": {
+          "x": 252.79,
+          "y": 290.5
+        }
+      },
+      {
+        "id": "service",
+        "bends": 1,
+        "length_css_px": 661.7,
+        "start": {
+          "x": 237.5,
+          "y": 521.5
+        },
+        "end": {
+          "x": 494.5,
+          "y": 116.8
+        }
+      },
+      {
+        "id": "diag",
+        "bends": 1,
+        "length_css_px": 1028.7,
+        "start": {
+          "x": 237.5,
+          "y": 521.5
+        },
+        "end": {
+          "x": 861.5,
+          "y": 116.8
+        }
+      },
+      {
+        "id": "cs",
+        "bends": 0,
+        "length_css_px": 131.7,
+        "start": {
+          "x": 237.5,
+          "y": 59.5
+        },
+        "end": {
+          "x": 369.2,
+          "y": 59.5
+        }
+      },
+      {
+        "id": "sp",
+        "bends": 0,
+        "length_css_px": 131.71000000000004,
+        "start": {
+          "x": 604.5,
+          "y": 59.5
+        },
+        "end": {
+          "x": 736.21,
+          "y": 59.5
+        }
+      },
+      {
+        "id": "pm",
+        "bends": 0,
+        "length_css_px": 131.70000000000005,
+        "start": {
+          "x": 971.5,
+          "y": 59.5
+        },
+        "end": {
+          "x": 1103.2,
+          "y": 59.5
+        }
+      }
+    ],
+    "score": 92,
+    "score_scope": "Rendered rectangle/path screening only; not a quality certificate. Sampled curves and jumps approximate; visual review required."
+  },
+  "metrics": {
+    "nodes": 6,
+    "text_runs": 8,
+    "edges": 7,
+    "sampled_edges": 0,
+    "bends": 3,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      1338.5,
+      563.5
+    ],
+    "width_css_px": 1321,
+    "height_css_px": 546,
+    "exported_width_css_px": 1373,
+    "aspect_ratio": 2.4194139194139193,
+    "min_font_css_px": 28,
+    "projected_min_font_pt": 9.249244427112307,
+    "estimated_whitespace_fraction": 0.8462703080416933
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "source_sha256": "62c824dbd3b5a1bf77f04ffac13349097f87765e24841d15f03ad59175ea5671",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v03/v02/fanout-four.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v03/v02/fanout-four.svg",
+      "sha256": "b6f78453f8699617db050521d24212811f4cffc2e3d7103b901f6b9e687cda6c",
+      "bytes": 18138
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v03/v02/fanout-four.png",
+      "sha256": "d7a27eabe46ef58e33525da326371e57e92abf5b3d2f43f03b01671bba09954c",
+      "bytes": 133202
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "source_sha256": "5886ec5a71e882364b6a1d26a8ed6d935cbe996468ff6d5ee68bf8df778cbed6",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v03/v03/fixed-interface.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v03/v03/fixed-interface.svg",
+      "sha256": "820c7fe8f6e8b886153f6363cae8da29d0148b80e45fbc08509acf52c931d7be",
+      "bytes": 7183
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v03/v03/fixed-interface.png",
+      "sha256": "48e6c93ca7f1e134059de7ab15afd31d9fef99ddddc5df54a313e3bd540452fd",
+      "bytes": 31791
+    }
+  ]
+}

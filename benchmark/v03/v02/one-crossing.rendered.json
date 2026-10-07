@@ -1,0 +1,90 @@
+{
+  "source": "benchmark/v03/v02/one-crossing.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "main",
+        "control"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "post_routing": {
+    "crossings": 1,
+    "crossing_pairs": [
+      [
+        "main",
+        "control"
+      ]
+    ],
+    "edge_node_collisions": 0,
+    "label_collisions": 0,
+    "total_edge_length_css_px": 715.4100000000001,
+    "main_flow_bends": 0,
+    "backward_ordinary_edges": 0,
+    "edge_metrics": [
+      {
+        "id": "main",
+        "bends": 0,
+        "length_css_px": 464.71000000000004,
+        "start": {
+          "x": 237.5,
+          "y": 209.5
+        },
+        "end": {
+          "x": 702.21,
+          "y": 209.5
+        }
+      },
+      {
+        "id": "control",
+        "bends": 0,
+        "length_css_px": 250.7,
+        "start": {
+          "x": 477.5,
+          "y": 101.5
+        },
+        "end": {
+          "x": 477.5,
+          "y": 352.2
+        }
+      }
+    ],
+    "score": 92,
+    "score_scope": "Rendered rectangle/path screening only; not a quality certificate. Sampled curves and jumps approximate; visual review required."
+  },
+  "metrics": {
+    "nodes": 4,
+    "text_runs": 4,
+    "edges": 2,
+    "sampled_edges": 0,
+    "bends": 0,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      937.5,
+      451.5
+    ],
+    "width_css_px": 920,
+    "height_css_px": 434,
+    "exported_width_css_px": 972,
+    "aspect_ratio": 2.119815668202765,
+    "min_font_css_px": 34,
+    "projected_min_font_pt": 15.864683581219015,
+    "estimated_whitespace_fraction": 0.814866760168303
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

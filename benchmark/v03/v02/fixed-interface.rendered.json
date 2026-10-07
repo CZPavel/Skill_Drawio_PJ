@@ -1,0 +1,63 @@
+{
+  "source": "benchmark/v03/v02/fixed-interface.svg",
+  "findings": [
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "post_routing": {
+    "crossings": 0,
+    "crossing_pairs": [],
+    "edge_node_collisions": 0,
+    "label_collisions": 0,
+    "total_edge_length_css_px": 121.69999999999999,
+    "main_flow_bends": 2,
+    "backward_ordinary_edges": 0,
+    "edge_metrics": [
+      {
+        "id": "port",
+        "bends": 2,
+        "length_css_px": 121.69999999999999,
+        "start": {
+          "x": 237.5,
+          "y": 65.5
+        },
+        "end": {
+          "x": 317.2,
+          "y": 107.5
+        }
+      }
+    ],
+    "score": 100,
+    "score_scope": "Rendered rectangle/path screening only; not a quality certificate. Sampled curves and jumps approximate; visual review required."
+  },
+  "metrics": {
+    "nodes": 2,
+    "text_runs": 3,
+    "edges": 1,
+    "sampled_edges": 0,
+    "bends": 2,
+    "bounds_css_px": [
+      17.5,
+      16.703125,
+      552.5,
+      128.5
+    ],
+    "width_css_px": 535,
+    "height_css_px": 111.796875,
+    "exported_width_css_px": 587,
+    "aspect_ratio": 4.785464709993012,
+    "min_font_css_px": 28,
+    "projected_min_font_pt": 21.634093012649398,
+    "estimated_whitespace_fraction": 0.38205685848076965
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

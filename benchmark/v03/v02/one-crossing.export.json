@@ -1,0 +1,20 @@
+{
+  "source_sha256": "eb9bc10046b30cd8ba74bb3f94d457198d7b25be3191ea205c940a53e3295c25",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v03/v02/one-crossing.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v03/v02/one-crossing.svg",
+      "sha256": "e4bd6af472febf19ef8b3121032bc0b1caa426f66b0b78ac9e99f29bd06a705f",
+      "bytes": 10730
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v03/v02/one-crossing.png",
+      "sha256": "121c18a1e18fdd7e2bf5026d59ee5ea72c699853aedea81c62d3354b68b9a1dd",
+      "bytes": 33814
+    }
+  ]
+}

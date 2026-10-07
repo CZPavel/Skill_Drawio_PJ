@@ -1,0 +1,92 @@
+{
+  "source": "benchmark/v03/v02/floating-process.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "ab"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "bc"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "post_routing": {
+    "crossings": 0,
+    "crossing_pairs": [],
+    "edge_node_collisions": 0,
+    "label_collisions": 0,
+    "total_edge_length_css_px": 89.41000000000003,
+    "main_flow_bends": 4,
+    "backward_ordinary_edges": 0,
+    "edge_metrics": [
+      {
+        "id": "ab",
+        "bends": 2,
+        "length_css_px": 44.69999999999999,
+        "start": {
+          "x": 277.5,
+          "y": 59.5
+        },
+        "end": {
+          "x": 302.2,
+          "y": 79.5
+        }
+      },
+      {
+        "id": "bc",
+        "bends": 2,
+        "length_css_px": 44.710000000000036,
+        "start": {
+          "x": 537.5,
+          "y": 79.5
+        },
+        "end": {
+          "x": 562.21,
+          "y": 59.5
+        }
+      }
+    ],
+    "score": 100,
+    "score_scope": "Rendered rectangle/path screening only; not a quality certificate. Sampled curves and jumps approximate; visual review required."
+  },
+  "metrics": {
+    "nodes": 3,
+    "text_runs": 4,
+    "edges": 2,
+    "sampled_edges": 0,
+    "bends": 4,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      877.5,
+      141.5
+    ],
+    "width_css_px": 860,
+    "height_css_px": 124,
+    "exported_width_css_px": 912,
+    "aspect_ratio": 6.935483870967742,
+    "min_font_css_px": 34,
+    "projected_min_font_pt": 16.90841276419395,
+    "estimated_whitespace_fraction": 0.30307576894223553
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

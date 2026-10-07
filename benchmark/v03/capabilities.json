@@ -1,0 +1,40 @@
+{
+  "desktop_version": "31.7.0",
+  "desktop_layout_help": "--layout <name|json>                            run a layout on the diagram after opening it (applies on open and before export). Either a preset name (verticalFlow, horizontalFlow, verticalTree, horizontalTree, radialTree, organic) or a custom-layout JSON array as used by the Layout dialog, e.g. [{\"layout\":\"elkLayered\",\"config\":{\"elk.direction\":\"RIGHT\"}}], for layout sequences and per-layout options",
+  "desktop_libavoid": {
+    "status": "unsupported",
+    "supports_side_constraints": false
+  },
+  "desktop_elk": {
+    "status": "verified",
+    "nodes_changed": true,
+    "edge_geometry_changed": true,
+    "supports_side_constraints": false
+  },
+  "mcp_libavoid": {
+    "status": "verified",
+    "obstacle_detour": true,
+    "result": {
+      "changed": true,
+      "status": "routed-review-required",
+      "engine": "external @drawio/mcp libavoid routeXml",
+      "visual_review_required": true
+    },
+    "supports_side_constraints": false
+  },
+  "elk": {
+    "status": "verified",
+    "nodes_changed": true,
+    "result": {
+      "status": "laid-out-review-required",
+      "changed": true,
+      "engine": "external @drawio/mcp ELK layoutXml",
+      "preset": "elk-flow-clean",
+      "preset_scope": "Official layered flow",
+      "direction": "horizontal",
+      "positions_may_change": true,
+      "visual_review_required": true
+    },
+    "supports_side_constraints": false
+  }
+}

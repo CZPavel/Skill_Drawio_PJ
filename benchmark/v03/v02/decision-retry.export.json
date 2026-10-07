@@ -1,0 +1,20 @@
+{
+  "source_sha256": "4ddbd2d4c9e667c7a5c15b5f15975fdbf98dcb66bed163ec521353b8cf1364df",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v03/v02/decision-retry.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v03/v02/decision-retry.svg",
+      "sha256": "520d8b7dab5df4c2bad65ed8e2b67fb2598c5ee1cae03d2f6ecd227d1c85bdf5",
+      "bytes": 15700
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v03/v02/decision-retry.png",
+      "sha256": "fd97f9799cb3c8caa00e11a99e09818a0d70873d227076f984247febb0ba2728",
+      "bytes": 173115
+    }
+  ]
+}
