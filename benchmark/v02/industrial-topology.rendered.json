@@ -1,0 +1,143 @@
+{
+  "source": "benchmark/v02/industrial-topology.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "e0",
+        "e0"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "e2",
+        "e1"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "path-sampled",
+      "cells": [
+        "e3"
+      ],
+      "message": "Curve/nonlinear path collisions sampled at about 3 SVG units (capped 2000); approximation"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "e3",
+        "e0"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "path-sampled",
+      "cells": [
+        "e4"
+      ],
+      "message": "Curve/nonlinear path collisions sampled at about 3 SVG units (capped 2000); approximation"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "e4",
+        "e1"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "e0",
+        "e2"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "e0",
+        "e3"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "e1",
+        "e2"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "e1",
+        "e4"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "e2",
+        "e3"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "e2",
+        "e4"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 5,
+    "text_runs": 11,
+    "edges": 5,
+    "sampled_edges": 2,
+    "bends": 4,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      993.5,
+      463.5
+    ],
+    "width_css_px": 976,
+    "height_css_px": 446,
+    "exported_width_css_px": 1028,
+    "aspect_ratio": 2.188340807174888,
+    "min_font_css_px": 28,
+    "projected_min_font_pt": 12.353319648273537,
+    "estimated_whitespace_fraction": 0.7270822612658973
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

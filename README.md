@@ -1,4 +1,4 @@
-# Skill_Drawio_PJ
+# Skill_Drawio_PJ V0.2
 
 Profesionální editovatelné diagramy v draw.io: **content-driven sizing + target-aware layout + rendered visual QA**.
 
@@ -23,7 +23,7 @@ uvádí také uživatelské `~/.agents/skills`; pro tento discovery root použij
 `.\install.ps1 -SkillsRoot "$env:USERPROFILE\.agents\skills"`. Nevytvářejte dvě
 kopie stejného skillu v současně skenovaných kořenech. Aktualizace spravované
 instalace: `git pull --ff-only`, poté `.\install.ps1 -Update` se stejným kořenem.
-Původní oficiální skill se nemaže. V novém chatu vyvolejte **`$skill-drawio-pj`**.
+Instalátor jiné skilly automaticky nemaže; nahrazení starších instrukcí je samostatný explicitní krok. V novém chatu vyvolejte **`$skill-drawio-pj`**.
 Instalace souborů není důkazem automatického výběru skillu v již otevřeném chatu.
 `npx skills` není pro tuto instalaci nutný; nepředpokládáme jeho podporu konkrétním hostem.
 
@@ -66,8 +66,8 @@ Instaluje Node závislosti do kořene instalovaného skillu a Chromium do cache.
 Samotné `npm ci` v klonu neinstaluje závislosti do kopie skillu. Python/Pillow
 musí být dostupné v interpreteru, kterým se pomocné skripty spouštějí.
 
-QA loop: **source lint → export SVG/PNG → rendered audit → prohlédnout PNG → lokální
-oprava → nový export**. Při vložení do Word/PPT je nutné vyrenderovat výsledný
+FAST QA: source lint → SVG/PNG → vizuální kontrola. FULL přidává browser audit.
+Při nalezené vadě následuje cílená oprava a nový export. Při vložení do Word/PPT je nutné vyrenderovat výsledný
 dokument/snímek; samostatný preview tuto kontrolu neprokazuje. Přesné automatické
 pokrytí a limity: [native QA](references/qa-coverage.md), [rendered QA](references/rendered-qa.md).
 
@@ -100,3 +100,19 @@ Nepodporované tvary, průhlednosti, math text, vendor assets nebo nestandardní
 metadata vyžadují cílenou kontrolu. Benchmark není obecná garance kvality.
 
 MIT pro vlastní obsah; externí závislosti viz [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md).
+
+## Nové ve V0.2
+
+Model zadává významový JSON bez souřadnic; nástroje změří text, porovnají několik
+rozložení a vyberou porty. Původní JSON s x/y zůstává podporovaný.
+
+```powershell
+python scripts/build_diagram.py examples/ir/process-lr.json process.drawio --report layout.json
+python scripts/layout_diagram.py --help
+python scripts/extract_style.py --help
+python scripts/qa_office.py --help
+```
+
+IR: [model/API](references/model-api.md). Úspornost: [EFFICIENCY](docs/EFFICIENCY.md).
+Změny: [CHANGELOG](CHANGELOG.md). Agents365 inspirovalo oddělení významu/geometrie,
+orientační kandidáty, skóre a omezený repair loop; jeho kód nebyl převzat.

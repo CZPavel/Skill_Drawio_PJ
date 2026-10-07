@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Skill_Drawio_PJ">
+  <diagram id="diagram" name="Diagram">
+    <mxGraphModel grid="1" gridSize="4" page="1" pageScale="1" pageWidth="1100" pageHeight="760" background="#FFFFFF" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="prepare" value="&lt;div style=&quot;font-size:34px;font-weight:bold;line-height:1.2&quot;&gt;Příprava kontrolního&lt;br&gt;stanoviště&lt;/div&gt;&lt;div style=&quot;margin-top:10px;font-size:30px;line-height:1.25&quot;&gt;Zkontrolujte osvětlení,&lt;br&gt;pracovní vzdálenost a&lt;br&gt;čistotu ochranného skla.&lt;br&gt;Nastavení musí&lt;br&gt;odpovídat schválenému&lt;br&gt;výrobnímu postupu.&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=34;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="28" y="28" width="380" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="check" value="&lt;div style=&quot;font-size:34px;font-weight:bold;line-height:1.2&quot;&gt;Ověření&lt;br&gt;opakovatelnosti&lt;br&gt;výsledku&lt;/div&gt;&lt;div style=&quot;margin-top:10px;font-size:30px;line-height:1.25&quot;&gt;Proveďte kontrolu&lt;br&gt;referenčního dílu a&lt;br&gt;zaznamenejte výsledek&lt;br&gt;měření. Při odchylce&lt;br&gt;přerušte vyhodnocování&lt;br&gt;a informujte odpovědnou&lt;br&gt;osobu.&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=34;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="28" y="454" width="380" height="436" as="geometry" />
+        </mxCell>
+        <mxCell id="e0" edge="1" parent="1" source="prepare" target="check" value="příprava dokončena" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=28;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" x="0.0" y="-18" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

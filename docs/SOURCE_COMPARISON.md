@@ -219,3 +219,27 @@ Remaining: upstream runtime tests, local JGraph/CLI version compatibility, actua
 - [src/drawio_mcp/layout.py](https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/layout.py)
 - [src/drawio_mcp/layout_engine.py](https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/layout_engine.py)
 - [src/drawio_mcp/validation.py](https://github.com/yohasacura/drawio-mcp/blob/036573d746e1720e121701dfe0b3b570c4895e2a/src/drawio_mcp/validation.py)
+
+## V0.2 additional source: Agents365-ai
+
+Inspected 2026-10-07 at commit
+[`88fd9236bc532aac4c25cb008a8bd59bc650b904`](https://github.com/Agents365-ai/drawio-skill/tree/88fd9236bc532aac4c25cb008a8bd59bc650b904).
+Root LICENSE: MIT, copyright 2026 Agents365-ai. No upstream source/prose/assets
+were copied. Static inspection only; upstream tests were not executed. JGraph
+remains the technical baseline; Agents365 provides composition inspiration.
+
+| Mechanism | Agents365 inspected source | PJ V0.2 |
+|---|---|---|
+| Semantic IR | diagram_ir.py stable IDs/metadata | Small creation IR without required coordinates |
+| Orientation | autolayout.py --tune TB/LR route penalties | Bounded deterministic candidates |
+| Readability | validate.py overlap/through-node/cross weights | Original estimated score + existing rendered QA |
+| Self-check | Static then PNG, maximum two vision rounds | FAST/FULL, one/two targeted repairs |
+| Styles | Named presets/extraction | Three presets and optional dominant-token extraction |
+| Incremental sync | reconcile retains manual geometry/style, flags conflicts | Not implemented; targeted native editing |
+| Views | project_views audience/concern filtering, metadata fallbacks | Content-preserving document/slide variants only |
+
+Pinned [IR/reconcile](https://github.com/Agents365-ai/drawio-skill/blob/88fd9236bc532aac4c25cb008a8bd59bc650b904/skills/drawio-skill/scripts/diagram_ir.py),
+[layout](https://github.com/Agents365-ai/drawio-skill/blob/88fd9236bc532aac4c25cb008a8bd59bc650b904/skills/drawio-skill/scripts/autolayout.py),
+[validator](https://github.com/Agents365-ai/drawio-skill/blob/88fd9236bc532aac4c25cb008a8bd59bc650b904/skills/drawio-skill/scripts/validate.py),
+[license](https://github.com/Agents365-ai/drawio-skill/blob/88fd9236bc532aac4c25cb008a8bd59bc650b904/LICENSE).
+Earlier matrix remains the V0.1 research snapshot, not updated runtime proof.

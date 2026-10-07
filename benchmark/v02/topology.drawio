@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Skill_Drawio_PJ">
+  <diagram id="topology" name="Koncepční topologie strojového vidění">
+    <mxGraphModel grid="1" gridSize="4" page="1" pageScale="1" pageWidth="1700" pageHeight="800" background="#FFFFFF" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cell" value="Výrobní pracoviště" vertex="1" parent="1" style="swimlane;startSize=60;horizontal=1;container=1;collapsible=0;html=1;whiteSpace=wrap;fontFamily=Arial;fontSize=40;fontStyle=1;fontColor=#182B3B;fillColor=#F2F5F7;swimlaneFillColor=#FFFFFF;strokeColor=#596B7A;strokeWidth=2.5;align=left;spacingLeft=20;">
+          <mxGeometry x="28" y="28" width="1184" height="968" as="geometry" />
+        </mxCell>
+        <mxCell id="camera" value="&lt;div style=&quot;font-size:40px;font-weight:bold;line-height:1.2&quot;&gt;Kamera&lt;/div&gt;&lt;div style=&quot;margin-top:10px;font-size:34px;line-height:1.25&quot;&gt;GigE snímky&lt;/div&gt;" vertex="1" parent="cell" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=40;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="28" y="88" width="260" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="switch" value="&lt;div style=&quot;font-size:40px;font-weight:bold;line-height:1.2&quot;&gt;Switch&lt;/div&gt;&lt;div style=&quot;margin-top:10px;font-size:34px;line-height:1.25&quot;&gt;Ethernet&lt;/div&gt;" vertex="1" parent="cell" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=40;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="482" y="88" width="220" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="ipc" value="&lt;div style=&quot;font-size:40px;font-weight:bold;line-height:1.2&quot;&gt;IPC&lt;/div&gt;&lt;div style=&quot;margin-top:10px;font-size:34px;line-height:1.25&quot;&gt;PEKAT Vision&lt;/div&gt;" vertex="1" parent="cell" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=40;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="896" y="88" width="260" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="plc" value="&lt;div style=&quot;font-size:40px;font-weight:bold;line-height:1.2&quot;&gt;PLC&lt;/div&gt;&lt;div style=&quot;margin-top:10px;font-size:34px;line-height:1.25&quot;&gt;Trigger a&lt;br&gt;výsledek&lt;/div&gt;" vertex="1" parent="cell" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=40;fontColor=#182B3B;fillColor=#FFF3E6;strokeColor=#9C4E15;strokeWidth=2.5;">
+          <mxGeometry x="28" y="426" width="220" height="184" as="geometry" />
+        </mxCell>
+        <mxCell id="service" value="&lt;div style=&quot;font-size:40px;font-weight:bold;line-height:1.2&quot;&gt;Servisní&lt;br&gt;notebook&lt;/div&gt;" vertex="1" parent="cell" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=40;fontColor=#182B3B;fillColor=#F2F5F7;strokeColor=#596B7A;strokeWidth=2.5;">
+          <mxGeometry x="28" y="804" width="220" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mes" value="&lt;div style=&quot;font-size:40px;font-weight:bold;line-height:1.2&quot;&gt;MES&lt;/div&gt;&lt;div style=&quot;margin-top:10px;font-size:34px;line-height:1.25&quot;&gt;Vyšší systém&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=40;fontColor=#182B3B;fillColor=#EEF6F0;strokeColor=#286547;strokeWidth=2.5;">
+          <mxGeometry x="1406" y="28" width="260" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="t1" edge="1" parent="cell" source="camera" target="switch" value="" style="endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" x="0" y="-18" as="geometry" />
+        </mxCell>
+        <mxCell id="t2" edge="1" parent="cell" source="switch" target="ipc" value="" style="endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry relative="1" x="0" y="-18" as="geometry" />
+        </mxCell>
+        <mxCell id="t3" edge="1" parent="1" source="ipc" target="mes" value="Data" style="endArrow=block;endSize=10;strokeColor=#286547;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry x="0.0" y="-18" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1295" y="188" />
+              <mxPoint x="1295" y="100" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t4" edge="1" parent="cell" source="service" target="switch" value="" style="endArrow=block;endSize=10;strokeColor=#596B7A;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry x="0" y="-18" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="138" y="707" />
+              <mxPoint x="592" y="707" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t5" edge="1" parent="cell" source="plc" target="camera" value="HW trigger" style="endArrow=block;endSize=10;strokeColor=#9C4E15;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=0;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry x="-0.4" y="-18" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="138" y="329" />
+              <mxPoint x="158" y="329" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="t6" edge="1" parent="cell" source="ipc" target="plc" value="Výsledek" style="endArrow=block;endSize=10;strokeColor=#9C4E15;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=1;entryY=0.5;exitPerimeter=1;entryPerimeter=1;jumpStyle=arc;jumpSize=10;edgeStyle=orthogonalEdgeStyle;rounded=0;libavoidRouting=1;orthogonalLoop=1;jettySize=auto;html=1;">
+          <mxGeometry x="-0.4" y="-18" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="799" y="160" />
+              <mxPoint x="799" y="518" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

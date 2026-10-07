@@ -1,0 +1,824 @@
+[
+  {
+    "case": "process",
+    "matched": true,
+    "candidates": 3,
+    "selected": "LR-gap93-width0",
+    "estimated": {
+      "name": "LR-gap93-width0",
+      "score": 1.332,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 80,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 7.445363786801458,
+        "crossings": 0,
+        "bends": 4.0,
+        "edge_length": 1.573,
+        "aspect": 3.8285607135966733,
+        "whitespace": 1.8215753356670659,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 1,
+      "bends": 8,
+      "projected_min_font_pt": 8.38,
+      "aspect_ratio": 4.963,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 32.24018475750577,
+      "projection_constraint": "width",
+      "width_px": 1732,
+      "height_px": 349,
+      "whitespace_fraction": 0.607,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [
+      "native-routing-review",
+      "target-font-review:split-or-recompose"
+    ],
+    "layout_seconds": 0.0071,
+    "render_passes": 1,
+    "routing": {
+      "changed": true,
+      "status": "routed-review-required",
+      "engine": "external @drawio/mcp libavoid routeXml",
+      "visual_review_required": true
+    },
+    "label_repair": {
+      "label_repair_flags": [],
+      "coverage": "Router waypoints are estimates of final rendered paths; visual review required"
+    },
+    "rendered": {
+      "nodes": 6,
+      "text_runs": 14,
+      "edges": 6,
+      "sampled_edges": 0,
+      "bends": 8,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        1749.5,
+        366.5
+      ],
+      "width_css_px": 1732,
+      "height_css_px": 349,
+      "exported_width_css_px": 1784,
+      "aspect_ratio": 4.962750716332378,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 8.64376257900498,
+      "estimated_whitespace_fraction": 0.6096719500676032
+    },
+    "findings": {
+      "edge-label": 2,
+      "edge-edge": 3,
+      "target-font-small": 1,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 35.96412556053812
+  },
+  {
+    "case": "topology",
+    "matched": true,
+    "candidates": 3,
+    "selected": "LR-gap194-width0",
+    "estimated": {
+      "name": "LR-gap194-width0",
+      "score": -78.677,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 160,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 8,
+        "bends": 4.0,
+        "edge_length": 2.944,
+        "aspect": 1.1388631261997122,
+        "whitespace": 2.5943450488905033,
+        "label_collisions": 0
+      },
+      "crossings": 1,
+      "node_overlaps": 0,
+      "edge_node_collisions": 2,
+      "bends": 8,
+      "projected_min_font_pt": 9.414,
+      "aspect_ratio": 1.692,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 94.55433455433456,
+      "projection_constraint": "width",
+      "width_px": 1638,
+      "height_px": 968,
+      "whitespace_fraction": 0.865,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [
+      "native-routing-review"
+    ],
+    "layout_seconds": 0.0133,
+    "render_passes": 1,
+    "routing": {
+      "changed": true,
+      "status": "routed-review-required",
+      "engine": "external @drawio/mcp libavoid routeXml",
+      "visual_review_required": true
+    },
+    "label_repair": {
+      "label_repair_flags": [],
+      "coverage": "Router waypoints are estimates of final rendered paths; visual review required"
+    },
+    "rendered": {
+      "nodes": 6,
+      "text_runs": 17,
+      "edges": 7,
+      "sampled_edges": 1,
+      "bends": 6,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        1655.5,
+        957.5
+      ],
+      "width_css_px": 1638,
+      "height_css_px": 940,
+      "exported_width_css_px": 1690,
+      "aspect_ratio": 1.7425531914893617,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 9.124539905884546,
+      "estimated_whitespace_fraction": 0.8607539033070948
+    },
+    "findings": {
+      "edge-label": 3,
+      "path-sampled": 1,
+      "edge-edge": 2,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 96.5680473372781
+  },
+  {
+    "case": "dense-training",
+    "matched": true,
+    "candidates": 3,
+    "selected": "LR-gap40-width0",
+    "estimated": {
+      "name": "LR-gap40-width0",
+      "score": 95.349,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 0,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 2.0,
+        "edge_length": 0.146,
+        "aspect": 0.958375662767867,
+        "whitespace": 1.5461247976982557,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 0,
+      "bends": 4,
+      "projected_min_font_pt": 11.612,
+      "aspect_ratio": 1.652,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 96.86746987951807,
+      "projection_constraint": "width",
+      "width_px": 1328,
+      "height_px": 804,
+      "whitespace_fraction": 0.515,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [],
+    "layout_seconds": 0.0272,
+    "render_passes": 1,
+    "rendered": {
+      "nodes": 6,
+      "text_runs": 35,
+      "edges": 5,
+      "sampled_edges": 0,
+      "bends": 4,
+      "bounds_css_px": [
+        17.5,
+        25.5,
+        1345.5,
+        793.5
+      ],
+      "width_css_px": 1328,
+      "height_css_px": 768,
+      "exported_width_css_px": 1380,
+      "aspect_ratio": 1.7291666666666667,
+      "min_font_css_px": 36,
+      "projected_min_font_pt": 11.831564532694282,
+      "estimated_whitespace_fraction": 0.4926581325301205
+    },
+    "findings": {
+      "edge-terminal": 2,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 99.24637681159422
+  },
+  {
+    "case": "industrial-topology",
+    "matched": false,
+    "candidates": 3,
+    "selected": "LR-gap158-width0",
+    "estimated": {
+      "name": "LR-gap158-width0",
+      "score": -6.14,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 80,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 16,
+        "bends": 4.0,
+        "edge_length": 1.892,
+        "aspect": 2.066983044434717,
+        "whitespace": 2.181246783797692,
+        "label_collisions": 0
+      },
+      "crossings": 2,
+      "node_overlaps": 0,
+      "edge_node_collisions": 1,
+      "bends": 8,
+      "projected_min_font_pt": 13.011,
+      "aspect_ratio": 2.188,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 73.11475409836065,
+      "projection_constraint": "width",
+      "width_px": 976,
+      "height_px": 446,
+      "whitespace_fraction": 0.727,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [
+      "native-routing-review"
+    ],
+    "layout_seconds": 0.0081,
+    "render_passes": 1,
+    "routing": {
+      "changed": true,
+      "status": "routed-review-required",
+      "engine": "external @drawio/mcp libavoid routeXml",
+      "visual_review_required": true
+    },
+    "label_repair": {
+      "label_repair_flags": [],
+      "coverage": "Router waypoints are estimates of final rendered paths; visual review required"
+    },
+    "rendered": {
+      "nodes": 5,
+      "text_runs": 11,
+      "edges": 5,
+      "sampled_edges": 2,
+      "bends": 4,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        993.5,
+        463.5
+      ],
+      "width_css_px": 976,
+      "height_css_px": 446,
+      "exported_width_css_px": 1028,
+      "aspect_ratio": 2.188340807174888,
+      "min_font_css_px": 28,
+      "projected_min_font_pt": 12.353319648273537,
+      "estimated_whitespace_fraction": 0.7270822612658973
+    },
+    "findings": {
+      "edge-label": 4,
+      "path-sampled": 2,
+      "edge-edge": 6,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 77.50972762645914
+  },
+  {
+    "case": "long-czech",
+    "matched": false,
+    "candidates": 3,
+    "selected": "TB-gap66-width1",
+    "estimated": {
+      "name": "TB-gap66-width1",
+      "score": 77.465,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 0,
+        "containment": 0,
+        "document_height": 16.29473684210526,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 0.0,
+        "edge_length": 0.066,
+        "aspect": 5.944155217246734,
+        "whitespace": 0.22969837587006947,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 0,
+      "bends": 0,
+      "projected_min_font_pt": 33.419,
+      "aspect_ratio": 0.441,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 362.9473684210526,
+      "projection_constraint": "width",
+      "width_px": 380,
+      "height_px": 862,
+      "whitespace_fraction": 0.077,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [],
+    "layout_seconds": 0.0266,
+    "render_passes": 1,
+    "rendered": {
+      "nodes": 2,
+      "text_runs": 19,
+      "edges": 1,
+      "sampled_edges": 0,
+      "bends": 0,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        397.5,
+        879.5
+      ],
+      "width_css_px": 380,
+      "height_css_px": 862,
+      "exported_width_css_px": 432,
+      "aspect_ratio": 0.4408352668213457,
+      "min_font_css_px": 28,
+      "projected_min_font_pt": 29.396325459317584,
+      "estimated_whitespace_fraction": 0.07656612529002316
+    },
+    "findings": {
+      "edge-label": 1,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 338.51851851851853
+  },
+  {
+    "case": "nested-groups",
+    "matched": false,
+    "candidates": 3,
+    "selected": "TB-gap64-width1",
+    "estimated": {
+      "name": "TB-gap64-width1",
+      "score": 93.469,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 0,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 1.0,
+        "edge_length": 0.244,
+        "aspect": 2.940002957630516,
+        "whitespace": 2.3472022955523677,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 0,
+      "bends": 2,
+      "projected_min_font_pt": 25.811,
+      "aspect_ratio": 0.804,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 199.02439024390245,
+      "projection_constraint": "width",
+      "width_px": 492,
+      "height_px": 612,
+      "whitespace_fraction": 0.782,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [],
+    "layout_seconds": 0.0029,
+    "render_passes": 1,
+    "rendered": {
+      "nodes": 3,
+      "text_runs": 5,
+      "edges": 4,
+      "sampled_edges": 0,
+      "bends": 2,
+      "bounds_css_px": [
+        17.5,
+        28.109375,
+        509.5,
+        601.5
+      ],
+      "width_css_px": 492,
+      "height_css_px": 573.390625,
+      "exported_width_css_px": 544,
+      "aspect_ratio": 0.858053791863095,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 28.34645669291339,
+      "estimated_whitespace_fraction": 0.7677486762060034
+    },
+    "findings": {
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 195.29411764705884
+  },
+  {
+    "case": "presentation-layout",
+    "matched": false,
+    "candidates": 3,
+    "selected": "LR-gap64-width1",
+    "estimated": {
+      "name": "LR-gap64-width1",
+      "score": 97.841,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 0,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 1.0,
+        "edge_length": 0.086,
+        "aspect": 0.7266388803244606,
+        "whitespace": 0.3465802057672802,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 0,
+      "bends": 2,
+      "projected_min_font_pt": 28.558,
+      "aspect_ratio": 1.537,
+      "target_height_mm": 168.75,
+      "height_at_target_width_mm": 195.14563106796118,
+      "projection_constraint": "height",
+      "width_px": 824,
+      "height_px": 536,
+      "whitespace_fraction": 0.116,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [],
+    "layout_seconds": 0.033,
+    "render_passes": 1,
+    "rendered": {
+      "nodes": 2,
+      "text_runs": 21,
+      "edges": 1,
+      "sampled_edges": 0,
+      "bends": 2,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        841.5,
+        553.5
+      ],
+      "width_css_px": 824,
+      "height_css_px": 536,
+      "exported_width_css_px": 876,
+      "aspect_ratio": 1.537313432835821,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 33.00614820407723,
+      "estimated_whitespace_fraction": 0.11552673525576007
+    },
+    "findings": {
+      "edge-terminal": 1,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 201.36986301369865
+  },
+  {
+    "case": "process-lr",
+    "matched": false,
+    "candidates": 3,
+    "selected": "LR-gap40-width0",
+    "estimated": {
+      "name": "LR-gap40-width0",
+      "score": 88.456,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 0,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 0.0,
+        "edge_length": 0.12,
+        "aspect": 11.102600699698709,
+        "whitespace": 0.3214285714285713,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 0,
+      "bends": 0,
+      "projected_min_font_pt": 11.339,
+      "aspect_ratio": 13.333,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 12.0,
+      "projection_constraint": "width",
+      "width_px": 1120,
+      "height_px": 84,
+      "whitespace_fraction": 0.107,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [],
+    "layout_seconds": 0.0048,
+    "render_passes": 1,
+    "rendered": {
+      "nodes": 4,
+      "text_runs": 4,
+      "edges": 3,
+      "sampled_edges": 0,
+      "bends": 0,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        1137.5,
+        101.5
+      ],
+      "width_css_px": 1120,
+      "height_css_px": 84,
+      "exported_width_css_px": 1172,
+      "aspect_ratio": 13.333333333333334,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 13.157399693638979,
+      "estimated_whitespace_fraction": 0.1071428571428571
+    },
+    "findings": {
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 18.56655290102389
+  },
+  {
+    "case": "process-tb",
+    "matched": false,
+    "candidates": 3,
+    "selected": "TB-gap40-width0",
+    "estimated": {
+      "name": "TB-gap40-width0",
+      "score": 87.38,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 0,
+        "containment": 0,
+        "document_height": 4.3199999999999985,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 3.0,
+        "edge_length": 0.2,
+        "aspect": 3.9422868018213504,
+        "whitespace": 1.1578947368421053,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 0,
+      "bends": 6,
+      "projected_min_font_pt": 42.331,
+      "aspect_ratio": 0.658,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 243.2,
+      "projection_constraint": "width",
+      "width_px": 300,
+      "height_px": 456,
+      "whitespace_fraction": 0.386,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [],
+    "layout_seconds": 0.0038,
+    "render_passes": 1,
+    "rendered": {
+      "nodes": 4,
+      "text_runs": 4,
+      "edges": 3,
+      "sampled_edges": 0,
+      "bends": 6,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        317.5,
+        473.5
+      ],
+      "width_css_px": 300,
+      "height_css_px": 456,
+      "exported_width_css_px": 352,
+      "aspect_ratio": 0.6578947368421053,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 43.80816034359342,
+      "estimated_whitespace_fraction": 0.38596491228070173
+    },
+    "findings": {
+      "edge-terminal": 3,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 230.9090909090909
+  },
+  {
+    "case": "retry-loop",
+    "matched": false,
+    "candidates": 3,
+    "selected": "LR-gap88-width0",
+    "estimated": {
+      "name": "LR-gap88-width0",
+      "score": 88.277,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 0,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 4.0,
+        "edge_length": 1.382,
+        "aspect": 4.718202824028588,
+        "whitespace": 1.6227022058823528,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 0,
+      "bends": 8,
+      "projected_min_font_pt": 13.34,
+      "aspect_ratio": 3.719,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 43.02521008403362,
+      "projection_constraint": "width",
+      "width_px": 952,
+      "height_px": 256,
+      "whitespace_fraction": 0.541,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [],
+    "layout_seconds": 0.0044,
+    "render_passes": 1,
+    "rendered": {
+      "nodes": 4,
+      "text_runs": 7,
+      "edges": 4,
+      "sampled_edges": 0,
+      "bends": 8,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        969.5,
+        331.703125
+      ],
+      "width_css_px": 952,
+      "height_css_px": 314.203125,
+      "exported_width_css_px": 1004,
+      "aspect_ratio": 3.02988711522204,
+      "min_font_css_px": 28,
+      "projected_min_font_pt": 12.648618125921509,
+      "estimated_whitespace_fraction": 0.6299444411442656
+    },
+    "findings": {
+      "edge-label": 1,
+      "edge-edge": 1,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 58.48605577689243
+  },
+  {
+    "case": "swimlane",
+    "matched": false,
+    "candidates": 3,
+    "selected": "LR-gap40-width0",
+    "estimated": {
+      "name": "LR-gap40-width0",
+      "score": 12.971,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 80,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 1.0,
+        "edge_length": 0.616,
+        "aspect": 3.2148779564079732,
+        "whitespace": 2.1978076731439957,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 1,
+      "bends": 2,
+      "projected_min_font_pt": 14.237,
+      "aspect_ratio": 2.753,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 58.11659192825112,
+      "projection_constraint": "width",
+      "width_px": 892,
+      "height_px": 324,
+      "whitespace_fraction": 0.733,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [
+      "native-routing-review"
+    ],
+    "layout_seconds": 0.0031,
+    "render_passes": 1,
+    "routing": {
+      "changed": true,
+      "status": "routed-review-required",
+      "engine": "external @drawio/mcp libavoid routeXml",
+      "visual_review_required": true
+    },
+    "label_repair": {
+      "label_repair_flags": [],
+      "coverage": "Router waypoints are estimates of final rendered paths; visual review required"
+    },
+    "rendered": {
+      "nodes": 4,
+      "text_runs": 6,
+      "edges": 5,
+      "sampled_edges": 0,
+      "bends": 2,
+      "bounds_css_px": [
+        17.5,
+        28.109375,
+        909.5,
+        313.5
+      ],
+      "width_css_px": 892,
+      "height_css_px": 285.390625,
+      "exported_width_css_px": 944,
+      "aspect_ratio": 3.1255406515192994,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 16.335246229814494,
+      "estimated_whitespace_fraction": 0.6964274096233944
+    },
+    "findings": {
+      "edge-edge": 1,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 63.728813559322035
+  },
+  {
+    "case": "word-layout",
+    "matched": false,
+    "candidates": 3,
+    "selected": "LR-gap40-width0",
+    "estimated": {
+      "name": "LR-gap40-width0",
+      "score": 97.589,
+      "penalties": {
+        "node_overlaps": 0,
+        "edge_node_collisions": 0,
+        "containment": 0,
+        "document_height": 0,
+        "small_font": 0,
+        "crossings": 0,
+        "bends": 1.0,
+        "edge_length": 0.058,
+        "aspect": 1.0727706805019164,
+        "whitespace": 0.2798813868613138,
+        "label_collisions": 0
+      },
+      "crossings": 0,
+      "node_overlaps": 0,
+      "edge_node_collisions": 0,
+      "bends": 2,
+      "projected_min_font_pt": 19.843,
+      "aspect_ratio": 1.168,
+      "target_height_mm": null,
+      "height_at_target_width_mm": 137.0,
+      "projection_constraint": "width",
+      "width_px": 640,
+      "height_px": 548,
+      "whitespace_fraction": 0.093,
+      "coverage": "Estimated orthogonal paths and labels; rendered routing/font QA required"
+    },
+    "review_flags": [],
+    "layout_seconds": 0.0259,
+    "render_passes": 1,
+    "rendered": {
+      "nodes": 2,
+      "text_runs": 25,
+      "edges": 1,
+      "sampled_edges": 0,
+      "bends": 2,
+      "bounds_css_px": [
+        17.5,
+        17.5,
+        657.5,
+        565.5
+      ],
+      "width_css_px": 640,
+      "height_css_px": 548,
+      "exported_width_css_px": 692,
+      "aspect_ratio": 1.167883211678832,
+      "min_font_css_px": 30,
+      "projected_min_font_pt": 19.662282099130675,
+      "estimated_whitespace_fraction": 0.09329379562043794
+    },
+    "findings": {
+      "edge-terminal": 1,
+      "bounds-approximation": 1
+    },
+    "height_at_target_mm": 138.72832369942196
+  }
+]

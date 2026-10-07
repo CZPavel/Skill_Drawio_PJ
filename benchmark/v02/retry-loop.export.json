@@ -1,0 +1,20 @@
+{
+  "source_sha256": "b9efccc2fcbace24c807547938dceb95de320d8f68fb1eb890106c8aec76db56",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v02/retry-loop.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v02/retry-loop.svg",
+      "sha256": "c57b82a6d1da9e66ecd9604fd4e1291bd2ebbfa0fd4542a4bef163c718afbc1a",
+      "bytes": 15608
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v02/retry-loop.png",
+      "sha256": "546fb7966dc7c0e4980c30380c4f62d50aac7e57dee23b22f32693c729e25587",
+      "bytes": 111743
+    }
+  ]
+}

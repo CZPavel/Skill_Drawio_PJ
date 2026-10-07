@@ -1,0 +1,20 @@
+{
+  "source_sha256": "f1776bf817120bc7dd259275ff1d48879e875bb387e2cc94fba99479bb656839",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v02/topology.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v02/topology.svg",
+      "sha256": "a9ebc7450c6fb2353a131e63eaef4c6f23d4401cbcf94f85409322d765d85b14",
+      "bytes": 26565
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v02/topology.png",
+      "sha256": "140cc1769ac12ee8233694050eb20305cb8f3b66052f198c420ab2ca54f42ab0",
+      "bytes": 339787
+    }
+  ]
+}

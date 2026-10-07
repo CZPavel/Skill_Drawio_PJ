@@ -1,0 +1,37 @@
+{
+  "source": "benchmark/v02/nested-groups.svg",
+  "findings": [
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 3,
+    "text_runs": 5,
+    "edges": 4,
+    "sampled_edges": 0,
+    "bends": 2,
+    "bounds_css_px": [
+      17.5,
+      28.109375,
+      509.5,
+      601.5
+    ],
+    "width_css_px": 492,
+    "height_css_px": 573.390625,
+    "exported_width_css_px": 544,
+    "aspect_ratio": 0.858053791863095,
+    "min_font_css_px": 34,
+    "projected_min_font_pt": 28.34645669291339,
+    "estimated_whitespace_fraction": 0.7677486762060034
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

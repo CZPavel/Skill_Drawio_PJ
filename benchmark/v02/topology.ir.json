@@ -1,0 +1,99 @@
+{
+  "id": "topology",
+  "name": "Koncepční topologie strojového vidění",
+  "profile": "document",
+  "profile_overrides": {
+    "canvas_width": 1700,
+    "canvas_height": 800,
+    "title": 40,
+    "body": 34,
+    "edge": 34
+  },
+  "groups": [
+    {
+      "id": "cell",
+      "title": "Výrobní pracoviště"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "camera",
+      "title": "Kamera",
+      "body": "GigE snímky",
+      "parent": "cell"
+    },
+    {
+      "id": "switch",
+      "title": "Switch",
+      "body": "Ethernet",
+      "parent": "cell"
+    },
+    {
+      "id": "ipc",
+      "title": "IPC",
+      "body": "PEKAT Vision",
+      "parent": "cell"
+    },
+    {
+      "id": "plc",
+      "title": "PLC",
+      "body": "Trigger a výsledek",
+      "role": "control",
+      "parent": "cell"
+    },
+    {
+      "id": "service",
+      "title": "Servisní notebook",
+      "role": "note",
+      "parent": "cell"
+    },
+    {
+      "id": "mes",
+      "title": "MES",
+      "body": "Vyšší systém",
+      "role": "ok"
+    }
+  ],
+  "edges": [
+    {
+      "id": "t1",
+      "source": "camera",
+      "target": "switch"
+    },
+    {
+      "id": "t2",
+      "source": "switch",
+      "target": "ipc"
+    },
+    {
+      "id": "t3",
+      "source": "ipc",
+      "target": "mes",
+      "label": "Data",
+      "role": "ok"
+    },
+    {
+      "id": "t4",
+      "source": "service",
+      "target": "switch",
+      "role": "note"
+    },
+    {
+      "id": "t5",
+      "source": "plc",
+      "target": "camera",
+      "label": "HW trigger",
+      "role": "control"
+    },
+    {
+      "id": "t6",
+      "source": "ipc",
+      "target": "plc",
+      "label": "Výsledek",
+      "role": "control"
+    }
+  ],
+  "semantic": true,
+  "direction": "auto",
+  "archetype": "network-topology"
+}

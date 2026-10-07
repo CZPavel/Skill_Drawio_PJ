@@ -1,0 +1,20 @@
+{
+  "source_sha256": "704ce92f929aab96fc635c00b56935668e69d231d4eb44e898bf38010aa284b1",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v02/swimlane.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v02/swimlane.svg",
+      "sha256": "6888d4b93b94a6bae97eca3672356b1e5dc9f4ab57c2a784a994f5f4d2a8b1bb",
+      "bytes": 16441
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v02/swimlane.png",
+      "sha256": "9a37687a3be4ed4391a63bf981f72046961a2e6d85e52703172b3a3387b80ec9",
+      "bytes": 96708
+    }
+  ]
+}

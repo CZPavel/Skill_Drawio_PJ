@@ -1,0 +1,20 @@
+{
+  "source_sha256": "0c9e769c055f59fdc4c57cfa6dd6275edd592604be4449dfbe81d64ebb8a11bf",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v02/nested-groups.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v02/nested-groups.svg",
+      "sha256": "d0d6e1a181f404cd7deaf5df1931acfe981e82ddad87b4bcd32267d318cbcd4d",
+      "bytes": 13270
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v02/nested-groups.png",
+      "sha256": "df93691d9b2ae2a2ad97037241c1f98f1ab3806c45be9f6abf2b647ff516ce9c",
+      "bytes": 112879
+    }
+  ]
+}

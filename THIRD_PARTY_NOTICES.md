@@ -25,3 +25,8 @@ disable font embedding for publication where font redistribution rights are unkn
 
 Official baseline benchmark diagrams were independently authored for this project
 by following the official workflow; they are not upstream sample diagrams.
+
+V0.2 also researched Agents365-ai/drawio-skill at
+88fd9236bc532aac4c25cb008a8bd59bc650b904 (MIT, copyright 2026 Agents365-ai).
+General principles inspired original implementation; no source/assets redistributed.
+See docs/SOURCE_COMPARISON.md for pinned evidence.

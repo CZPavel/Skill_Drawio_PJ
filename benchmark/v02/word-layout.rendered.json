@@ -1,0 +1,45 @@
+{
+  "source": "benchmark/v02/word-layout.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "e0"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 2,
+    "text_runs": 25,
+    "edges": 1,
+    "sampled_edges": 0,
+    "bends": 2,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      657.5,
+      565.5
+    ],
+    "width_css_px": 640,
+    "height_css_px": 548,
+    "exported_width_css_px": 692,
+    "aspect_ratio": 1.167883211678832,
+    "min_font_css_px": 30,
+    "projected_min_font_pt": 19.662282099130675,
+    "estimated_whitespace_fraction": 0.09329379562043794
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

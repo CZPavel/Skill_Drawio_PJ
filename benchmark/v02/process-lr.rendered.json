@@ -1,0 +1,37 @@
+{
+  "source": "benchmark/v02/process-lr.svg",
+  "findings": [
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 4,
+    "text_runs": 4,
+    "edges": 3,
+    "sampled_edges": 0,
+    "bends": 0,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      1137.5,
+      101.5
+    ],
+    "width_css_px": 1120,
+    "height_css_px": 84,
+    "exported_width_css_px": 1172,
+    "aspect_ratio": 13.333333333333334,
+    "min_font_css_px": 34,
+    "projected_min_font_pt": 13.157399693638979,
+    "estimated_whitespace_fraction": 0.1071428571428571
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

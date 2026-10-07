@@ -1,0 +1,46 @@
+{
+  "source": "benchmark/v02/long-czech.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "e0",
+        "e0"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 2,
+    "text_runs": 19,
+    "edges": 1,
+    "sampled_edges": 0,
+    "bends": 0,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      397.5,
+      879.5
+    ],
+    "width_css_px": 380,
+    "height_css_px": 862,
+    "exported_width_css_px": 432,
+    "aspect_ratio": 0.4408352668213457,
+    "min_font_css_px": 28,
+    "projected_min_font_pt": 29.396325459317584,
+    "estimated_whitespace_fraction": 0.07656612529002316
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "target": "document",
+  "archetype": "swimlane",
+  "direction": "auto",
+  "nodes": [
+    {
+      "id": "order",
+      "title": "Zadání",
+      "group": "operator"
+    },
+    {
+      "id": "capture",
+      "title": "Snímek",
+      "group": "machine"
+    },
+    {
+      "id": "decision",
+      "title": "Rozhodnutí",
+      "group": "machine"
+    },
+    {
+      "id": "confirm",
+      "title": "Potvrzení",
+      "group": "operator"
+    }
+  ],
+  "groups": [
+    {
+      "id": "operator",
+      "title": "Obsluha"
+    },
+    {
+      "id": "machine",
+      "title": "Automat"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "order",
+      "target": "capture"
+    },
+    {
+      "id": "e1",
+      "source": "capture",
+      "target": "decision"
+    },
+    {
+      "id": "e2",
+      "source": "decision",
+      "target": "confirm"
+    }
+  ]
+}

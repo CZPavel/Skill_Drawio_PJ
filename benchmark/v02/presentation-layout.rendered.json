@@ -1,0 +1,45 @@
+{
+  "source": "benchmark/v02/presentation-layout.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "e0"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 2,
+    "text_runs": 21,
+    "edges": 1,
+    "sampled_edges": 0,
+    "bends": 2,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      841.5,
+      553.5
+    ],
+    "width_css_px": 824,
+    "height_css_px": 536,
+    "exported_width_css_px": 876,
+    "aspect_ratio": 1.537313432835821,
+    "min_font_css_px": 34,
+    "projected_min_font_pt": 33.00614820407723,
+    "estimated_whitespace_fraction": 0.11552673525576007
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

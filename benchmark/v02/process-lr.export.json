@@ -1,0 +1,20 @@
+{
+  "source_sha256": "319ac0ed137e4edaf7fd42b6211feceb5950c5c9f1ad5c421ffb33b7de762377",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v02/process-lr.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v02/process-lr.svg",
+      "sha256": "735325076415deb0d329fef3247c8233a813ac89ece9e93fd6b022c0e1c72878",
+      "bytes": 11927
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v02/process-lr.png",
+      "sha256": "5f333a9681ff05641aeccb3c253fd8447b50072a747dd45dfbde6e5e74754afd",
+      "bytes": 69231
+    }
+  ]
+}

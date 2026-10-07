@@ -103,3 +103,49 @@ sampling/rectangular bounds, complex stencils, rotated text, MathJax and asset
 availability have the documented QA limits. PDF signature/export was smoke-tested;
 PDF XML recovery was not independently checked. One agent-run pilot per workflow
 does not establish statistically general performance or token-cost superiority.
+
+## V0.2 semantic generation benchmark (2026-10-07)
+
+The three pilots were regenerated from semantic IR with coordinates, dimensions
+and curated routing removed. Nine additional fixtures exercise Czech text,
+industrial topology, LR/TB processes, nested groups, swimlanes, retry and document/
+presentation targets. The archived official and V0.1 columns are unchanged;
+V0.1 includes manual curation, whereas V0.2 here is automatic generation.
+
+| Pilot | Official height / min font / bends | V0.1 height / min font / bends | V0.2 height / min font / bends |
+|---|---|---|---|
+| Process | 154.8 mm / 14.63 pt / 4 | 54.9 mm / 10.81 pt / 1 | 36.0 mm / 8.64 pt / 8 |
+| Topology | 92.2 mm / 8.43 pt / 3 | 67.9 mm / 9.19 pt / 2 | 96.6 mm / 9.12 pt / 6 |
+| Training | 148.7 mm / 11.50 pt / 0 | 82.3 mm / 11.02 pt / 0 | 99.2 mm / 11.83 pt / 4 |
+
+These are width-projected SVG measurements at 160 mm, not actual printed points.
+V0.2 improves process compactness and training readability against the archived official
+pilots; topology trades slightly greater height for larger text, but does not consistently beat curated V0.1. More bends and label placement
+are remaining weaknesses. Labels near node boundaries and short connectors still
+need targeted editing; bounded label offsets deliberately flag unresolved cases
+instead of moving text arbitrarily far from its edge. Audit findings are warnings
+with the coverage limits above, not a count of independently confirmed defects.
+
+All 12 native sources were exported through draw.io Desktop 31.7.0 and audited in
+Chromium; all final PNGs were visually inspected. Optional external routing used
+the installed official `@drawio/mcp` 1.6.3 `routeXml` implementation. Desktop 31.7.0
+rejects `--layout libavoid`, so it is not claimed as that routing engine. The adapter
+checks semantic/node preservation and repairs generated labels against estimated
+router polylines. Those estimates still require rendered review.
+
+Raw results, candidate penalties, review flags and export identities are in
+[V0.2 metrics](../benchmark/v02/metrics.json) and adjacent per-case JSON files.
+[Process](../benchmark/v02/process-comparison.png),
+[topology](../benchmark/v02/topology-comparison.png) and
+[training](../benchmark/v02/dense-training-comparison.png) show all three versions.
+Reproduce with `python scripts/benchmark_v02.py --render`; add `--mcp-root` pointing
+to an installed official package to reproduce the external routing pass.
+
+Validation: 56 Python tests, three browser QA tests, portable package/link/hash
+validation and skill metadata validation passed locally. Word insertion fixture
+creation worked, but LibreOffice was unavailable; python-pptx was unavailable in
+the executing interpreter. Actual Word/PowerPoint rendering remains unverified.
+Slide metrics in rendered audits project to width only; layout candidate scoring
+also respects slide height. Neither is an Office font-substitution test.
+Efficiency numbers in [EFFICIENCY](EFFICIENCY.md) are reproducible workflow proxies,
+not measured API token savings or a smaller-model performance benchmark.

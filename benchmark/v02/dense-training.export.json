@@ -1,0 +1,20 @@
+{
+  "source_sha256": "bfcc39f70e54cc7f7ff909ea3b980b0647aa3e077ec0b55590bbc66dec6e5e3e",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v02/dense-training.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v02/dense-training.svg",
+      "sha256": "2e8061b3cbae438ef39c397988ba7d4006a541a665e4326a18432f3847d7193b",
+      "bytes": 24503
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v02/dense-training.png",
+      "sha256": "01b722a7881a0baccc1858b067bd611aff68b3c9ddac28a194878ae9404466f7",
+      "bytes": 703399
+    }
+  ]
+}

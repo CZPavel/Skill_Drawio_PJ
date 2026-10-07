@@ -1,0 +1,55 @@
+{
+  "source": "benchmark/v02/retry-loop.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "e2",
+        "e1"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "e1",
+        "e2"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 4,
+    "text_runs": 7,
+    "edges": 4,
+    "sampled_edges": 0,
+    "bends": 8,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      969.5,
+      331.703125
+    ],
+    "width_css_px": 952,
+    "height_css_px": 314.203125,
+    "exported_width_css_px": 1004,
+    "aspect_ratio": 3.02988711522204,
+    "min_font_css_px": 28,
+    "projected_min_font_pt": 12.648618125921509,
+    "estimated_whitespace_fraction": 0.6299444411442656
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

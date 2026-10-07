@@ -1,0 +1,61 @@
+{
+  "source": "benchmark/v02/process-tb.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "e0"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "e1"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "e2"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 4,
+    "text_runs": 4,
+    "edges": 3,
+    "sampled_edges": 0,
+    "bends": 6,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      317.5,
+      473.5
+    ],
+    "width_css_px": 300,
+    "height_css_px": 456,
+    "exported_width_css_px": 352,
+    "aspect_ratio": 0.6578947368421053,
+    "min_font_css_px": 34,
+    "projected_min_font_pt": 43.80816034359342,
+    "estimated_whitespace_fraction": 0.38596491228070173
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "source": "benchmark/v02/topology.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "t5",
+        "t5"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "path-sampled",
+      "cells": [
+        "t6"
+      ],
+      "message": "Curve/nonlinear path collisions sampled at about 3 SVG units (capped 2000); approximation"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "t6",
+        "t6"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "t3",
+        "t3"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "t2",
+        "t6"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-edge",
+      "cells": [
+        "t4",
+        "t6"
+      ],
+      "message": "Rendered path segments intersect/overlap; intentional junctions need review"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 6,
+    "text_runs": 17,
+    "edges": 7,
+    "sampled_edges": 1,
+    "bends": 6,
+    "bounds_css_px": [
+      17.5,
+      17.5,
+      1655.5,
+      957.5
+    ],
+    "width_css_px": 1638,
+    "height_css_px": 940,
+    "exported_width_css_px": 1690,
+    "aspect_ratio": 1.7425531914893617,
+    "min_font_css_px": 34,
+    "projected_min_font_pt": 9.124539905884546,
+    "estimated_whitespace_fraction": 0.8607539033070948
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "source_sha256": "49d577594ff14dc2815dd6b089cd242862887b3e5944f9aae3eb55867b44ad35",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v02/long-czech.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v02/long-czech.svg",
+      "sha256": "39a8622b3122aa1d7babb676d6918f2af1f072fcaca3c2248a3ea004a80bef24",
+      "bytes": 9545
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v02/long-czech.png",
+      "sha256": "e05e7283957dd56de44a8d1c0b37b43e0d8efbea9d897f3e290e5b5e4eee1048",
+      "bytes": 475362
+    }
+  ]
+}

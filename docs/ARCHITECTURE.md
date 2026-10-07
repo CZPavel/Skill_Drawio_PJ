@@ -14,7 +14,7 @@ The skill is a decision and quality layer above external draw.io tooling.
 | examples + benchmark | reproducible inputs and native final source; independent official baseline |
 | install.ps1 | managed copy of the skill package; preserves official/other skills |
 
-No custom graph-layout/routing engine is maintained. ELK/libavoid/Mermaid and
+No general graph framework or obstacle-routing engine is maintained. ELK/libavoid/Mermaid and
 native stencil rendering remain external capabilities. Direct XML/MCP editing
 is available beyond the bounded JSON helper. Existing arbitrary diagrams must
 not be regenerated through that helper: preservation requires targeted edits.
@@ -27,3 +27,16 @@ local absolute paths and should remain local or be sanitized for public reports.
 Portability: Python 3.10+; Pillow for sizing/PNG verification; Desktop for exports;
 Node + Playwright/browser for optional rendered audit. Native linter is stdlib.
 Missing optional tools must be reported, not silently represented as passed QA.
+
+## V0.2: semantic composition
+
+New documents may start with a compact semantic IR. `layout_diagram.py` validates
+it, measures cards using the existing builder, places bounded deterministic
+candidates and selects with `score_layout.py`. The builder remains the native XML
+writer and accepts legacy coordinate models. Named presets merge into tokens.
+Native/ELK/libavoid remain routing engines; preview routes in scoring are estimates.
+No server, database or persistent cache. Same IR supports document/presentation
+without deleting content. Arbitrary existing files require targeted native edits;
+generation does not implement lossless import or incremental manual-edit sync.
+FAST needs Python/Pillow + Desktop + sight; FULL adds browser audit. Office
+fixtures and style extraction are optional helpers.

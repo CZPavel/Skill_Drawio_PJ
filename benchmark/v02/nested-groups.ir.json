@@ -1,0 +1,45 @@
+{
+  "target": "document",
+  "archetype": "process-flow",
+  "direction": "auto",
+  "nodes": [
+    {
+      "id": "sensor",
+      "title": "Snímač",
+      "group": "station"
+    },
+    {
+      "id": "evaluate",
+      "title": "Vyhodnocení",
+      "group": "station"
+    },
+    {
+      "id": "server",
+      "title": "Server",
+      "group": "factory"
+    }
+  ],
+  "groups": [
+    {
+      "id": "factory",
+      "title": "Výrobní závod"
+    },
+    {
+      "id": "station",
+      "title": "Stanoviště",
+      "group": "factory"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "sensor",
+      "target": "evaluate"
+    },
+    {
+      "id": "e1",
+      "source": "evaluate",
+      "target": "server"
+    }
+  ]
+}

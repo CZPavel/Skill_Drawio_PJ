@@ -1,0 +1,53 @@
+{
+  "source": "benchmark/v02/dense-training.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "g1"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "g2"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 6,
+    "text_runs": 35,
+    "edges": 5,
+    "sampled_edges": 0,
+    "bends": 4,
+    "bounds_css_px": [
+      17.5,
+      25.5,
+      1345.5,
+      793.5
+    ],
+    "width_css_px": 1328,
+    "height_css_px": 768,
+    "exported_width_css_px": 1380,
+    "aspect_ratio": 1.7291666666666667,
+    "min_font_css_px": 36,
+    "projected_min_font_pt": 11.831564532694282,
+    "estimated_whitespace_fraction": 0.4926581325301205
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

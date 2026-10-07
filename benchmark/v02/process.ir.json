@@ -1,0 +1,85 @@
+{
+  "id": "process",
+  "name": "Kontrola snímku",
+  "profile": "document",
+  "profile_overrides": {
+    "canvas_width": 1500,
+    "canvas_height": 650,
+    "title": 36,
+    "body": 32,
+    "edge": 34
+  },
+  "nodes": [
+    {
+      "id": "receive",
+      "title": "Přijmout\nsnímek",
+      "shape": "terminal"
+    },
+    {
+      "id": "exposure",
+      "title": "Ověřit\nexpozici"
+    },
+    {
+      "id": "usable",
+      "title": "Snímek\npoužitelný?",
+      "shape": "decision",
+      "role": "control",
+      "padding": 8
+    },
+    {
+      "id": "evaluate",
+      "title": "Vyhodnotit\nmodel"
+    },
+    {
+      "id": "save",
+      "title": "Uložit\nvýsledek",
+      "role": "ok",
+      "shape": "terminal"
+    },
+    {
+      "id": "light",
+      "title": "Upravit\nosvětlení",
+      "role": "control"
+    }
+  ],
+  "edges": [
+    {
+      "id": "p1",
+      "source": "receive",
+      "target": "exposure"
+    },
+    {
+      "id": "p2",
+      "source": "exposure",
+      "target": "usable"
+    },
+    {
+      "id": "p3",
+      "source": "usable",
+      "target": "evaluate",
+      "label": "Ano"
+    },
+    {
+      "id": "p4",
+      "source": "evaluate",
+      "target": "save"
+    },
+    {
+      "id": "p5",
+      "source": "usable",
+      "target": "light",
+      "label": "Ne",
+      "role": "control"
+    },
+    {
+      "id": "p6",
+      "source": "light",
+      "target": "exposure",
+      "role": "control",
+      "type": "retry"
+    }
+  ],
+  "semantic": true,
+  "direction": "auto",
+  "archetype": "process-flow"
+}

@@ -21,6 +21,16 @@
 10. **Benchmark evidence has a narrow scope.** Matched three-task pilot with an
     independent official workflow can demonstrate improvements on those cases,
     not universal superiority across future tasks or models.
-11. **Preserve the official skill.** The installed new skill has a unique canonical
-    name `skill-drawio-pj`; display/repository brand is `Skill_Drawio_PJ`. No automatic
-    priority across competing skill descriptions is claimed; invoke explicitly.
+11. **One local authoring skill when requested.** Canonical name is `skill-drawio-pj`.
+    V0.2 replaces older local instructions on this workstation by explicit user
+    request; standalone official MCP/renderer remains. The portable installer
+    never removes unrelated skills automatically.
+
+12. **Meaning before geometry.** Minimal IR and bounded candidates remove ordinary
+    coordinate/port bookkeeping; explicit native geometry remains available.
+13. **Transparent heuristics.** Critical collisions and unreadable projection dominate
+    softer aspect/length/whitespace costs. Compare only the same semantic graph.
+14. **One selected render.** Internal candidates, FAST without Chromium, one repair;
+    FULL adds rendered paths and permits two repairs.
+15. **No sync infrastructure.** Agents365 reconcile/filtered views are research,
+    not claimed features of this small layer.

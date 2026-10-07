@@ -1,0 +1,20 @@
+{
+  "source_sha256": "21e9a4d4ec215c7b70cd7cb2b6af6817b0e38d662710f8b8f2f9a91194668eaa",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "source": "benchmark/v02/process-tb.drawio",
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/v02/process-tb.svg",
+      "sha256": "f3620228e70f61eed99b945888d2b8cc78ea77461154089a3ead7900dbe38aa1",
+      "bytes": 11996
+    },
+    {
+      "format": "png",
+      "path": "benchmark/v02/process-tb.png",
+      "sha256": "5cb38ef94d0c7586dbad4ebc268c3b73ee915f555eba2c7fa07c095e18e50318",
+      "bytes": 95302
+    }
+  ]
+}
