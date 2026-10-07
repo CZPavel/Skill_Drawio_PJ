@@ -6,3 +6,5 @@
 *.svg text eol=lf
 *.png binary
 *.pdf binary
+# Export manifests identify exact native bytes, including renderer line endings.
+benchmark/v02/*.drawio -text
