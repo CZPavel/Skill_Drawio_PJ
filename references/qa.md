@@ -20,3 +20,10 @@ Source font sizes are not the acceptance metric; projected points and actual cro
 If composing Word/PPT, acceptance includes a render of the actual inserted result with surrounding content. Otherwise mark target-context QA unperformed. Automated SVG checks, if used, must describe path/shape/HTML coverage; do not call an approximation complete SVG lint.
 
 For batch work use process, topology and dense training pilots first. Validate typography at insertion scale, then apply tokens. Review representative details and every changed diagram; do not substitute a contact sheet for detailed text/edge review.
+
+## V0.2 depth and repair budget
+
+FAST retains structure/estimated fit/projection, embedded SVG+PNG and sight;
+Playwright is optional. FULL adds browser/path/label inspection. One targeted
+repair normally, at most two in FULL. Candidate estimates and exported paths are
+separate evidence. Export only the selected candidate, optionally a close runner-up.

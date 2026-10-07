@@ -1,0 +1,9 @@
+{
+  "vertex_style": {
+    "rounded": 1,
+    "arcSize": 12
+  },
+  "edge_style": {
+    "endSize": 12
+  }
+}

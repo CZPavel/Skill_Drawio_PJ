@@ -1,0 +1,57 @@
+{
+  "target": "document",
+  "archetype": "process-flow",
+  "direction": "auto",
+  "nodes": [
+    {
+      "id": "request",
+      "title": "Požadavek"
+    },
+    {
+      "id": "test",
+      "title": "Platné?",
+      "shape": "decision"
+    },
+    {
+      "id": "done",
+      "title": "Hotovo",
+      "role": "ok"
+    },
+    {
+      "id": "retry",
+      "title": "Opakovat",
+      "role": "risk"
+    }
+  ],
+  "groups": [],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "request",
+      "target": "test"
+    },
+    {
+      "id": "e1",
+      "source": "test",
+      "target": "done",
+      "label": "ano"
+    },
+    {
+      "id": "e2",
+      "source": "test",
+      "target": "retry",
+      "label": "ne"
+    },
+    {
+      "id": "e3",
+      "source": "retry",
+      "target": "request",
+      "role": "control",
+      "label": "retry",
+      "ports": {
+        "source": "bottom",
+        "target": "bottom"
+      }
+    }
+  ]
+}

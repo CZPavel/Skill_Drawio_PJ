@@ -19,6 +19,13 @@ class BuilderTests(unittest.TestCase):
             cell = ET.parse(path).find(".//mxCell[@id='a']")
             self.assertIn("&amp;", cell.get("value"))
 
+    def test_decision_preserves_body(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "decision.drawio"
+            build({"nodes": [{"id": "a", "title": "Valid?", "body": "Threshold condition", "shape": "decision", "width": 700, "x": 0, "y": 0}]}, path)
+            label = ET.parse(path).find(".//mxCell[@id='a']").get("value")
+            self.assertIn("Threshold condition", label)
+
     def test_common_ancestor_and_no_lost_edges(self):
         with tempfile.TemporaryDirectory() as tmp:
             path = Path(tmp) / "test.drawio"

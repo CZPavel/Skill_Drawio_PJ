@@ -17,3 +17,10 @@ For Word, use available text width and a reasonable height; keep caption and exp
 Same logical information may yield `name-document.drawio` and `name-slide.drawio`. Preserve IDs/semantic inventory where practical and compare nodes/edges/conditions, not coordinates.
 
 After insertion, render the actual Word/PPT file and inspect the complete page/slide at normal scale. Verify the current export was embedded, original replaced graphics removed, surrounding native objects legible and no title/footer collision. Use the documents/presentations workflow available in that environment when producing those artifacts. Identify the renderer honestly; a substitute renderer is not Microsoft Office verification.
+
+## Optional Office insertion fixture
+
+`python scripts/qa_office.py export.png fresh-dir --target document --render`
+creates a DOCX (presentation creates PPTX), then attempts available LibreOffice.
+Libraries/renderer are optional; missing renderer remains explicitly unverified.
+Inspect the rendered page/slide. This helper does not claim Microsoft Office QA.

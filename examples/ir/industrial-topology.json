@@ -1,0 +1,64 @@
+{
+  "target": "document",
+  "archetype": "network-topology",
+  "direction": "auto",
+  "nodes": [
+    {
+      "id": "camera",
+      "title": "Kamera",
+      "body": "Snímky z kontrolního stanoviště"
+    },
+    {
+      "id": "vision",
+      "title": "Vision PC"
+    },
+    {
+      "id": "plc",
+      "title": "PLC",
+      "role": "control"
+    },
+    {
+      "id": "operator",
+      "title": "Operátor",
+      "role": "note"
+    },
+    {
+      "id": "archive",
+      "title": "Archiv"
+    }
+  ],
+  "groups": [],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "camera",
+      "target": "vision",
+      "label": "image"
+    },
+    {
+      "id": "e1",
+      "source": "vision",
+      "target": "plc",
+      "label": "OK / NOK"
+    },
+    {
+      "id": "e2",
+      "source": "plc",
+      "target": "camera",
+      "label": "trigger",
+      "role": "control"
+    },
+    {
+      "id": "e3",
+      "source": "operator",
+      "target": "vision",
+      "role": "control"
+    },
+    {
+      "id": "e4",
+      "source": "vision",
+      "target": "archive"
+    }
+  ],
+  "style": "industrial"
+}

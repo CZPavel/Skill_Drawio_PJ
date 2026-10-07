@@ -19,10 +19,22 @@ Desktop examples (PowerShell; quote the executable path):
 $drawioExe = 'C:\Program Files\draw.io\draw.io.exe'
 & $drawioExe -x -f xml -o 'draft.drawio' 'input.mmd'
 & $drawioExe -x -f xml --layout horizontalFlow -o 'layout.drawio' 'draft.drawio'
-& $drawioExe -x -f xml --layout libavoid -o 'routed.drawio' 'layout.drawio'
+# Only use layouts actually listed by the installed Desktop version.
 & $drawioExe -x -f svg -e --theme light -b 16 -o 'routed.drawio.svg' 'routed.drawio'
 ```
 
-Keep input/source files. Editable Mermaid conversion requires native cells, not `--mermaid-image true`. Review conversion for lost notation/labels. Standard ELK presets include horizontalFlow, verticalFlow, horizontalTree, verticalTree, radialTree and organic; custom layouts use a JSON array. Probe `--help` for the installed version. On GPU initialization failure retry once with `--disable-gpu`. Use separate layout outputs and adopt them only after checking semantic inventory and rendering.
+Keep input/source files. Editable Mermaid conversion requires native cells, not `--mermaid-image true`. Review conversion for lost notation/labels. Standard presets include horizontalFlow, verticalFlow, horizontalTree, verticalTree, radialTree and organic; custom layouts use a JSON array. Probe `--help` for the installed version. On GPU initialization failure retry once with `--disable-gpu`. Use separate layout outputs and adopt them only after checking semantic inventory and rendering.
+
+V0.2 runtime finding: Desktop 31.7.0 on the author workstation rejects
+`--layout libavoid` as unknown. Libavoid is available in the separately installed
+official `@drawio/mcp` package. Optional original adapter:
+`python scripts/route_drawio.py draft.drawio routed.drawio --mcp-root PATH_TO_PACKAGE`.
+It calls external `src/libavoid-pass.js::routeXml`, checks native semantic/node
+preservation, keeps input and reports unchanged output as unverified. It does not
+bundle WASM or routing code. Export the adopted routed source, then inspect labels.
+The upstream module path is an integration boundary, not a promised stable API.
+For a diagram generated from unchanged IR, add `--ir diagram.ir.json` to perform
+one bounded label repair against router waypoints. Explicit IR label positions
+remain authoritative; changed node geometry is rejected. This is not import/sync.
 
 The project export adapter detects Desktop, uses argument arrays and bounded timeouts, verifies signatures and embedded XML for supported image exports, and records hashes. SVG/PNG/PDF are external engine exports. PDF embedding is requested; verify recoverability separately if essential. Opening/rendering is required beyond subprocess success.

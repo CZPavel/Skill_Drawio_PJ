@@ -5,6 +5,7 @@ It intentionally does not import/edit arbitrary draw.io documents or infer topol
 """
 from __future__ import annotations
 import argparse
+from functools import lru_cache
 import html
 import json
 import math
@@ -17,6 +18,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TOKENS = json.loads((ROOT / "assets/design-tokens.json").read_text(encoding="utf-8"))
 
 
+@lru_cache(maxsize=64)
 def font(size, bold=False, path=None):
     candidates = [path] if path else []
     candidates += [str(Path(os.environ.get("WINDIR", "C:/Windows")) / "Fonts" / ("arialbd.ttf" if bold else "arial.ttf")),
@@ -65,7 +67,36 @@ def style(**values):
     return ";".join(f"{key}={value}" for key, value in values.items()) + ";"
 
 
-def build(model, output):
+def load_preset(model):
+    name = model.get("style_preset", "default")
+    if not isinstance(name, str) or Path(name).name != name:
+        raise ValueError("Invalid style_preset name")
+    path = ROOT / "assets/styles" / (name + ".json")
+    if not path.exists():
+        raise ValueError(f"Unknown style preset {name}")
+    return json.loads(path.read_text(encoding="utf-8-sig"))
+
+
+def effective_profile(model):
+    preset = load_preset(model)
+    return {**TOKENS["profiles"][model.get("target", model.get("profile", "document"))],
+            **preset.get("profile_overrides", {}), **model.get("profile_overrides", {})}
+
+
+def build(model, output, report_path=None):
+    preset = load_preset(model)
+    model = dict(model)
+    model["profile_overrides"] = {**preset.get("profile_overrides", {}), **model.get("profile_overrides", {})}
+    model.setdefault("font_family", preset.get("font_family", TOKENS["font_family"]))
+    semantic = model.get("semantic") or model.get("layout") == "semantic" or any(
+        "x" not in n or "y" not in n for n in model.get("groups", []) + model.get("nodes", []))
+    report = None
+    if semantic:
+        from layout_diagram import layout
+        model, report = layout(model)
+    if "target" in model:
+        model["profile"] = model["target"]
+
     profile = {**TOKENS["profiles"][model.get("profile", "document")], **model.get("profile_overrides", {})}
     family = model.get("font_family", TOKENS["font_family"])
     ids = {"0", "1"}
@@ -118,7 +149,7 @@ def build(model, output):
                 model.get("font_path"), model.get("bold_font_path"), pad)
         height = max(node.get("height", 0), content_height * (2 if decision else 1))
         if decision:
-            label = "<br>".join(html.escape(line) for line in titles)
+            label = "<br>".join(html.escape(line) for line in titles + ([""] + bodies if bodies else []))
         else:
             label = f'<div style="font-size:{profile["title"]}px;font-weight:bold;line-height:1.2">' + "<br>".join(html.escape(line) for line in titles) + "</div>"
             if bodies:
@@ -136,6 +167,7 @@ def build(model, output):
             base.update(arcSize=50)
         elif node.get("shape"):
             base["shape"] = node["shape"]
+        base.update(preset.get("vertex_style", {}))
         base.update(node.get("style", {}))
         c = cell(node["id"], value=label, vertex="1", parent=parent, style=prefix + style(**base))
         ET.SubElement(c, "mxGeometry", x=str(node["x"]), y=str(node["y"]), width=str(width), height=str(height), **{"as": "geometry"})
@@ -157,6 +189,7 @@ def build(model, output):
             strokeColor=role["stroke"], strokeWidth=TOKENS["stroke_width"], fontColor=TOKENS["text"],
             fontFamily=family, fontSize=profile["edge"], labelBackgroundColor="#FFFFFF",
             exitX=1, exitY=0.5, entryX=0, entryY=0.5, exitPerimeter=1, entryPerimeter=1)
+        options.update(preset.get("edge_style", {}))
         options.update(edge.get("style", {}))
         if edge.get("points"):
             options.update(edgeStyle="none", noEdgeStyle=1)
@@ -172,6 +205,10 @@ def build(model, output):
     ET.indent(file)
     # Bytes keep native source identity stable across Windows/Linux checkouts.
     output.write_bytes(ET.tostring(file, encoding="utf-8", xml_declaration=True))
+    if report_path is not None:
+        report_path = Path(report_path)
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        report_path.write_text(json.dumps(report or {"mode": "explicit", "review_flags": ["rendered-qa-required"]}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return boxes
 
 
@@ -179,5 +216,6 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("model", type=Path)
     parser.add_argument("output", type=Path)
+    parser.add_argument("--report", type=Path)
     args = parser.parse_args()
-    build(json.loads(args.model.read_text(encoding="utf-8-sig")), args.output)
+    build(json.loads(args.model.read_text(encoding="utf-8-sig")), args.output, args.report)

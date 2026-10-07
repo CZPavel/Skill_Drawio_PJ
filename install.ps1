@@ -19,7 +19,8 @@ New-Item -ItemType Directory -Force -Path $destination | Out-Null
 foreach ($item in @('SKILL.md','LICENSE','THIRD_PARTY_NOTICES.md','requirements.txt','package.json','package-lock.json','references','scripts','assets','agents')) {
     Copy-Item -LiteralPath (Join-Path $sourceRoot $item) -Destination $destination -Recurse -Force
 }
-@{ project='CZPavel/Skill_Drawio_PJ'; source=$sourceRoot; installedUtc=[DateTime]::UtcNow.ToString('o') } |
+$packageVersion = (Get-Content -LiteralPath (Join-Path $sourceRoot 'package.json') -Raw | ConvertFrom-Json).version
+@{ project='CZPavel/Skill_Drawio_PJ'; version=$packageVersion; source=$sourceRoot; installedUtc=[DateTime]::UtcNow.ToString('o') } |
     ConvertTo-Json | Set-Content -LiteralPath $marker -Encoding UTF8
 if ($WithRenderedQa) {
     $npmCommand = Get-Command npm.cmd,npm -ErrorAction SilentlyContinue | Select-Object -First 1

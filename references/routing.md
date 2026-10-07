@@ -11,3 +11,12 @@ For obstacle-aware routing use external `libavoid` after sizing/placement, then 
 Waypoints and label offsets are in the edge parent's coordinate frame. Edge parent is the nearest common ancestor of both terminals. Edges to a child legitimately cross the ancestor container boundary; do not treat that as an obstacle collision. A label/node bounding box check for a diamond, cylinder or stencil is conservative; actual outlines require rendering.
 
 If routing is changed, save the changed native source and export from it. Never apply layout only during PNG export while delivering stale `.drawio` geometry.
+
+## V0.2 ports and labels
+
+Semantic generation selects facing ports from absolute geometry, with explicit
+style/semantic overrides. Label candidates are estimated against rectangles and
+other labels; unresolved cases require review. Predicted paths are not Desktop
+routes. Preserve labels/conditions. Short line jumps may beat long detours;
+crossings are not junctions. Reconsider stale waypoints after significant moves,
+but never silently replace user points in an arbitrary imported diagram.

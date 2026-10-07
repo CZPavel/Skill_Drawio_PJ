@@ -11,3 +11,10 @@ Use one font family and restrained title/body hierarchy. Short labels may be cen
 Layout sequence: content → target → size → place → route → style → inspect. Prefer an obvious dominant reading direction. Use grid snapping for alignment, not fixed width. Secondary paths belong near the relevant branch and may use perimeter corridors. Avoid high empty boxes, narrow centered compositions, paragraph text floating in a tall box, unnecessary bends and large whitespace introduced solely for a detour.
 
 When a readable layout no longer fits, remove redundant wording with semantic care, widen within the target, split overview/detail or create separate document/slide variants. Do not turn independent principles into a sequence. Preserve all required exceptions and record meaningful editorial changes.
+
+## Deterministic width selection
+
+Semantic layout measures a small set of widths and trades height against target
+aspect/available width. It never clips text or shrinks font to hide overflow.
+Explicit dimensions take precedence; insufficient containers need review.
+Presets merge into base tokens. Extracted styles are proposals, not design approval.

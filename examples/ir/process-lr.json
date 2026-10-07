@@ -1,0 +1,41 @@
+{
+  "target": "document",
+  "archetype": "process-flow",
+  "direction": "LR",
+  "nodes": [
+    {
+      "id": "start",
+      "title": "Spuštění"
+    },
+    {
+      "id": "acquire",
+      "title": "Pořízení snímku"
+    },
+    {
+      "id": "inspect",
+      "title": "Vyhodnocení"
+    },
+    {
+      "id": "result",
+      "title": "Výsledek"
+    }
+  ],
+  "groups": [],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "start",
+      "target": "acquire"
+    },
+    {
+      "id": "e1",
+      "source": "acquire",
+      "target": "inspect"
+    },
+    {
+      "id": "e2",
+      "source": "inspect",
+      "target": "result"
+    }
+  ]
+}

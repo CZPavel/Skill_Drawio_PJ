@@ -1,0 +1,26 @@
+{
+  "target": "document",
+  "archetype": "process-flow",
+  "direction": "auto",
+  "nodes": [
+    {
+      "id": "prepare",
+      "title": "Příprava kontrolního stanoviště",
+      "body": "Zkontrolujte osvětlení, pracovní vzdálenost a čistotu ochranného skla. Nastavení musí odpovídat schválenému výrobnímu postupu."
+    },
+    {
+      "id": "check",
+      "title": "Ověření opakovatelnosti výsledku",
+      "body": "Proveďte kontrolu referenčního dílu a zaznamenejte výsledek měření. Při odchylce přerušte vyhodnocování a informujte odpovědnou osobu."
+    }
+  ],
+  "groups": [],
+  "edges": [
+    {
+      "id": "e0",
+      "source": "prepare",
+      "target": "check",
+      "label": "příprava dokončena"
+    }
+  ]
+}
