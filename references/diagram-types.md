@@ -16,3 +16,15 @@
 Shared tokens do not imply shared geometry. Use native electrical/network/cloud/BPMN symbols when notation matters; a rectangle labeled PLC may be perfectly adequate in a conceptual block diagram. Search shapes only when domain symbols improve understanding. A vendor icon does not certify device capability, protocol compatibility or physical wiring.
 
 For dense training material start with overview + subsystem detail. Use separate pages when one reading scale cannot preserve important detail. Maintain an inventory of nodes/edges/branch conditions to prevent semantic loss during redesign.
+
+
+## Automation tiers
+
+**Tier A — direct deterministic composition:** process-flow, decision-flow, basic
+network-topology, technical-block and grouped training/cards. Supply semantic IR;
+rendered acceptance still applies, especially labels/retry and dense connections.
+
+**Tier B — JGraph-assisted composition:** complex architecture/deployment, swimlane,
+sequence, highly compound graphs and specialized vendor/electrical notation.
+PJ assists sizing, styles and QA, but may need native shapes, targeted XML and
+external engine placement. A simple swimlane fixture is not universal lane support.

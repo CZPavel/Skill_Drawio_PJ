@@ -243,3 +243,47 @@ Pinned [IR/reconcile](https://github.com/Agents365-ai/drawio-skill/blob/88fd9236
 [validator](https://github.com/Agents365-ai/drawio-skill/blob/88fd9236bc532aac4c25cb008a8bd59bc650b904/skills/drawio-skill/scripts/validate.py),
 [license](https://github.com/Agents365-ai/drawio-skill/blob/88fd9236bc532aac4c25cb008a8bd59bc650b904/LICENSE).
 Earlier matrix remains the V0.1 research snapshot, not updated runtime proof.
+
+
+## V0.3 targeted routing/design evidence (2026-10-07)
+
+JGraph main was rechecked at eebe7def96409a15511a51fda958f4a620c2300a.
+No source/prose/assets copied; XML/style names are interoperability contracts.
+
+| Primary source | Applied decision |
+|---|---|
+| [Fixed/floating connectors](https://www.drawio.com/docs/manual/connectors/connector-fixed-vs-floating/) | Ordinary relations omit fixed coordinates; meaningful interfaces explicitly attach |
+| [Waypoint shape](https://www.drawio.com/docs/manual/shapes/waypoint-shape/) | Optional synthetic native fan-out vertex, distinct from mxPoint geometry |
+| [Line jumps](https://www.drawio.com/docs/manual/styles/connector-styles/) | Local crossing indication, never blanket routing repair |
+| [Paint order](https://www.drawio.com/docs/manual/shapes/move-shapes-forwards-backwards/) | Background groups, secondary paths, primary paths, foreground nodes in new generation |
+| [JGraph XML](https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/shared/xml-reference.md) / [styles](https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/shared/style-reference.md) | Exact native serialization, side/fixed geometry and waypoint syntax |
+| [Official Codex skill](https://github.com/jgraph/drawio-mcp/blob/eebe7def96409a15511a51fda958f4a620c2300a/plugins/codex/drawio/skills/drawio/SKILL.md) | Declared CLI libavoid/ELK capabilities, independently probed locally |
+| [mxUtils port constraints](https://github.com/jgraph/mxgraph/blob/master/javascript/src/js/util/mxUtils.js#L2236) | sourcePortConstraint / targetPortConstraint accept north/east/south/west; no midpoint required |
+| [ELK Layered](https://eclipse.dev/elk/reference/algorithms/org-eclipse-elk-layered.html) / [spacing](https://eclipse.dev/elk/documentation/tooldevelopers/graphdatastructure/spacingdocumentation.html) | Layered/orthogonal semantics; only options exposed by the official adapter are passed |
+
+ELK research covered direction, orthogonal routing, node/edge spacing, between-layer
+spacing, crossing minimization, port constraints/order, straightness and cycle
+breaking. The installed official MCP layoutXml accepts direction only; PJ exposes
+small named limited presets rather than inventing a tuning API. Future Desktop
+custom JSON tuning requires separate verified adapter tests.
+
+Runtime differs from upstream declaration: Desktop 31.7.0 actually rejects libavoid
+CLI, while horizontalFlow ELK succeeds. External MCP 1.6.3 libavoid obstacle detour
+and ELK placement succeed. Probe statuses and matched routing fixtures are retained
+in benchmark/v03. These tests establish those exercised interfaces, not all future
+versions or universal quality. Existing source matrices above are historical reviews.
+
+
+### Current bridge limit (verified V0.3)
+
+The installed `@drawio/mcp` 1.6.3 bridges do not provide a verified side-constraint
+contract. `routeXml` ignores source/target side masks when constructing libavoid
+connections; retained style text is not proof that the route obeys those masks.
+The adapters therefore reject side-constrained XML, including compressed pages,
+before calling either engine. The strategy permits a side graph only with an
+explicit verified `supports_side_constraints: true`; the current probe reports
+false (not verified by this integration), including Desktop ELK. This is a bound
+on this adapter, not a claim about every upstream ELK/libavoid implementation.
+Use native sides and deliberate local waypoints for these graphs. Do not convert
+side intent to fixed midpoint coordinates or silently remove constraints.
+ELK also rejects output that changes explicit fixed attachment coordinates.

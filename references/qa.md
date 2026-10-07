@@ -24,6 +24,15 @@ For batch work use process, topology and dense training pilots first. Validate t
 ## V0.2 depth and repair budget
 
 FAST retains structure/estimated fit/projection, embedded SVG+PNG and sight;
-Playwright is optional. FULL adds browser/path/label inspection. One targeted
+Playwright is optional only for simple clear native routing. Layout report FULL
+escalation is authoritative for unresolved routing/labels, jumps or engine repairs.
+FULL adds browser/path/label inspection. One targeted
 repair normally, at most two in FULL. Candidate estimates and exported paths are
 separate evidence. Export only the selected candidate, optionally a close runner-up.
+
+
+V0.3 SVG reports include `post_routing` screening metrics and per-edge bends/length.
+Use `--model placed.json` to identify ordinary/main vs retry/secondary edges and
+reading direction. Without that metadata semantic metrics are null. Strict interior
+crossings exclude endpoint contacts; rectangle label/shape findings and curve/jump
+sampling are approximate. Post-routing score is not candidate score or acceptance.

@@ -30,7 +30,20 @@
     coordinate/port bookkeeping; explicit native geometry remains available.
 13. **Transparent heuristics.** Critical collisions and unreadable projection dominate
     softer aspect/length/whitespace costs. Compare only the same semantic graph.
-14. **One selected render.** Internal candidates, FAST without Chromium, one repair;
+14. **One selected render.** Internal candidates, FAST without Chromium only for clear simple routes, one repair;
     FULL adds rendered paths and permits two repairs.
 15. **No sync infrastructure.** Agents365 reconcile/filtered views are research,
     not claimed features of this small layer.
+
+
+16. **Anchoring is semantic policy.** Floating ordinary relations, side-constrained
+    processes, fixed meaningful interfaces. Native explicit styles override defaults.
+17. **Alternative engines.** Libavoid preserves placement; ELK can move it. Verified
+    capabilities gate recommendation; no automatic ELK+libavoid double pass.
+18. **Local jumps only.** One/two estimated crossing pairs may select a secondary
+    edge; ambiguity/density escalates instead of adding jumps to all edges.
+19. **Synthetic helpers are not systems.** Explicit eligible fan-out only, metadata
+    preserves logical source and inventory. Reject fixed-source or marker semantics.
+20. **Tiered claims.** Tier A deterministic support; Tier B native/JGraph assistance.
+21. **Post-routing evidence.** Browser metrics report actual exported paths with
+    rectangle/sampling limits. Unknown curved bend metrics remain null, not zero.

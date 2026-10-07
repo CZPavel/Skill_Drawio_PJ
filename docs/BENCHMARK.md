@@ -149,3 +149,34 @@ Slide metrics in rendered audits project to width only; layout candidate scoring
 also respects slide height. Neither is an Office font-substitution test.
 Efficiency numbers in [EFFICIENCY](EFFICIENCY.md) are reproducible workflow proxies,
 not measured API token savings or a smaller-model performance benchmark.
+
+## V0.3 routing benchmark (2026-10-07)
+
+Six identical public input models run through archived v0.2.0 and current V0.3.
+V0.3 includes explicit, inspectable polish: native outer retry corridor, opt-in
+fan-out bus, one selected jump and verified libavoid for dense floating topology.
+These are final workflow results, not a claim that raw generation alone solves every case.
+
+| Case | Fixed endpoints V02 → V03 | Foreign-node findings V02 → V03 | Label findings V02 → V03 | Height mm V02 → V03 |
+|---|---:|---:|---:|---:|
+| decision-retry | 8 → 0 | 1 → 0 | 1 → 0 | 43.3 → 55.5 |
+| dense-topology | 14 → 0 | 3 → 0 | 4 → 0 | 69.7 → 69.7 |
+| fanout-four | 8 → 0 | 1 → 0 | 6 → 0 | 142.8 → 142.8 |
+| fixed-interface | 2 → 2 | 0 → 0 | 0 → 0 | 44.7 → 44.7 |
+| floating-process | 4 → 0 | 0 → 0 | 0 → 0 | 30.9 → 19.4 |
+| one-crossing | 4 → 4 | 0 → 0 | 0 → 0 | 80.0 → 80.0 |
+
+Height/font projections use a 160 mm insertion width. Findings are rectangle/path
+screening, not exact shape or visual quality certificates. A diamond can produce
+a bounding-box false positive. Curved/jump bends may be unknown; synthetic shared
+bus geometry needs visual interpretation. Six logical inventories match exactly.
+The dense topology retains one crossing. Fixed interface geometry is unchanged.
+Decision is clearer but taller; fan-out is clearer without reducing height.
+
+[Metrics and engine actions](../benchmark/v03/metrics.json); six adjacent comparison PNGs.
+Probe: Desktop 31.7.0 + external @drawio/mcp 1.6.3. ELK floating-input native/SVG/PNG
+smoke was also run and visually inspected; side constraints are guarded as documented.
+Reproduce with `python scripts/benchmark_v03.py --baseline-root PATH --mcp-root PATH --capabilities benchmark/v03/capabilities.json --render`.
+Baseline root must contain an extracted v0.2.0 tree. Optional `--cases` rechecks a subset.
+Final validation: 80 Python tests, six browser SVG tests, package metadata/links/export
+identity checks, independent targeted review and all six paired visual inspections.

@@ -18,3 +18,28 @@ Semantic layout measures a small set of widths and trades height against target
 aspect/available width. It never clips text or shrinks font to hide overflow.
 Explicit dimensions take precedence; insufficient containers need review.
 Presets merge into base tokens. Extracted styles are proposals, not design approval.
+
+## Semantic design grammar
+
+Use one abstraction level per diagram by default. Split overview/detail, use an
+explicit container/callout or separate pages when both system and port/register
+levels are necessary. `abstraction_level` and `mixed_abstraction_reason` can make
+this deliberate; routing helpers are not semantic systems.
+
+Action labels prefer verb + object (Načti snímek, Ověř expozici); devices/systems
+use nouns (Kamera, IPC, PLC); decisions use questions or explicit conditions;
+edges use short payload/condition names (Ano, Ne, Trigger, Výsledek). Preserve the
+user's technical text; only recommend changes that could affect meaning.
+Optional `kind` metadata enables lightweight recommendations, not NLP validation.
+
+Same semantic kind uses the same shape grammar: process blocks, decision diamonds,
+consistent external-system blocks and notes. A datastore symbol means a datastore;
+shapes are not decoration. The existing semantic palette is sufficient. Color
+must not be the sole carrier of meaning; same meaning uses the same color.
+
+Recommend a small legend for >=3 semantic line styles, >=3 role colors whose
+meaning is not labeled, >=3 explicitly listed abbreviations, or specialized
+notation. Simple flowcharts need no legend. Recommendations never invent meanings.
+Use smaller local gaps and larger phase gaps before adding unnecessary containers.
+Optical priority: main flow, primary nodes, secondary/service paths, annotations.
+Secondary connectors must not dominate the main process.

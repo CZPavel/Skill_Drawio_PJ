@@ -38,5 +38,17 @@ Native/ELK/libavoid remain routing engines; preview routes in scoring are estima
 No server, database or persistent cache. Same IR supports document/presentation
 without deleting content. Arbitrary existing files require targeted native edits;
 generation does not implement lossless import or incremental manual-edit sync.
-FAST needs Python/Pillow + Desktop + sight; FULL adds browser audit. Office
+FAST needs Python/Pillow + Desktop + sight only for clear simple native routing;
+report-driven FULL escalation adds browser audit. Office
 fixtures and style extraction are optional helpers.
+
+
+## V0.3 routing composition
+
+connector_policy supplies anchoring, pair-specific jumps and capability-aware
+engine recommendation. layout/score remain bounded estimates; actual engines are
+external. probe_drawio is an explicit diagnostic with temporary fixtures, no DB.
+elk_drawio and route_drawio publish separate native outputs only after contract
+checks. fanout_junction is opt-in and records logical identity; design_review gives
+warning-only grammar/legend/abstraction advice. SVG post_routing measurements are
+separate from candidate scores. No new runtime dependency or engine is introduced.

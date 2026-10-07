@@ -8,3 +8,5 @@
 *.pdf binary
 # Export manifests identify exact native bytes, including renderer line endings.
 benchmark/v02/*.drawio -text
+
+benchmark/v03/**/*.drawio -text

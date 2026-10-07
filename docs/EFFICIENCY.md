@@ -31,3 +31,18 @@ Run `python scripts/benchmark_v02.py` for bounded offline candidates, or add
 `--render` for selected Desktop/browser exports. `--mcp-root PATH` optionally uses
 the external JGraph router. Benchmark layout_seconds are local observations and
 should not be compared across different hosts as performance claims.
+
+
+## V0.3 delta
+
+The simple path still reads SKILL + model/API + design (two references), evaluates
+at most 3/8/12 candidates in memory, exports the selected native once and performs
+FAST sight checks. Routing reference is conditional. Engine recommendation and
+FAST/FULL escalation are script decisions; the probe is explicit/session-only.
+No new dependencies, persistent database or per-diagram network research.
+FULL adds one browser audit; a justified routing repair adds an engine pass and
+re-export. Fan-out is opt-in. Entry-point growth is tracked at release; character
+counts are a context proxy, not measured tokenizer/API cost. Tier B may require
+more context; there is no claim of equal automation for every diagram type.
+
+Release entrypoint: V0.2 4701 characters; V0.3 4905 characters (+204, 4.3%). Counts use decoded text, not tokens.

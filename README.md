@@ -1,4 +1,4 @@
-# Skill_Drawio_PJ V0.2
+# Skill_Drawio_PJ V0.3
 
 Profesionální editovatelné diagramy v draw.io: **content-driven sizing + target-aware layout + rendered visual QA**.
 
@@ -116,3 +116,26 @@ python scripts/qa_office.py --help
 IR: [model/API](references/model-api.md). Úspornost: [EFFICIENCY](docs/EFFICIENCY.md).
 Změny: [CHANGELOG](CHANGELOG.md). Agents365 inspirovalo oddělení významu/geometrie,
 orientační kandidáty, skóre a omezený repair loop; jeho kód nebyl převzat.
+
+
+## V0.3 routing update
+
+New semantic diagrams choose floating/side/fixed anchoring deterministically.
+Explicit technical ports are validated; existing native documents keep manual
+routing. Local crossing pairs choose secondary-edge jumps; dense conflicts request
+routing repair. Reports declare FAST/FULL and recommend one appropriate engine.
+
+Explicit diagnostics (once when needed):
+`python scripts/probe_drawio.py --mcp-root PATH_TO_OFFICIAL_PACKAGE --json capabilities.json`.
+Pass the resulting object as optional `routing_capabilities` in semantic IR for a
+verified routing recommendation. No diagnostic runs during ordinary generation.
+ELK presets use the installed official interface; compact is currently a limited
+alias, not custom tuning. ELK can move nodes and refuses changed fixed attachments.
+
+Optional fan-out: `python scripts/fanout_junction.py input.drawio output.drawio --source-id ipc`.
+Only >=3 same-style sibling forward relations qualify; fixed source interfaces and
+source markers are rejected. The helper carries synthetic metadata and preserves
+logical inventory. Follow with FULL QA; it does not represent electrical contact.
+
+See [V0.3 review](docs/V03_CONSISTENCY_REVIEW.md), [routing](references/routing.md),
+[benchmark](docs/BENCHMARK.md) and [baseline capabilities](references/jgraph-baseline.md).

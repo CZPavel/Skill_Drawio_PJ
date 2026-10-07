@@ -1,6 +1,6 @@
 {
   "name": "skill-drawio-pj",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "description": "Optional rendered SVG QA for an independent draw.io authoring skill",
   "license": "MIT",

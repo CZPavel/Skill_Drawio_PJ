@@ -25,7 +25,7 @@ $drawioExe = 'C:\Program Files\draw.io\draw.io.exe'
 
 Keep input/source files. Editable Mermaid conversion requires native cells, not `--mermaid-image true`. Review conversion for lost notation/labels. Standard presets include horizontalFlow, verticalFlow, horizontalTree, verticalTree, radialTree and organic; custom layouts use a JSON array. Probe `--help` for the installed version. On GPU initialization failure retry once with `--disable-gpu`. Use separate layout outputs and adopt them only after checking semantic inventory and rendering.
 
-V0.2 runtime finding: Desktop 31.7.0 on the author workstation rejects
+Historical V0.2 runtime finding (retested for V0.3): Desktop 31.7.0 on the author workstation rejects
 `--layout libavoid` as unknown. Libavoid is available in the separately installed
 official `@drawio/mcp` package. Optional original adapter:
 `python scripts/route_drawio.py draft.drawio routed.drawio --mcp-root PATH_TO_PACKAGE`.
@@ -38,3 +38,40 @@ one bounded label repair against router waypoints. Explicit IR label positions
 remain authoritative; changed node geometry is rejected. This is not import/sync.
 
 The project export adapter detects Desktop, uses argument arrays and bounded timeouts, verifies signatures and embedded XML for supported image exports, and records hashes. SVG/PNG/PDF are external engine exports. PDF embedding is requested; verify recoverability separately if essential. Opening/rendering is required beyond subprocess success.
+
+
+## V0.3 capability boundary
+
+**Upstream declaration:** current JGraph Codex skill documents libavoid CLI and
+ELK preset/custom JSON layouts. This is not a promise about an installed release.
+**Verified local:** Desktop 31.7.0 help advertises ELK layouts; actual libavoid CLI
+returns Unknown layout. Actual horizontalFlow changes positions/routes. Installed
+@drawio/mcp 1.6.3 routeXml creates an obstacle detour preserving nodes; layoutXml
+executes layered placement preserving checked semantics/sizes. These are runtime
+smoke results, not visual quality acceptance.
+
+`python scripts/probe_drawio.py --mcp-root PATH --json capabilities.json` tests fresh
+temporary fixtures and distinguishes verified/unsupported/unavailable/unverified.
+Run explicitly on installation/version change or once when a session needs routing;
+never probe every diagram. The version string alone is not the capability contract.
+
+The official MCP ELK interface accepts only direction (horizontal/vertical). PJ's
+three named presets intentionally expose no unsupported options; compact currently
+aliases clean. Desktop custom JSON may expose more, but no untested tuning is
+forwarded through the MCP adapter. Node positions may change under ELK. Fixed
+attachments that the official bridge changes are rejected before publication.
+
+
+### Current bridge limit (verified V0.3)
+
+The installed `@drawio/mcp` 1.6.3 bridges do not provide a verified side-constraint
+contract. `routeXml` ignores source/target side masks when constructing libavoid
+connections; retained style text is not proof that the route obeys those masks.
+The adapters therefore reject side-constrained XML, including compressed pages,
+before calling either engine. The strategy permits a side graph only with an
+explicit verified `supports_side_constraints: true`; the current probe reports
+false (not verified by this integration), including Desktop ELK. This is a bound
+on this adapter, not a claim about every upstream ELK/libavoid implementation.
+Use native sides and deliberate local waypoints for these graphs. Do not convert
+side intent to fixed midpoint coordinates or silently remove constraints.
+ELK also rejects output that changes explicit fixed attachment coordinates.
