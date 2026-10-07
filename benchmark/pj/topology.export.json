@@ -1,0 +1,27 @@
+{
+  "source": "examples/topology/topology.drawio",
+  "source_sha256": "9a143d074ba24a8da8767799169aa3e27f7bbf6b639063c3171c4c68c59e23f3",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "settings": {
+    "theme": "light",
+    "border": 16,
+    "png_scale": 2,
+    "embed_diagram": true,
+    "embed_svg_fonts": false
+  },
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/pj/topology.svg",
+      "sha256": "13c2f70bc20d310fda306028872bf92bae36df8429415af38b1f09f3c4d31cc1",
+      "bytes": 25446
+    },
+    {
+      "format": "png",
+      "path": "benchmark/pj/topology.png",
+      "sha256": "7dd645e526e740fafcca9e935f06b30b465aeead0bb3293b9404a28ab9981d57",
+      "bytes": 318996
+    }
+  ]
+}

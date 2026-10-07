@@ -1,0 +1,27 @@
+{
+  "source": "examples/dense-training/dense-training.drawio",
+  "source_sha256": "4b5d07ef112676ef5b1f630dcd66eea3dedb900f235009c3935adae50984433a",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "settings": {
+    "theme": "light",
+    "border": 16,
+    "png_scale": 2,
+    "embed_diagram": true,
+    "embed_svg_fonts": false
+  },
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/pj/dense-training.svg",
+      "sha256": "0d90247c11608a4651c13ac7cc41d00317ac4c086f46781e7b504483634338e8",
+      "bytes": 24114
+    },
+    {
+      "format": "png",
+      "path": "benchmark/pj/dense-training.png",
+      "sha256": "b3d0af2d8d8d010e0463f83fca70bf9d202cc3e413015ffa05ac98377d75e13f",
+      "bytes": 674313
+    }
+  ]
+}

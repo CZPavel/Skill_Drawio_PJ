@@ -1,0 +1,25 @@
+{
+  "font_family": "Arial",
+  "text": "#182B3B",
+  "background": "#FFFFFF",
+  "stroke_width": 2.5,
+  "radius": 8,
+  "padding": 20,
+  "gap": 64,
+  "container_padding": 28,
+  "terminal_min": 20,
+  "profiles": {
+    "document": {"title": 34, "body": 30, "edge": 28, "canvas_width": 1100, "canvas_height": 760, "target_width_mm": 160, "min_font_pt": 9},
+    "presentation": {"title": 40, "body": 34, "edge": 32, "canvas_width": 1200, "canvas_height": 675, "target_width_mm": 300, "min_font_pt": 18},
+    "a4-portrait": {"title": 34, "body": 30, "edge": 28, "canvas_width": 1000, "canvas_height": 1450, "target_width_mm": 170, "min_font_pt": 9},
+    "a4-landscape": {"title": 36, "body": 32, "edge": 30, "canvas_width": 1250, "canvas_height": 800, "target_width_mm": 257, "min_font_pt": 9},
+    "standalone": {"title": 28, "body": 24, "edge": 22, "canvas_width": 1200, "canvas_height": 800, "target_width_mm": null, "min_font_pt": null}
+  },
+  "roles": {
+    "data": {"fill": "#EEF4FA", "stroke": "#245C91"},
+    "control": {"fill": "#FFF3E6", "stroke": "#9C4E15"},
+    "ok": {"fill": "#EEF6F0", "stroke": "#286547"},
+    "note": {"fill": "#F2F5F7", "stroke": "#596B7A"},
+    "risk": {"fill": "#FFF1F2", "stroke": "#A02D38"}
+  }
+}

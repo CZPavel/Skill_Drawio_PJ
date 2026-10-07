@@ -1,0 +1,27 @@
+{
+  "source": "examples/process/process.drawio",
+  "source_sha256": "b358fd9f7f361d0171e65637777a3039c87ec1cbe430c50bed55beb271422808",
+  "drawio_version": "31.7.0",
+  "page_index": 1,
+  "settings": {
+    "theme": "light",
+    "border": 16,
+    "png_scale": 2,
+    "embed_diagram": true,
+    "embed_svg_fonts": false
+  },
+  "files": [
+    {
+      "format": "svg",
+      "path": "benchmark/pj/process.svg",
+      "sha256": "5a47c828a0c0d66cb24f9b8f7a4c10372d13905ec3a304f715aa1808c1d834e5",
+      "bytes": 21199
+    },
+    {
+      "format": "png",
+      "path": "benchmark/pj/process.png",
+      "sha256": "8db4c3e0c2842b2d4c50b36e7ffe16e6fa8373d2af6a8da5c8d2402b3642f052",
+      "bytes": 295587
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "source": "benchmark/official/process.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "cd",
+        "cd"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "cf",
+        "cf"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "fb"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 6,
+    "text_runs": 8,
+    "edges": 6,
+    "sampled_edges": 0,
+    "bends": 4,
+    "bounds_css_px": [
+      23.5,
+      16.5,
+      493.5,
+      476.5
+    ],
+    "width_css_px": 470,
+    "height_css_px": 460,
+    "exported_width_css_px": 527,
+    "aspect_ratio": 1.0217391304347827,
+    "min_font_css_px": 17,
+    "projected_min_font_pt": 14.630429260858524,
+    "estimated_whitespace_fraction": 0.6466234967622572
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

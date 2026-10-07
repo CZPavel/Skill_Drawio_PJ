@@ -1,0 +1,154 @@
+{
+  "id": "topology",
+  "name": "Koncepční topologie strojového vidění",
+  "profile": "document",
+  "profile_overrides": {
+    "canvas_width": 1700,
+    "canvas_height": 800,
+    "title": 40,
+    "body": 34,
+    "edge": 34
+  },
+  "groups": [
+    {
+      "id": "cell",
+      "title": "Výrobní pracoviště",
+      "x": 24,
+      "y": 24,
+      "width": 1150,
+      "height": 660
+    }
+  ],
+  "nodes": [
+    {
+      "id": "camera",
+      "title": "Kamera",
+      "body": "GigE snímky",
+      "parent": "cell",
+      "x": 32,
+      "y": 230,
+      "width": 245
+    },
+    {
+      "id": "switch",
+      "title": "Switch",
+      "body": "Ethernet",
+      "parent": "cell",
+      "x": 385,
+      "y": 230,
+      "width": 245
+    },
+    {
+      "id": "ipc",
+      "title": "IPC",
+      "body": "PEKAT Vision",
+      "parent": "cell",
+      "x": 738,
+      "y": 230,
+      "width": 350
+    },
+    {
+      "id": "plc",
+      "title": "PLC",
+      "body": "Trigger a výsledek",
+      "role": "control",
+      "parent": "cell",
+      "x": 385,
+      "y": 455,
+      "width": 350
+    },
+    {
+      "id": "service",
+      "title": "Servisní notebook",
+      "role": "note",
+      "parent": "cell",
+      "x": 307.5,
+      "y": 95,
+      "width": 400
+    },
+    {
+      "id": "mes",
+      "title": "MES",
+      "body": "Vyšší systém",
+      "x": 1360,
+      "y": 254,
+      "width": 290,
+      "role": "ok"
+    }
+  ],
+  "edges": [
+    {
+      "id": "t1",
+      "source": "camera",
+      "target": "switch"
+    },
+    {
+      "id": "t2",
+      "source": "switch",
+      "target": "ipc"
+    },
+    {
+      "id": "t3",
+      "source": "ipc",
+      "target": "mes",
+      "label": "Data",
+      "role": "ok",
+      "label_position": 0.5,
+      "label_offset": 28
+    },
+    {
+      "id": "t4",
+      "source": "service",
+      "target": "switch",
+      "role": "note",
+      "style": {
+        "exitX": 0.5,
+        "exitY": 1,
+        "entryX": 0.5,
+        "entryY": 0,
+        "dashed": 1,
+        "startArrow": "block"
+      }
+    },
+    {
+      "id": "t5",
+      "source": "plc",
+      "target": "camera",
+      "label": "HW trigger",
+      "label_offset": 38,
+      "role": "control",
+      "points": [
+        [
+          154.5,
+          528
+        ]
+      ],
+      "style": {
+        "exitX": 0,
+        "exitY": 0.5,
+        "entryX": 0.5,
+        "entryY": 1
+      }
+    },
+    {
+      "id": "t6",
+      "source": "ipc",
+      "target": "plc",
+      "label": "Výsledek",
+      "label_offset": 38,
+      "role": "control",
+      "points": [
+        [
+          913,
+          528
+        ]
+      ],
+      "style": {
+        "exitX": 0.5,
+        "exitY": 1,
+        "entryX": 1,
+        "entryY": 0.5
+      }
+    }
+  ]
+}

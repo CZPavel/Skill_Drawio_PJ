@@ -1,0 +1,158 @@
+{
+  "source": "examples/dense-training/dense-training.drawio",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "optics"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "optics"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "lighting"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "lighting"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "dataset"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "dataset"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "model"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "model"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "integration"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "integration"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "diagnostics"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "diagnostics"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "g1"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Od akvizice k provozu"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "g2"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Od akvizice k provozu"
+    }
+  ],
+  "metrics": {
+    "pages": [
+      {
+        "page": "Od akvizice k provozu",
+        "nodes": 9,
+        "edges": 2,
+        "explicit_paths": 0,
+        "bounds_px": [
+          24.0,
+          24.0,
+          1454.0,
+          734.0
+        ],
+        "width_px": 1430.0,
+        "height_px": 710.0,
+        "aspect_ratio": 2.0140845070422535,
+        "font_min_px": 36.0,
+        "font_max_px": 40.0,
+        "projected_min_font_pt": 11.41787346511756,
+        "estimated_whitespace_fraction": 0.09790209790209792
+      }
+    ]
+  },
+  "coverage": {
+    "text_measurement": "estimated character widths, not browser font metrics",
+    "rendered_qa_required": true
+  }
+}

@@ -1,0 +1,203 @@
+{
+  "source": "examples/topology/topology.drawio",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "camera"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "camera"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "switch"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "ipc"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "plc"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "plc"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "service"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "service"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "mes"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "mes"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "t1"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "t2"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "t3"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "t3"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "t4"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "t5"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "t5"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "t6"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "Koncepční topologie strojového vidění"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "t6"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Koncepční topologie strojového vidění"
+    }
+  ],
+  "metrics": {
+    "pages": [
+      {
+        "page": "Koncepční topologie strojového vidění",
+        "nodes": 7,
+        "edges": 6,
+        "explicit_paths": 0,
+        "bounds_px": [
+          24.0,
+          24.0,
+          1650.0,
+          684.0
+        ],
+        "width_px": 1626.0,
+        "height_px": 660.0,
+        "aspect_ratio": 2.463636363636364,
+        "font_min_px": 34.0,
+        "font_max_px": 40.0,
+        "projected_min_font_pt": 9.483685388034983,
+        "estimated_whitespace_fraction": 0.25382981102538293
+      }
+    ]
+  },
+  "coverage": {
+    "text_measurement": "estimated character widths, not browser font metrics",
+    "rendered_qa_required": true
+  }
+}

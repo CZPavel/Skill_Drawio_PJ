@@ -1,0 +1,229 @@
+[
+  {
+    "case": "process",
+    "variant": "official",
+    "source_sha256": "2e686ddb44589b08a8e0b7d1cd358e57e227a5132030d03ba2efa072aa845dff",
+    "export_width": 527.0,
+    "export_height": 510.0,
+    "height_at_160mm": 154.83870967741936,
+    "rendered_metrics": {
+      "nodes": 6,
+      "text_runs": 8,
+      "edges": 6,
+      "sampled_edges": 0,
+      "bends": 4,
+      "bounds_css_px": [
+        23.5,
+        16.5,
+        493.5,
+        476.5
+      ],
+      "width_css_px": 470,
+      "height_css_px": 460,
+      "exported_width_css_px": 527,
+      "aspect_ratio": 1.0217391304347827,
+      "min_font_css_px": 17,
+      "projected_min_font_pt": 14.630429260858524,
+      "estimated_whitespace_fraction": 0.6466234967622572
+    },
+    "source_findings": {
+      "style-explicit": 14,
+      "border-contrast": 1,
+      "edge-path-unresolved": 6,
+      "edge-label-unresolved": 2
+    },
+    "rendered_findings": {
+      "edge-label": 2,
+      "edge-terminal": 1,
+      "bounds-approximation": 1
+    }
+  },
+  {
+    "case": "process",
+    "variant": "pj",
+    "source_sha256": "b358fd9f7f361d0171e65637777a3039c87ec1cbe430c50bed55beb271422808",
+    "export_width": 1427.0,
+    "export_height": 490.0,
+    "height_at_160mm": 54.94043447792571,
+    "rendered_metrics": {
+      "nodes": 6,
+      "text_runs": 14,
+      "edges": 6,
+      "sampled_edges": 0,
+      "bends": 1,
+      "bounds_css_px": [
+        17.5,
+        18.325000762939453,
+        1392.5,
+        455.5
+      ],
+      "width_css_px": 1375,
+      "height_css_px": 437.17499923706055,
+      "exported_width_css_px": 1427,
+      "aspect_ratio": 3.1451935778569045,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 10.806217547964179,
+      "estimated_whitespace_fraction": 0.5920753622133507
+    },
+    "source_findings": {
+      "text-overflow-height-estimated": 5,
+      "html-text-estimated": 6,
+      "edge-path-unresolved": 6,
+      "edge-label-unresolved": 2
+    },
+    "rendered_findings": {
+      "bounds-approximation": 1
+    }
+  },
+  {
+    "case": "topology",
+    "variant": "official",
+    "source_sha256": "2f7d34e0b2651df2545e7d8c9a3b5135f6c01c2b0dbb2bf5e63319c58e14b1ca",
+    "export_width": 753.0,
+    "export_height": 434.0,
+    "height_at_160mm": 92.21779548472776,
+    "rendered_metrics": {
+      "nodes": 6,
+      "text_runs": 12,
+      "edges": 6,
+      "sampled_edges": 0,
+      "bends": 3,
+      "bounds_css_px": [
+        16.046875,
+        16.109375,
+        719.5,
+        400.5
+      ],
+      "width_css_px": 703.453125,
+      "height_css_px": 384.390625,
+      "exported_width_css_px": 753,
+      "aspect_ratio": 1.8300475590423153,
+      "min_font_css_px": 14,
+      "projected_min_font_pt": 8.432412083947675,
+      "estimated_whitespace_fraction": 0.7692314403516154
+    },
+    "source_findings": {
+      "style-explicit": 18,
+      "border-contrast": 1,
+      "edge-label-unresolved": 6,
+      "edge-path-unresolved": 6
+    },
+    "rendered_findings": {
+      "label-node": 4,
+      "edge-label": 4,
+      "edge-terminal": 1,
+      "target-font-small": 1,
+      "bounds-approximation": 1
+    }
+  },
+  {
+    "case": "topology",
+    "variant": "pj",
+    "source_sha256": "9a143d074ba24a8da8767799169aa3e27f7bbf6b639063c3171c4c68c59e23f3",
+    "export_width": 1678.0,
+    "export_height": 712.0,
+    "height_at_160mm": 67.89034564958284,
+    "rendered_metrics": {
+      "nodes": 6,
+      "text_runs": 15,
+      "edges": 7,
+      "sampled_edges": 0,
+      "bends": 2,
+      "bounds_css_px": [
+        17.5,
+        25.5,
+        1643.5,
+        616.5
+      ],
+      "width_css_px": 1626,
+      "height_css_px": 591,
+      "exported_width_css_px": 1678,
+      "aspect_ratio": 2.751269035532995,
+      "min_font_css_px": 34,
+      "projected_min_font_pt": 9.189792873030324,
+      "estimated_whitespace_fraction": 0.7415933550198446
+    },
+    "source_findings": {
+      "text-overflow-height-estimated": 4,
+      "html-text-estimated": 6,
+      "edge-path-unresolved": 6,
+      "edge-label-unresolved": 3
+    },
+    "rendered_findings": {
+      "bounds-approximation": 1
+    }
+  },
+  {
+    "case": "dense-training",
+    "variant": "official",
+    "source_sha256": "fb89f6f1cf703fb6e6b135b682de26a25a78a193382d5515596b7fd3a531130e",
+    "export_width": 710.0,
+    "export_height": 660.0,
+    "height_at_160mm": 148.73239436619718,
+    "rendered_metrics": {
+      "nodes": 6,
+      "text_runs": 15,
+      "edges": 5,
+      "sampled_edges": 0,
+      "bends": 0,
+      "bounds_css_px": [
+        16.5,
+        25.703125,
+        676.5,
+        606.5
+      ],
+      "width_css_px": 660,
+      "height_css_px": 580.796875,
+      "exported_width_css_px": 710,
+      "aspect_ratio": 1.1363697506120363,
+      "min_font_css_px": 18,
+      "projected_min_font_pt": 11.498281024731064,
+      "estimated_whitespace_fraction": 0.5539044367432089
+    },
+    "source_findings": {
+      "style-explicit": 11,
+      "border-contrast": 1,
+      "html-text-estimated": 6,
+      "edge-path-unresolved": 2
+    },
+    "rendered_findings": {
+      "bounds-approximation": 1
+    }
+  },
+  {
+    "case": "dense-training",
+    "variant": "pj",
+    "source_sha256": "4b5d07ef112676ef5b1f630dcd66eea3dedb900f235009c3935adae50984433a",
+    "export_width": 1482.0,
+    "export_height": 762.0,
+    "height_at_160mm": 82.26720647773278,
+    "rendered_metrics": {
+      "nodes": 6,
+      "text_runs": 28,
+      "edges": 5,
+      "sampled_edges": 0,
+      "bends": 0,
+      "bounds_css_px": [
+        17.5,
+        25.5,
+        1447.5,
+        645.5
+      ],
+      "width_css_px": 1430,
+      "height_css_px": 620,
+      "exported_width_css_px": 1482,
+      "aspect_ratio": 2.306451612903226,
+      "min_font_css_px": 36,
+      "projected_min_font_pt": 11.017246325990627,
+      "estimated_whitespace_fraction": 0.37753214527408074
+    },
+    "source_findings": {
+      "text-overflow-height-estimated": 6,
+      "html-text-estimated": 6,
+      "edge-path-unresolved": 2
+    },
+    "rendered_findings": {
+      "bounds-approximation": 1
+    }
+  }
+]

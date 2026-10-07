@@ -1,0 +1,115 @@
+{
+  "id": "training",
+  "name": "Od akvizice k provozu",
+  "profile": "document",
+  "profile_overrides": {
+    "canvas_width": 1500,
+    "canvas_height": 1100,
+    "title": 40,
+    "body": 36,
+    "edge": 34
+  },
+  "groups": [
+    {
+      "id": "acquisition",
+      "title": "Akvizice",
+      "role": "data",
+      "x": 24,
+      "y": 24,
+      "width": 430,
+      "height": 710
+    },
+    {
+      "id": "evaluation",
+      "title": "Vyhodnocení",
+      "role": "control",
+      "x": 524,
+      "y": 24,
+      "width": 430,
+      "height": 710
+    },
+    {
+      "id": "operation",
+      "title": "Provoz",
+      "role": "ok",
+      "x": 1024,
+      "y": 24,
+      "width": 430,
+      "height": 710
+    }
+  ],
+  "nodes": [
+    {
+      "id": "optics",
+      "title": "Optika",
+      "body": "Zorné pole, pracovní vzdálenost a hloubka ostrosti.",
+      "role": "data",
+      "parent": "acquisition",
+      "x": 26,
+      "y": 94,
+      "width": 378
+    },
+    {
+      "id": "lighting",
+      "title": "Světlo",
+      "body": "Stabilní osvětlení a krátká expozice potlačí rozmazání.",
+      "role": "data",
+      "parent": "acquisition",
+      "x": 26,
+      "y": 392,
+      "width": 378
+    },
+    {
+      "id": "dataset",
+      "title": "Dataset",
+      "body": "Reprezentativní OK/NOK příklady a nezávislá validační sada.",
+      "role": "control",
+      "parent": "evaluation",
+      "x": 26,
+      "y": 94,
+      "width": 378
+    },
+    {
+      "id": "model",
+      "title": "Model",
+      "body": "Prah rozhodnutí vychází z měřených chyb na validaci.",
+      "role": "control",
+      "parent": "evaluation",
+      "x": 26,
+      "y": 392,
+      "width": 378
+    },
+    {
+      "id": "integration",
+      "title": "Integrace",
+      "body": "PLC dostává výsledek i stav připravenosti.",
+      "role": "ok",
+      "parent": "operation",
+      "x": 26,
+      "y": 94,
+      "width": 378
+    },
+    {
+      "id": "diagnostics",
+      "title": "Diagnostika",
+      "body": "Uchovat snímek, čas a verzi modelu pro dohledání.",
+      "role": "ok",
+      "parent": "operation",
+      "x": 26,
+      "y": 392,
+      "width": 378
+    }
+  ],
+  "edges": [
+    {
+      "id": "g1",
+      "source": "acquisition",
+      "target": "evaluation"
+    },
+    {
+      "id": "g2",
+      "source": "evaluation",
+      "target": "operation"
+    }
+  ]
+}

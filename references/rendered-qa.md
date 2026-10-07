@@ -1,0 +1,15 @@
+# Browser SVG audit
+
+`node scripts/audit_svg.cjs FILE.svg --json report.json --target-width-mm 160 [--browser-channel msedge]`
+
+Requires Node.js and Playwright (`npm install`; install Chromium with `npx playwright install chromium`, or select installed Edge). Chromium is attempted first; installed Edge is fallback. API: `const {audit}=require('./scripts/audit_svg.cjs'); await audit(file,{targetWidthMm:160,browserChannel:'msedge'})`. Input is a local Desktop-exported SVG; external HTTP requests and page JavaScript are disabled. Source is not changed. Exit 2 is execution/input failure; exit 0 means the audit ran, **not that visual acceptance passed**. Review `findings` including warnings and uncertainty.
+
+The browser measures transformed shape rectangles, DOM Range text bounds, real HTML clipping (`scrollWidth/clientWidth`, `scrollHeight/clientHeight`), font sizes and actual exported edge paths. It checks node overlap, text outside its related node, label/node intersection, edge/node, edge/text and edge/edge. Draw.io `data-cell-id` is retained when present; otherwise SVG IDs/indexes identify findings. Filled arrowheads inside recognized edge cells are excluded as nodes.
+
+Linear M/L/H/V paths are checked as segments (absolute and relative). Curves are sampled at roughly 3 source SVG units, capped at 2000 intervals, with an explicit approximation finding. Multiple subpaths are unresolved. Arrowhead/marker extents, clipped glyph ink, exact silhouettes, filters, decorative/background shapes and rotated text require visual review. Node attachment is inferred from endpoints within 8 rendered pixels; those node pairs are excluded. Containment is geometric and excludes containing pairs; this does not prove native parent-child correctness. Use the XML linter alongside this audit.
+
+Edge/text findings include an edge's own label: a white label background may intentionally mask the line, requiring review. Intentional junctions and meaningful overlapping frames require review. Rectangular bounds can overestimate rounded/diamond shapes. A successful audit always retains uncertainty and `visual_review_required:true`; it never proves target-document acceptance.
+
+Metrics: `nodes`, `text_runs`, `edges`, `sampled_edges`, `bends` (linear polyline vertex count minus two, not optical bend simplification), `bounds_css_px` `[left,top,right,bottom]`, `width_css_px`, `height_css_px`, `exported_width_css_px`, `aspect_ratio`, `min_font_css_px`, `projected_min_font_pt`, `estimated_whitespace_fraction`. Projection uses the entire rendered root SVG width (`exported_width_css_px`), including exported margins/borders and viewBox scaling, and requested inserted width; it does not assume content is cropped. Default review minimum is 9 pt. Font scaling uses the SVG screen transform; HTML CSS transforms/mixed spans and nonuniform scaling need inspection. Whitespace uses outer rectangle areas and is not exact ink density. `coverage.target_document_verified` remains false until the separate Word/PPT render check.
+
+Run browser regression fixtures with `node --test tests/test_svg_audit.cjs`.

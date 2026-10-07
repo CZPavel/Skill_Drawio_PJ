@@ -1,0 +1,125 @@
+{
+  "id": "process",
+  "name": "Kontrola snímku",
+  "profile": "document",
+  "profile_overrides": {
+    "canvas_width": 1500,
+    "canvas_height": 650,
+    "title": 36,
+    "body": 32,
+    "edge": 34
+  },
+  "nodes": [
+    {
+      "id": "receive",
+      "title": "Přijmout\nsnímek",
+      "x": 30,
+      "y": 70,
+      "width": 205,
+      "shape": "terminal"
+    },
+    {
+      "id": "exposure",
+      "title": "Ověřit\nexpozici",
+      "x": 305,
+      "y": 70,
+      "width": 205
+    },
+    {
+      "id": "usable",
+      "title": "Snímek\npoužitelný?",
+      "x": 580,
+      "y": 30,
+      "width": 460,
+      "shape": "decision",
+      "role": "control",
+      "padding": 8
+    },
+    {
+      "id": "evaluate",
+      "title": "Vyhodnotit\nmodel",
+      "x": 1160,
+      "y": 70,
+      "width": 245
+    },
+    {
+      "id": "save",
+      "title": "Uložit\nvýsledek",
+      "x": 1160,
+      "y": 340,
+      "width": 245,
+      "role": "ok",
+      "shape": "terminal"
+    },
+    {
+      "id": "light",
+      "title": "Upravit\nosvětlení",
+      "x": 670,
+      "y": 340,
+      "width": 280,
+      "role": "control"
+    }
+  ],
+  "edges": [
+    {
+      "id": "p1",
+      "source": "receive",
+      "target": "exposure"
+    },
+    {
+      "id": "p2",
+      "source": "exposure",
+      "target": "usable"
+    },
+    {
+      "id": "p3",
+      "source": "usable",
+      "target": "evaluate",
+      "label": "Ano",
+      "label_offset": 26
+    },
+    {
+      "id": "p4",
+      "source": "evaluate",
+      "target": "save",
+      "style": {
+        "exitX": 0.5,
+        "exitY": 1,
+        "entryX": 0.5,
+        "entryY": 0
+      }
+    },
+    {
+      "id": "p5",
+      "source": "usable",
+      "target": "light",
+      "label": "Ne",
+      "label_offset": -42,
+      "role": "control",
+      "style": {
+        "exitX": 0.5,
+        "exitY": 1,
+        "entryX": 0.5,
+        "entryY": 0
+      }
+    },
+    {
+      "id": "p6",
+      "source": "light",
+      "target": "exposure",
+      "role": "control",
+      "points": [
+        [
+          407.5,
+          404
+        ]
+      ],
+      "style": {
+        "exitX": 0,
+        "exitY": 0.5,
+        "entryX": 0.5,
+        "entryY": 1
+      }
+    }
+  ]
+}

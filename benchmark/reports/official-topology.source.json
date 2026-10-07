@@ -1,0 +1,311 @@
+{
+  "source": "benchmark/official/topology.drawio",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "cam"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "sw"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "ipc"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "mes"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "plc"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "border-contrast",
+      "cells": [
+        "plc"
+      ],
+      "message": "Border/fill contrast 2.80:1 below 3:1",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "nb"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "cs"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "cs"
+      ],
+      "message": "Set explicit fontColor",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "cs"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "cs"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "si"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "si"
+      ],
+      "message": "Set explicit fontColor",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "si"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "si"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "im"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "im"
+      ],
+      "message": "Set explicit fontColor",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "im"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "im"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "pc"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "pc"
+      ],
+      "message": "Set explicit fontColor",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "pc"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "pc"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "ip"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "ip"
+      ],
+      "message": "Set explicit fontColor",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "ip"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "ip"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "ns"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "ns"
+      ],
+      "message": "Set explicit fontColor",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "ns"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "b-integrace"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "ns"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "b-integrace"
+    }
+  ],
+  "metrics": {
+    "pages": [
+      {
+        "page": "b-integrace",
+        "nodes": 6,
+        "edges": 6,
+        "explicit_paths": 0,
+        "bounds_px": [
+          40.0,
+          40.0,
+          700.0,
+          420.0
+        ],
+        "width_px": 660.0,
+        "height_px": 380.0,
+        "aspect_ratio": 1.736842105263158,
+        "font_min_px": 14.0,
+        "font_max_px": 18.0,
+        "projected_min_font_pt": 9.620615604867574,
+        "estimated_whitespace_fraction": 0.7511961722488039
+      }
+    ]
+  },
+  "coverage": {
+    "text_measurement": "estimated character widths, not browser font metrics",
+    "rendered_qa_required": true
+  }
+}

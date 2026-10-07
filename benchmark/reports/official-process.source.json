@@ -1,0 +1,239 @@
+{
+  "source": "benchmark/official/process.drawio",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "a"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "b"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "c"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "border-contrast",
+      "cells": [
+        "c"
+      ],
+      "message": "Border/fill contrast 2.80:1 below 3:1",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "d"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "e"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "f"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "ab"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "ab"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "bc"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "bc"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "cd"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "cd"
+      ],
+      "message": "Set explicit fontColor",
+      "page": "a-proces"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "cd"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "a-proces"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "cd"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "de"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "de"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "cf"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "cf"
+      ],
+      "message": "Set explicit fontColor",
+      "page": "a-proces"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "cf"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "a-proces"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "cf"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "a-proces"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "fb"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "a-proces"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "fb"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "a-proces"
+    }
+  ],
+  "metrics": {
+    "pages": [
+      {
+        "page": "a-proces",
+        "nodes": 6,
+        "edges": 6,
+        "explicit_paths": 0,
+        "bounds_px": [
+          40.0,
+          40.0,
+          500.0,
+          500.0
+        ],
+        "width_px": 460.0,
+        "height_px": 460.0,
+        "aspect_ratio": 1.0,
+        "font_min_px": 17.0,
+        "font_max_px": 18.0,
+        "projected_min_font_pt": 16.761383087983567,
+        "estimated_whitespace_fraction": 0.6389413988657845
+      }
+    ]
+  },
+  "coverage": {
+    "text_measurement": "estimated character widths, not browser font metrics",
+    "rendered_qa_required": true
+  }
+}

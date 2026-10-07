@@ -1,0 +1,6 @@
+interface:
+  display_name: "Skill_Drawio_PJ"
+  short_description: "Profesionální draw.io diagramy s vizuální QA"
+  default_prompt: "Použij $skill-drawio-pj pro editovatelné technické schéma s kontrolou čitelnosti v cílovém měřítku."
+policy:
+  allow_implicit_invocation: true

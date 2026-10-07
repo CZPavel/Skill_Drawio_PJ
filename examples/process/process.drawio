@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="Skill_Drawio_PJ">
+  <diagram id="process" name="Kontrola snímku">
+    <mxGraphModel grid="1" gridSize="4" page="1" pageScale="1" pageWidth="1500" pageHeight="650" background="#FFFFFF" adaptiveColors="none">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="receive" value="&lt;div style=&quot;font-size:36px;font-weight:bold;line-height:1.2&quot;&gt;Přijmout&lt;br&gt;snímek&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=36;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="30" y="70" width="205" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="exposure" value="&lt;div style=&quot;font-size:36px;font-weight:bold;line-height:1.2&quot;&gt;Ověřit&lt;br&gt;expozici&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=36;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="305" y="70" width="205" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="usable" value="Snímek&lt;br&gt;použitelný?" vertex="1" parent="1" style="rhombus;rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;spacing=0;spacingLeft=8;spacingRight=8;spacingTop=8;spacingBottom=8;fontFamily=Arial;fontSize=36;fontColor=#182B3B;fillColor=#FFF3E6;strokeColor=#9C4E15;strokeWidth=2.5;fontStyle=1;">
+          <mxGeometry x="580" y="30" width="460" height="208" as="geometry" />
+        </mxCell>
+        <mxCell id="evaluate" value="&lt;div style=&quot;font-size:36px;font-weight:bold;line-height:1.2&quot;&gt;Vyhodnotit&lt;br&gt;model&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=36;fontColor=#182B3B;fillColor=#EEF4FA;strokeColor=#245C91;strokeWidth=2.5;">
+          <mxGeometry x="1160" y="70" width="245" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="save" value="&lt;div style=&quot;font-size:36px;font-weight:bold;line-height:1.2&quot;&gt;Uložit&lt;br&gt;výsledek&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=50;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=36;fontColor=#182B3B;fillColor=#EEF6F0;strokeColor=#286547;strokeWidth=2.5;">
+          <mxGeometry x="1160" y="340" width="245" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="light" value="&lt;div style=&quot;font-size:36px;font-weight:bold;line-height:1.2&quot;&gt;Upravit&lt;br&gt;osvětlení&lt;/div&gt;" vertex="1" parent="1" style="rounded=1;arcSize=8;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;spacingLeft=20;spacingRight=20;spacingTop=20;spacingBottom=20;fontFamily=Arial;fontSize=36;fontColor=#182B3B;fillColor=#FFF3E6;strokeColor=#9C4E15;strokeWidth=2.5;">
+          <mxGeometry x="670" y="340" width="280" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="p1" edge="1" parent="1" source="receive" target="exposure" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" x="0" y="-18" as="geometry" />
+        </mxCell>
+        <mxCell id="p2" edge="1" parent="1" source="exposure" target="usable" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" x="0" y="-18" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" edge="1" parent="1" source="usable" target="evaluate" value="Ano" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" x="0" y="26" as="geometry" />
+        </mxCell>
+        <mxCell id="p4" edge="1" parent="1" source="evaluate" target="save" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endSize=10;strokeColor=#245C91;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" x="0" y="-18" as="geometry" />
+        </mxCell>
+        <mxCell id="p5" edge="1" parent="1" source="usable" target="light" value="Ne" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endSize=10;strokeColor=#9C4E15;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=0.5;exitY=1;entryX=0.5;entryY=0;exitPerimeter=1;entryPerimeter=1;">
+          <mxGeometry relative="1" x="0" y="-42" as="geometry" />
+        </mxCell>
+        <mxCell id="p6" edge="1" parent="1" source="light" target="exposure" value="" style="edgeStyle=none;rounded=0;html=1;endArrow=block;endSize=10;strokeColor=#9C4E15;strokeWidth=2.5;fontColor=#182B3B;fontFamily=Arial;fontSize=34;labelBackgroundColor=#FFFFFF;exitX=0;exitY=0.5;entryX=0.5;entryY=1;exitPerimeter=1;entryPerimeter=1;noEdgeStyle=1;">
+          <mxGeometry relative="1" x="0" y="-18" as="geometry">
+            <Array as="points">
+              <mxPoint x="407.5" y="404" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

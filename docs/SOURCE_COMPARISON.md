@@ -1,5 +1,12 @@
 # Source comparison — Skill_Drawio_PJ
 
+This is the research-stage snapshot, written before implementation. The new-skill
+matrix column deliberately records the plan at that point. Final implemented
+coverage and measured results are in [ARCHITECTURE](ARCHITECTURE.md),
+[BENCHMARK](BENCHMARK.md), [native QA](../references/qa-coverage.md) and
+[rendered QA](../references/rendered-qa.md); those later results do not retroactively
+turn upstream static inspection into runtime verification.
+
 Research completed before implementation, 2026-10-07. The supplied local specification is the product authority; upstream projects provide technical evidence and design ideas, not acceptance criteria. All eight requested default branches were cloned outside this public repository. This document summarizes direct inspection of skill instructions, references and implementation files, not only README claims. Machine-readable pinned identities, inspected paths, file digests and permanent links are in [source-evidence.json](source-evidence.json).
 
 Evidence scope: **S** = implemented in inspected source; **G** = explicit guidance/workflow, not an automatic guarantee; **P** = partial/conditional implementation; **U** = unknown or not established by inspected files; **A** = absent in the inspected bounded package. Absence is not a claim about every historical branch or third-party extension. No upstream runtime suite was executed. A recent commit, reachable repository or non-archived state does not prove maintenance quality or runtime compatibility.
@@ -128,7 +135,7 @@ If later work copies any upstream protectable material, stop that copy path and 
 
 ## Verification performed and remaining gates
 
-Performed: authenticated GitHub metadata reads without printing credentials; successful HTTPS Git clone of all eight sources; exact default-branch commit/date capture; direct license and implementation/reference inspection; all 55 evidence paths exist at their pinned commits. File SHA-256 values identify inspected evidence, not policy validity. Repository web pages were also opened for JGraph, Sunwood, lgazo and yohasacura. No source files, prose excerpts or assets were copied into this project.
+Performed: authenticated GitHub metadata reads without printing credentials; successful HTTPS Git clone of all eight sources; exact default-branch commit/date capture; direct license and implementation/reference inspection; all 55 evidence paths exist at their pinned commits and returned HTTP 200 from their permanent raw-file URLs. File SHA-256 values identify inspected evidence, not policy validity. Repository web pages were also opened for JGraph, Sunwood, lgazo and yohasacura. No source files, prose excerpts or assets were copied into this project.
 
 Remaining: upstream runtime tests, local JGraph/CLI version compatibility, actual new-skill feature tests, installed-skill test, visual review and comparative benchmark. Those are implementation acceptance work, not outcomes claimed by this static review. No additional repository was needed to establish the requested baseline; all eight mandatory sources are covered.
 

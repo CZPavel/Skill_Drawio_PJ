@@ -1,0 +1,37 @@
+{
+  "source": "benchmark/official/dense-training.svg",
+  "findings": [
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 6,
+    "text_runs": 15,
+    "edges": 5,
+    "sampled_edges": 0,
+    "bends": 0,
+    "bounds_css_px": [
+      16.5,
+      25.703125,
+      676.5,
+      606.5
+    ],
+    "width_css_px": 660,
+    "height_css_px": 580.796875,
+    "exported_width_css_px": 710,
+    "aspect_ratio": 1.1363697506120363,
+    "min_font_css_px": 18,
+    "projected_min_font_pt": 11.498281024731064,
+    "estimated_whitespace_fraction": 0.5539044367432089
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}

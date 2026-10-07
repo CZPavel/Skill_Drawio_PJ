@@ -1,0 +1,203 @@
+{
+  "source": "examples/process/process.drawio",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "receive"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "receive"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "exposure"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "exposure"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "usable"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "evaluate"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "evaluate"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "save"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "save"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "warning",
+      "code": "text-overflow-height-estimated",
+      "cells": [
+        "light"
+      ],
+      "message": "Estimated text height exceeds node interior",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "light"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "p1"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "p2"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "p3"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "p3"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "p4"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-label-unresolved",
+      "cells": [
+        "p5"
+      ],
+      "message": "Edge-label position/extent requires rendered export QA",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "p5"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Kontrola snímku"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "p6"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "Kontrola snímku"
+    }
+  ],
+  "metrics": {
+    "pages": [
+      {
+        "page": "Kontrola snímku",
+        "nodes": 6,
+        "edges": 6,
+        "explicit_paths": 0,
+        "bounds_px": [
+          30.0,
+          30.0,
+          1405.0,
+          468.0
+        ],
+        "width_px": 1375.0,
+        "height_px": 438.0,
+        "aspect_ratio": 3.1392694063926943,
+        "font_min_px": 34.0,
+        "font_max_px": 36.0,
+        "projected_min_font_pt": 11.214889047959915,
+        "estimated_whitespace_fraction": 0.5903362391033624
+      }
+    ]
+  },
+  "coverage": {
+    "text_measurement": "estimated character widths, not browser font metrics",
+    "rendered_qa_required": true
+  }
+}

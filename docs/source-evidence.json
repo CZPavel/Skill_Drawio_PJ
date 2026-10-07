@@ -444,5 +444,11 @@
         }
       ]
     }
-  ]
+  ],
+  "verification": {
+    "pinned_file_http_head_checked": 55,
+    "all_http_200": true,
+    "checked_at": "2026-10-07",
+    "upstream_runtime_tests_run": false
+  }
 }

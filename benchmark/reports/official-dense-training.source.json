@@ -1,0 +1,212 @@
+{
+  "source": "benchmark/official/dense-training.drawio",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "g1"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "g2"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "g3"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "border-contrast",
+      "cells": [
+        "g3"
+      ],
+      "message": "Border/fill contrast 2.80:1 below 3:1",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "o"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "o"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "l"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "l"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "ds"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "ds"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "m"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "m"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "i"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "i"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "dg"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "uncertain",
+      "code": "html-text-estimated",
+      "cells": [
+        "dg"
+      ],
+      "message": "Rich text, mixed fonts and CSS require rendered inspection; inline sizes included conservatively",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "g12"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "g12"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "warning",
+      "code": "style-explicit",
+      "cells": [
+        "g23"
+      ],
+      "message": "Set explicit strokeWidth",
+      "page": "c-skoleni"
+    },
+    {
+      "severity": "uncertain",
+      "code": "edge-path-unresolved",
+      "cells": [
+        "g23"
+      ],
+      "message": "Automatic/attached/routed path requires rendered export; source waypoints are not final segments",
+      "page": "c-skoleni"
+    }
+  ],
+  "metrics": {
+    "pages": [
+      {
+        "page": "c-skoleni",
+        "nodes": 9,
+        "edges": 2,
+        "explicit_paths": 0,
+        "bounds_px": [
+          40.0,
+          40.0,
+          700.0,
+          650.0
+        ],
+        "width_px": 660.0,
+        "height_px": 610.0,
+        "aspect_ratio": 1.0819672131147542,
+        "font_min_px": 18.0,
+        "font_max_px": 18.0,
+        "projected_min_font_pt": 12.369362920544022,
+        "estimated_whitespace_fraction": 0.16393442622950816
+      }
+    ]
+  },
+  "coverage": {
+    "text_measurement": "estimated character widths, not browser font metrics",
+    "rendered_qa_required": true
+  }
+}

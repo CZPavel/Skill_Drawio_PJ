@@ -1,0 +1,123 @@
+{
+  "source": "benchmark/official/topology.svg",
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "label-node",
+      "cells": [
+        "cs",
+        "cam"
+      ],
+      "message": "Rendered text intersects unrelated shape rectangle"
+    },
+    {
+      "severity": "warning",
+      "code": "label-node",
+      "cells": [
+        "cs",
+        "sw"
+      ],
+      "message": "Rendered text intersects unrelated shape rectangle"
+    },
+    {
+      "severity": "warning",
+      "code": "label-node",
+      "cells": [
+        "im",
+        "ipc"
+      ],
+      "message": "Rendered text intersects unrelated shape rectangle"
+    },
+    {
+      "severity": "warning",
+      "code": "label-node",
+      "cells": [
+        "im",
+        "mes"
+      ],
+      "message": "Rendered text intersects unrelated shape rectangle"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "si",
+        "si"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-terminal",
+      "cells": [
+        "pc"
+      ],
+      "message": "Final rendered segment shorter than 20 rendered CSS pixels (review target scale)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "pc",
+        "pc"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "ip",
+        "ip"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "edge-label",
+      "cells": [
+        "ns",
+        "ns"
+      ],
+      "message": "Rendered path intersects actual text bounding rectangle (including its own label)"
+    },
+    {
+      "severity": "warning",
+      "code": "target-font-small",
+      "cells": [],
+      "message": "Smallest rendered font projects to 8.43 pt at target width; default review minimum 9 pt"
+    },
+    {
+      "severity": "uncertain",
+      "code": "bounds-approximation",
+      "cells": [],
+      "message": "Shape/text rectangles omit nonrectangular interiors, filters, markers and exact ink; containment is geometric when source grouping is absent"
+    }
+  ],
+  "metrics": {
+    "nodes": 6,
+    "text_runs": 12,
+    "edges": 6,
+    "sampled_edges": 0,
+    "bends": 3,
+    "bounds_css_px": [
+      16.046875,
+      16.109375,
+      719.5,
+      400.5
+    ],
+    "width_css_px": 703.453125,
+    "height_css_px": 384.390625,
+    "exported_width_css_px": 753,
+    "aspect_ratio": 1.8300475590423153,
+    "min_font_css_px": 14,
+    "projected_min_font_pt": 8.432412083947675,
+    "estimated_whitespace_fraction": 0.7692314403516154
+  },
+  "coverage": {
+    "browser_rendered": true,
+    "target_document_verified": false,
+    "collision_geometry": "transformed browser rectangles and rendered path segments; sampled curves approximate",
+    "visual_review_required": true
+  }
+}
